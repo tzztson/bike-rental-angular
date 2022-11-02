@@ -1,0 +1,22 @@
+<div>
+  <label
+    [for]="controlName"
+    (click)="onClick()"
+    [ngClass]="['checkbox-' + color, 'text-' + colorText]"
+    [style.display]="shape"
+  >
+    <input type="checkbox" name="{{ controlName }}" #checkboxElement [formControlName]="controlName" />
+    <span [ngClass]="['checkmark', 'checkmark-' + color]"></span>
+    {{ label | transloco }}
+  </label>
+  <ng-content select="[link]"></ng-content>
+</div>
+<div
+  *ngIf="errorMessageKeys && formControl.errors && formControl.touched"
+  class="error-messages"
+  data-testid="error-message"
+>
+  <p *ngFor="let messageKey of errorMessageKeys" [hidden]="!formControl.errors[messageKey]">
+    {{ errorMessages[messageKey] | transloco }}
+  </p>
+</div>

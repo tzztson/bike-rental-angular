@@ -1,0 +1,37 @@
+@import 'src/styles/scss/variables';
+@import 'src/styles/scss/mixins';
+
+.range-container {
+  border-radius: 4px;
+
+  @apply shadow-md;
+
+  &-with-calendar {
+    max-width: 400px;
+
+    @media screen and (max-width: 420px) {
+      min-width: unset;
+      max-width: unset;
+    }
+  }
+}
+
+::ng-deep .mat-form-field-flex {
+  padding-left: 15px !important;
+}
+
+.range-btn {
+  @apply py-2.5;
+  @apply px-5;
+  @apply text-xs;
+  @apply text-left;
+
+  &:hover {
+    @apply bg-neutral-50;
+  }
+
+  &-active {
+    @apply bg-neutral-50;
+    @apply font-bold;
+  }
+}

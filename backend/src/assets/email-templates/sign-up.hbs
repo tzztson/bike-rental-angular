@@ -1,0 +1,41 @@
+{{> head}}
+
+{{> header}}
+<table
+  style='background-color: white; width: 500px; line-height: 25px; padding-left: 1rem; padding-right: 1rem; padding-bottom: 1rem;'
+>
+  <tr>
+    <td style='padding-top: 4rem; text-align: center;'>
+      {{! <img src='cid:codinglab_logo' alt='logo' /> }}
+    </td>
+  </tr>
+  <tr>
+    <td style='padding-top: 4rem;'>
+      <h1 style='text-align: start;'>
+        Welcome
+      </h1>
+    </td>
+  </tr>
+  <tr>
+    <td style='padding-top: 3rem;'>
+      <label style='font-weight: 600;'>
+        Hi, {{name}}
+      </label>
+      <p>
+        Click on the button below to verify your email.
+      </p>
+      <p style='padding-top: 4rem;'>
+        Thanks for your time,
+      </p>
+      <div style='padding-top: 3rem; text-align: center; padding-bottom: 5rem;'>
+        <a
+          style='color: white; padding: 0.7rem 1.7rem; background-color: #1CD49C; text-decoration: none; border-radius: 3px'
+          href='{{verificationLink}}'
+        >
+          Verify Email
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+{{> footer this}}

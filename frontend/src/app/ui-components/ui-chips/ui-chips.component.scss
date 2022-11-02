@@ -1,0 +1,28 @@
+@import 'src/styles/scss/variables';
+
+.chip {
+  border-radius: 4px;
+  padding: 0.3em 0.5em;
+  font-size: 16px;
+  display: inline-block;
+
+  &-shadow {
+    background-color: #f6f9fc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  &-none {
+    background-color: $color-light;
+    color: $color-dark;
+    font-family: $font-family-bold;
+  }
+
+  &-icon {
+    padding-right: 0.2em;
+    max-height: 14px;
+  }
+
+  &-icon::before {
+    font-size: 13px;
+  }
+}

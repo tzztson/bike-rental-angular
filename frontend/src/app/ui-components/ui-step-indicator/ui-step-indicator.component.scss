@@ -1,0 +1,59 @@
+@import 'src/styles/scss/variables';
+@import 'src/styles/scss/mixins';
+
+$transition-speed: 0.3s;
+
+.step-indicator-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+
+  .step {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    font-family: $font-family-bold;
+
+    .step-number {
+      cursor: pointer;
+      background-color: $color-dark;
+      width: calc(5rem / 3);
+      height: calc(5rem / 3);
+      border-radius: 50%;
+      color: white;
+      padding-top: 0.1rem;
+      text-align: center;
+
+      @include transition(background-color $transition-speed);
+
+      &.active {
+        background-color: $color-blue;
+      }
+    }
+
+    &:not(:first-child) {
+      flex-grow: 1;
+
+      .step-number {
+        &::before {
+          display: block;
+          content: '';
+          width: calc(100% - 1.5rem);
+          height: 0;
+          border: 3px solid #617487;
+          background-color: #617487;
+          position: absolute;
+          left: -0.09rem;
+          top: 0.7rem;
+          z-index: auto;
+          transition: border-color 0.5s;
+        }
+
+        &.active::before {
+          border-color: $color-blue;
+          background-color: $color-blue;
+        }
+      }
+    }
+  }
+}

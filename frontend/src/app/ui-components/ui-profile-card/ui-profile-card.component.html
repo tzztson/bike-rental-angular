@@ -1,0 +1,55 @@
+<div class="wrapper">
+  <div class="card-content">
+    <div class="card-content-photo">
+      <div class="card-content-photo-online" [class.online]="freelancer?.isOnline"></div>
+      <img class="card-photo-img" [src]="freelancer?.profilePictureUrl" />
+    </div>
+
+    <div class="card-content-title">
+      <div class="card-content-name-name text-center">{{ freelancer?.fullName }}</div>
+      <div class="card-content-name-position text-center">
+        <span *ngFor="let position of freelancer?.positions; let last = last">
+          {{ position }}
+          <span *ngIf="!last"> | </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="card-content-info">
+      <div class="card-content-info-rate">
+        <p class="card-content-info-label">{{ 'common.labels.hourly-rate' | transloco }}</p>
+        <p>
+          {{ 'common.durations.hourly-rate.min-selected-rate' | transloco: { minRate: freelancer.minHourlyRate || 0 } }}
+          -
+          {{
+            'common.durations.hourly-rate.max-selected-rate'
+              | transloco
+                : {
+                    maxRate: freelancer.preferredRate || ''
+                  }
+          }}
+        </p>
+      </div>
+      <div class="card-content-info-availability">
+        <p class="card-content-info-label">{{ 'common.labels.availability' | transloco }}</p>
+        <p>
+          {{
+            'common.durations.hours'
+              | transloco
+                : {
+                    minHour: freelancer.minWorkingHours || 0,
+                    maxHour: freelancer.maxWorkingHours || 0
+                  }
+          }}
+        </p>
+      </div>
+    </div>
+
+    <div class="card-content-buttons">
+      <ui-button class="action-button" color="primary" shape="block" size="sm">
+        {{ 'profile-card.buttons.view-profile' | transloco }}
+      </ui-button>
+      <ui-button class="action-button" shape="block" size="sm"><i class="fas fa-envelope"></i></ui-button>
+    </div>
+  </div>
+</div>

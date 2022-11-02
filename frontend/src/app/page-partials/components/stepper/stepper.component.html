@@ -1,0 +1,3 @@
+<div class="w-100 step-content" *ngFor="let step of steps; let i = index" [@stepTransition]="_getAnimationDirection(i)">
+  <ng-container [ngTemplateOutlet]="step.content"></ng-container>
+</div>

@@ -1,0 +1,13 @@
+# This file defines code owners using the following
+# GitLab subgroups of CodingLab organization:
+# @devops - @ismail-codinglab, @orzeh, @shivakumard
+# @frontend-developers - @ismail-codinglab, @stefan-nedelchev, @stepan_ua
+
+# all files owned by frontend developers by default
+* @codinglab-team/frontend-developers
+
+# files managed by dev ops engineers
+.gitlab-ci.yml @codinglab-team/devops
+*.sh @codinglab-team/devops
+Dockerfile @codinglab-team/devops
+.dockerignore @codinglab-team/devops

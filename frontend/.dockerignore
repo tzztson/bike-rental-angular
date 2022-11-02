@@ -1,0 +1,10 @@
+*
+!src/
+!angular.json
+!tsconfig.json
+!package*.json
+!webpack.extra.js
+!data-cy-loader.js
+!pipeline/nginx.conf
+!pipeline/docker-entrypoint.sh
+!pipeline/clear-test-attributes.js

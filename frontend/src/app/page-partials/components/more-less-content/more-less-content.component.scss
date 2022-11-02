@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+.wrapper {
+  word-break: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  visibility: hidden;
+}

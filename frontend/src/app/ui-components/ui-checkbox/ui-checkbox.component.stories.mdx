@@ -1,0 +1,87 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { UiCheckboxComponent } from './ui-checkbox.component';
+import { TestCheckboxComponent } from './ui-checkbox.component.stories.ts';
+import { ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { moduleMetadata } from '@storybook/angular';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TranslocoService } from '@ngneat/transloco';
+import { TranslocoRootModule } from 'src/app/transloco-root.module';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+import { UiComponentsModule } from '../ui-components.module';
+import { TestDocComponent, HttpLoaderFactory, translateModuleConfig } from './ui-checkbox.component.stories.ts';
+
+<Meta
+  title="UiCheckboxComponent"
+  decorators={[
+    moduleMetadata({
+      declarations: [TestCheckboxComponent, UiCheckboxComponent],
+      imports: [ReactiveFormsModule, HttpClientModule, TranslocoRootModule],
+      providers: [HttpClient, TranslocoService],
+    }),
+  ]}
+/>
+
+# Usage example
+
+Checkbox with label
+
+<Story name="Docs" height="auto">
+  {{
+    component: TestCheckboxComponent,
+    props: {
+      colorSelect: 'dark',
+      labelText: 'Test checkbox',
+    },
+  }}
+</Story>
+
+<!-- A spacer to separate the story iframe from the snippet header -->
+
+<div className="mb-5"></div>
+
+### demo.module.ts
+
+```ts
+// import the UI Components module in your module
+import { UiComponentsModule } from 'src/app/ui-components/ui-components.module';
+
+@NgModule({
+  imports: [UiComponentsModule]
+})
+export class AppModule(){}
+```
+
+### demo.component.html
+
+```html
+<form [formGroup]="testForm" class="p-3 mb-1">
+  <ui-checkbox controlName="testCheckbox" [label]="labelText" [color]="colorSelect"></ui-checkbox>
+</form>
+<div class="px-3 mb-4">Is checkbox checked: {{ testCheckbox.value }}</div>
+```
+
+### demo.component.ts
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'demo-checkbox',
+  templateUrl: './demo-checkbox.component.html',
+})
+export class DemoCheckboxComponent {
+  colorSelect = 'dark';
+  labelText = 'Test Checkbox';
+  testForm = new FormGroup({
+    testCheckbox: new FormControl(false),
+  });
+  testCheckbox = testForm.get('testCheckbox');
+
+  constructor();
+}
+```
+
+## Props
+
+<Props of={UiCheckboxComponent} />

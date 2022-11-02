@@ -1,0 +1,18 @@
+.mat-snack-bar-container {
+  //TODO change it whe create-resume PR will be merged
+  font-weight: 600;
+  width: 80vw;
+  max-width: unset;
+  min-width: unset;
+}
+
+.snack-message {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &-cross {
+    cursor: pointer;
+  }
+}

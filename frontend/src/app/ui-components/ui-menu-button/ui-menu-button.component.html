@@ -1,0 +1,13 @@
+<button
+  mat-mini-fab
+  [matMenuTriggerFor]="menu"
+  [class]="['button-' + color]"
+  aria-label="Example icon button with a home icon"
+>
+  <i class="fas fa-ellipsis-h"></i>
+</button>
+<mat-menu [xPosition]="xPosition" [yPosition]="yPosition" #menu="matMenu">
+  <button (click)="doAction(menuItem)" *ngFor="let menuItem of listMenu" mat-menu-item>
+    <span>{{ menuItem.label }}</span>
+  </button>
+</mat-menu>

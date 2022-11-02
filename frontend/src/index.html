@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Miami motorcycle rental" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="TODO add description" />
+    <!-- Site Titles  -->
+    <title>Miami motorcycle rental</title>
+    <base href="/" />
+    <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
+  </head>
+  <body>
+    <!-- LOGGING START (ONLY USE WHEN DEBUGGING E2E tests)
+    <h5
+      id="mylog"
+      style="position: absolute; bottom: 200px; left: 400px; z-index: 99999; background: grey; color: black;"
+    ></h5>
+    <script>
+      var baseLogFunction = console.log;
+      console.log = function () {
+        baseLogFunction.apply(console, arguments);
+
+        var args = Array.prototype.slice.call(arguments);
+        for (var i = 0; i < args.length; i++) {
+          var node = createLogNode(args[i]);
+          document.querySelector('#mylog').appendChild(node);
+        }
+      };
+      var baseErrorFunction = console.error;
+      console.error = function () {
+        baseErrorFunction.apply(console, arguments);
+
+        var args = Array.prototype.slice.call(arguments);
+        for (var i = 0; i < args.length; i++) {
+          var node = createLogNode(args[i]);
+          document.querySelector('#mylog').appendChild(node);
+        }
+      };
+
+      var baseWarnFunction = console.warn;
+      console.warn = function () {
+        baseWarnFunction.apply(console, arguments);
+
+        var args = Array.prototype.slice.call(arguments);
+        for (var i = 0; i < args.length; i++) {
+          var node = createLogNode(args[i]);
+          document.querySelector('#mylog').appendChild(node);
+        }
+      };
+
+      function createLogNode(message) {
+        var node = document.createElement('div');
+        var textNode = document.createTextNode(message);
+        node.appendChild(textNode);
+        return node;
+      }
+
+      window.onerror = function (message, url, linenumber) {
+        console.log('JavaScript error: ' + message + ' on line ' + linenumber + ' for ' + url);
+      };
+    </script>
+
+    <!-- LOGGING END -->
+    <app-root>
+      <div style="text-align: center; opacity: 0.035">
+        <h1>...</h1>
+      </div>
+    </app-root>
+  </body>
+</html>

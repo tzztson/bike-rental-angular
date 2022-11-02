@@ -1,0 +1,49 @@
+@import 'src/styles/scss/variables';
+
+button {
+  padding-left: map-get($map: $spacers, $key: 2);
+  padding-right: map-get($map: $spacers, $key: 2);
+  font-family: $font-family-bold;
+  border: none;
+  background-color: transparent;
+}
+
+.not-active {
+  cursor: unset;
+  color: $border-color;
+}
+
+.drop-down {
+  &-btn {
+    width: 150px;
+    font-family: $font-family-bold;
+    padding: 0.2rem 0.9rem;
+    border: none;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      display: block;
+    }
+
+    i {
+      display: block;
+      align-self: center;
+    }
+  }
+}
+
+.dropdown-item:hover {
+  background-color: $color-light;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+::ng-deep .pagination {
+  margin-bottom: 0;
+}

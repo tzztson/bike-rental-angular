@@ -1,0 +1,318 @@
+<div class="h-[70px] py-2 pl-[20px] lg:pl-[120px] md:pl-[100px] sm:pl-[80px] my-auto text-center bg-white">
+  <img height="53px" width="152px" src="assets/images/logo/logo.svg" class="logo" alt="logo" />
+</div>
+
+<div class="container h-100 hide-scroll">
+  <p class="mt-10 text-2xl font-bold text-center">Rent A BMW G310R</p>
+  <div class="mt-5 row justify-content-center">
+    <div class="col-12 col-md-8">
+      <ui-step-indicator (step)="nextStep(stepper, $event)" [currentStep]="currentStep" [totalSteps]="totalSteps">
+      </ui-step-indicator>
+    </div>
+    <div *ngIf="currentStep == 1" class="pt-4 text-center w-100">
+      <p class="mb-4 leading-6 text-black-100">Register for booking</p>
+    </div>
+    <section class="col-12 col-md-8 w-100 form">
+      <app-stepper
+        [nextStep]="currentStep"
+        linear
+        #stepper
+        (selectionChange)="changeCurrentStep($event)"
+        class="app-stepper"
+      >
+        <cdk-step class="bg-white" [completed]="firstStepFormGroup.valid" [stepControl]="firstStepFormGroup">
+          <form
+            class="bg-white my-auto rounded px-[15px] lg:px-[76px] md:px-[32px] sm:px-[16px] pt-[20px] pb-[40px] lg:py-[76px] md:py-[32px] sm:py-[16px]"
+            [formGroup]="firstStepFormGroup"
+          >
+            <p class="font-bold mb-2 text-sm !leading-6">Personal Details</p>
+            <div class="mb-1 row">
+              <div class="pr-0 col-6">
+                <ui-input
+                  label="First Name"
+                  [errorMessages]="errors.firstName"
+                  controlName="firstName"
+                  placeHolder="Enter your first name"
+                ></ui-input>
+              </div>
+              <div class="pl-2 col-6">
+                <ui-input
+                  label="Last Name"
+                  controlName="lastName"
+                  [errorMessages]="errors.lastName"
+                  placeHolder="Enter your last name"
+                ></ui-input>
+              </div>
+            </div>
+            <ui-input
+              [errorMessages]="errors.email"
+              label="Email"
+              type="email"
+              controlName="email"
+              placeHolder="Enter your email"
+            ></ui-input>
+            <div class="relative mt-1 mb-4">
+              <ui-input
+                label="Phone number"
+                type="tel"
+                controlName="phoneNumber"
+                placeHolder="Enter your first name"
+                [errorMessages]="errors.phoneNumber"
+              ></ui-input>
+              <div class="leading-[0px] text-[10px] w-max">
+                We will send a verification code on your phone no. to verify it
+              </div>
+            </div>
+            <div class="mb-1">
+              <p class="font-bold text-sm !leading-6 mb-1">Date of Birth</p>
+
+              <div class="row">
+                <div class="pt-1 pr-1 mx-0 col-4">
+                  <mat-form-field name class="w-full" appearance="outline">
+                    <mat-label>Month</mat-label>
+                    <mat-select formControlName="monthOfBirth">
+                      <mat-option ngDefaultControl *ngFor="let month of monthsList" [value]="month">{{
+                        month
+                      }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="px-1 pt-1 mx-0 col-4">
+                  <mat-form-field class="w-full" appearance="outline">
+                    <mat-label>Day</mat-label>
+                    <mat-select formControlName="dayOfBirth">
+                      <mat-option *ngFor="let day of monthDaysListInNumbers" [value]="day">{{ day }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="pt-1 pl-1 mx-0 col-4">
+                  <mat-form-field class="w-full" appearance="outline">
+                    <mat-label>Year</mat-label>
+                    <mat-select formControlName="yearOfBirth">
+                      <mat-option *ngFor="let year of yearsList" [value]="year">{{ year }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div
+                *ngIf="
+                  firstStepFormGroup.controls.monthOfBirth.errors && firstStepFormGroup.controls.monthOfBirth.touched
+                "
+                class="error-messages"
+              >
+                <p
+                  *ngFor="let messageKey of ['required']"
+                  [hidden]="!firstStepFormGroup.controls.monthOfBirth.errors[messageKey]"
+                >
+                  {{ errors.monthOfBirth[messageKey] | transloco }}
+                </p>
+              </div>
+              <div
+                *ngIf="firstStepFormGroup.controls.dayOfBirth.errors && firstStepFormGroup.controls.dayOfBirth.touched"
+                class="error-messages"
+              >
+                <p
+                  *ngFor="let messageKey of ['required']"
+                  [hidden]="!firstStepFormGroup.controls.dayOfBirth.errors[messageKey]"
+                >
+                  {{ errors.dayOfBirth[messageKey] | transloco }}
+                </p>
+              </div>
+              <div
+                *ngIf="
+                  firstStepFormGroup.controls.yearOfBirth.errors && firstStepFormGroup.controls.yearOfBirth.touched
+                "
+                class="error-messages"
+              >
+                <p
+                  *ngFor="let messageKey of ['required']"
+                  [hidden]="!firstStepFormGroup.controls.yearOfBirth.errors[messageKey]"
+                >
+                  {{ errors.yearOfBirth[messageKey] | transloco }}
+                </p>
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-sm mb-2 !leading-6">Home Address</p>
+              <mat-form-field class="w-full" appearance="outline">
+                <mat-label>Country</mat-label>
+                <mat-select formControlName="country">
+                  <mat-option *ngFor="let country of countriesList" [value]="country">{{ country }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <div
+                *ngIf="firstStepFormGroup.controls.country.errors && firstStepFormGroup.controls.country.touched"
+                class="mb-3 error-messages"
+              >
+                <p
+                  *ngFor="let messageKey of ['required']"
+                  [hidden]="!firstStepFormGroup.controls.country.errors[messageKey]"
+                >
+                  {{ errors.country[messageKey] | transloco }}
+                </p>
+              </div>
+              <div class="mt-1 mb-1 row">
+                <div class="mb-1 lg:!mb-0 md:!mb-0 lg:pr-0 md:pr-0 col-12 col-lg-6 col-md-6">
+                  <ui-input
+                    label="Street Address"
+                    [errorMessages]="errors.streetAddress"
+                    controlName="streetAddress"
+                    placeHolder="Street Address"
+                  ></ui-input>
+                </div>
+                <div class="lg:pl-2 md:pl-2 col-12 col-lg-6 col-md-6">
+                  <ui-input
+                    label="Apt. Suite (Optional)"
+                    controlName="aptSuite"
+                    placeHolder="Apt. Suite (Optional)"
+                    [errorMessages]="errors.aptSuite"
+                  ></ui-input>
+                </div>
+              </div>
+              <ui-input
+                label="City"
+                type="tel"
+                [errorMessages]="errors.city"
+                controlName="city"
+                placeHolder="City"
+              ></ui-input>
+              <div class="mt-1 row">
+                <div class="pr-2 col-6">
+                  <ui-input
+                    label="State"
+                    [errorMessages]="errors.state"
+                    controlName="state"
+                    placeHolder="State"
+                  ></ui-input>
+                </div>
+                <div class="pl-0 col-6">
+                  <ui-input
+                    [errorMessages]="errors.postalCode"
+                    label="Postal Code"
+                    controlName="postalCode"
+                    placeHolder="Postal Code"
+                  ></ui-input>
+                </div>
+              </div>
+            </div>
+          </form>
+        </cdk-step>
+        <cdk-step [completed]="secondStepFormGroup.valid" [stepControl]="secondStepFormGroup">
+          <p class="mt-6 mb-4 text-base text-center">Select your Pickup Date/Time and Drop off Date/Time</p>
+          <form
+            class="bg-white rounded px-[15px] lg:px-[76px] md:px-[32px] sm:px-[16px] pt-[20px] pb-[40px] lg:py-[76px] md:py-[32px] sm:py-[16px]"
+            [formGroup]="secondStepFormGroup"
+          >
+            <div>
+              <div class="text-sm !leading-6 font-bold">
+                <p>Pickup date & time</p>
+              </div>
+              <div class="row">
+                <div class="pt-2 col-12 col-lg-6">
+                  <ovn-ui-date-range-picker
+                    [currentDate]="startDate"
+                    [startDate]="startDate"
+                    [endDate]="endDate"
+                    (selectedDateRangeEmitter)="updateDateRange($event)"
+                    class="w-full"
+                    label="Date"
+                    placeHolder="Pickup date"
+                    formControlName="pickupDate"
+                  >
+                  </ovn-ui-date-range-picker>
+                </div>
+                <div class="pt-2 col-12 col-lg-6">
+                  <mat-form-field class="w-full" appearance="outline">
+                    <mat-label>Time</mat-label>
+                    <mat-select formControlName="pickupTime">
+                      <mat-option *ngFor="let time of timeValues" [value]="time">{{ time }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="text-sm !leading-6 font-bold">
+                <p>Drop-off date & time</p>
+              </div>
+              <div class="row">
+                <div class="pt-2 col-12 col-lg-6">
+                  <ovn-ui-date-range-picker
+                    [currentDate]="endDate"
+                    [startDate]="startDate"
+                    [endDate]="endDate"
+                    (selectedDateRangeEmitter)="updateDateRange($event)"
+                    class="w-full"
+                    placeHolder="Drop-off date"
+                    label="Date"
+                    formControlName="dropoffDate"
+                  >
+                  </ovn-ui-date-range-picker>
+                </div>
+                <div class="pt-2 col-12 col-lg-6">
+                  <mat-form-field class="w-full" appearance="outline">
+                    <mat-label>Time</mat-label>
+                    <mat-select formControlName="dropoffTime">
+                      <mat-option *ngFor="let time of timeValues" [value]="time">{{ time }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <!-- You get a discount area -->
+              <div
+                class="min-h-[75px] lg:!min-h-[60px] md:!min-h-[60px] flex flex-row my-auto mx-auto font-semibold bg-blue-100 rounded"
+              >
+                <div class="my-auto flex-none ml-[17px] mr-[13px]">
+                  <img
+                    height="18px"
+                    width="18px"
+                    class="inline"
+                    src="../../../../assets/images/icons/discount-details-icon.svg"
+                  />
+                </div>
+                <div class="text-[14px] font-semibold my-auto pt-1 pb-1">
+                  <p>You get discount when you book for more than 1 day.</p>
+                  <p class="underline cursor-pointer">View Discount Details</p>
+                </div>
+              </div>
+              <!-- You have saved area -->
+              <div class="mt-3 text-left">
+                <span> $51.20 x 5 Days </span>
+                <span class="hidden text-blue-200 lg:inline md:inline sm:inline"> (You saved $XXX) </span>
+                <span class="float-right"> $256.00 </span>
+              </div>
+              <p class="text-blue-200 lg:hidden md:hidden sm:hidden">(You saved $XXX)</p>
+            </div>
+          </form>
+        </cdk-step>
+        <cdk-step> three </cdk-step>
+        <cdk-step> four </cdk-step>
+        <cdk-step> five </cdk-step>
+      </app-stepper>
+
+      <div class="mt-8 d-flex justify-content-center">
+        <ui-button
+          class="pr-3"
+          *ngIf="currentStep > 1"
+          (click)="previousStep(stepper)"
+          iconName="back"
+          size="sm"
+          textColor="dark"
+          disabled="true"
+          shape="link"
+          color="dark"
+        >
+          {{ 'common.buttons.back' | transloco }}
+        </ui-button>
+        <ng-container *ngIf="currentStep < totalSteps; else saveBtn">
+          <ui-button size="sm" (click)="nextStep(stepper)" iconName="next" color="primary">
+            {{ 'common.buttons.next' | transloco }}
+          </ui-button>
+        </ng-container>
+        <ng-template #saveBtn>
+          <ui-button size="sm" (click)="onSubmit()" color="primary">
+            {{ 'common.buttons.save' | transloco }}
+          </ui-button>
+        </ng-template>
+      </div>
+    </section>
+  </div>
+</div>

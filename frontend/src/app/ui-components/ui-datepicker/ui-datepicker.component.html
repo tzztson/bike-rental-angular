@@ -1,0 +1,22 @@
+<div class="d-flex">
+  <div>
+    <div class="hide-input" [formGroup]="parentForm">
+      <input [max]="maxDate" [min]="minDate" [formControlName]="controlName" [matDatepicker]="datePicker" />
+      <mat-datepicker [touchUi]="isMobileResolutions$ | async" color="primary" #datePicker></mat-datepicker>
+    </div>
+    <button
+      type="button"
+      [ngClass]="['btn', 'btn-' + color, 'btn-' + shape, 'btn-date-' + size]"
+      (click)="datePicker.open()"
+    >
+      <i *ngIf="showIcon" class="far fa-calendar-alt"></i>
+      <span *ngIf="text">{{ text | transloco }}</span>
+    </button>
+  </div>
+  <div class="pl-2 align-self-center">{{ formattedPickedDate }}</div>
+</div>
+<div *ngIf="errorMessageKeys && formControl.errors && formControl.touched" class="error-messages">
+  <p *ngFor="let messageKey of errorMessageKeys" [hidden]="!formControl.errors[messageKey]">
+    {{ errorMessages[messageKey] | transloco }}
+  </p>
+</div>

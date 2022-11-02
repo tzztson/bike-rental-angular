@@ -1,0 +1,226 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "admin-panel": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.extra.js",
+              "mergeStrategies": {
+                "externals": "append"
+              }
+            },
+            "aot": true,
+            "outputPath": "dist/admin-panel/browser",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "src/styles.scss"],
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "lodash",
+              "@bugsnag/js",
+              "ng5-slider",
+              "cookie-storage",
+              "@feathersjs/socketio-client",
+              "@feathersjs/feathers",
+              "socket.io-client",
+              "feathers-reactive",
+              "@feathersjs/authentication-client",
+              "rxjs/operators",
+              "rxjs"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "index": {
+                "output": "index.html",
+                "input": "src/index.prod.html"
+              },
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
+            "development": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": false,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "namedChunks": true,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": true
+            },
+            "default": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "fileReplacements": [],
+              "optimization": false,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "namedChunks": true,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "defaultConfiguration": "default",
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "options": {
+            "browserTarget": "admin-panel:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "admin-panel:build:production"
+            },
+            "development": {
+              "browserTarget": "admin-panel:build:development"
+            },
+            "default": {
+              "browserTarget": "admin-panel:build:default"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "admin-panel:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "snapshotSerializers": [
+              "<rootDir>/node_modules/jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js",
+              "<rootDir>/node_modules/jest-preset-angular/build/AngularSnapshotSerializer.js",
+              "<rootDir>/node_modules/jest-preset-angular/build/HTMLCommentSerializer.js"
+            ]
+          }
+        },
+        "server": {
+          "builder": "@angular-builders/custom-webpack:server",
+          "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.server.config.js"
+            },
+            "outputPath": "dist/admin-panel/server",
+            "main": "server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "admin-panel:build",
+            "serverTarget": "admin-panel:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "admin-panel:build:production",
+              "serverTarget": "admin-panel:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "admin-panel:build:production",
+            "serverTarget": "admin-panel:server:production",
+            "guessRoutes": false,
+            "routes": ["/landing"]
+          },
+          "configurations": {
+            "production": {}
+          }
+        }
+      }
+    },
+    "admin-panel-e2e": {
+      "root": "e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "admin-panel:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "admin-panel:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "admin-panel",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}

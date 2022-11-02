@@ -1,0 +1,156 @@
+@import 'src/styles/scss/buttons';
+@import 'src/styles/scss/variables.scss';
+
+$square-button-size: 12.5rem;
+
+$transition-speed: 0.2s;
+
+label {
+  display: block;
+  position: relative;
+  padding-left: calc(5rem / 3);
+  cursor: pointer;
+
+  @include user-select(none);
+
+  .checkmark {
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    background-color: transparent;
+    border: 1px solid $color-dark;
+    border-radius: 3px;
+
+    &.checkmark-dark {
+      border-color: $color-dark;
+    }
+
+    &.checkmark-primary {
+      border-color: $color-primary;
+    }
+
+    &.checkmark-secondary {
+      border-color: $color-secondary;
+    }
+
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      left: 0.25rem;
+      top: 0.02rem;
+      width: 0.4rem;
+      height: calc(2rem / 3);
+      border: solid white;
+      border-width: 0 0.1rem 0.1rem 0;
+      opacity: 0;
+
+      @include transform(rotate(45deg));
+      @include transition(opacity $transition-speed);
+    }
+  }
+
+  &:hover input ~ .checkmark {
+    &.checkmark-dark {
+      background-color: $color-dark-light;
+    }
+
+    &.checkmark-primary {
+      background-color: $color-primary-light;
+    }
+
+    &.checkmark-secondary {
+      background-color: $color-secondary-light;
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked ~ .checkmark {
+      &.checkmark-dark {
+        background-color: $color-dark;
+      }
+
+      &.checkmark-primary {
+        background-color: $color-primary;
+      }
+
+      &.checkmark-secondary {
+        background-color: $color-secondary;
+      }
+    }
+
+    &:checked ~ .checkmark::after {
+      opacity: 1;
+    }
+  }
+}
+
+.btn {
+  height: 250px;
+  width: 250px;
+  color: $color-body-font;
+  background-color: white;
+
+  padding: {
+    top: 2em;
+    bottom: 5em;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  .btn-text {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 2em;
+    width: 100%;
+    text-align: center;
+    font-size: 1.15rem;
+  }
+
+  &:hover {
+    background-color: $color-primary-transparent;
+  }
+
+  &:focus,
+  &:active,
+  &.active {
+    color: white;
+    background-color: $color-primary;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .btn {
+    // max-height: 300px;
+    height: 250px;
+    width: 250px;
+    // .btn-text{
+    //   bottom: 2.5em;
+    //   width: 100%;
+    //   font-size: 19px;
+    // }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .btn {
+    // max-height: 300px;
+    height: 45vw;
+    width: 45vw;
+
+    .btn-text {
+      bottom: 1rem;
+      padding: 0 0.2rem;
+    }
+  }
+}

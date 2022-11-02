@@ -1,0 +1,15 @@
+@import 'src/styles/scss/variables';
+
+.menu {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  outline: none;
+}
+
+.active-item {
+  color: $color-primary;
+  background-color: $color-blue-light;
+}

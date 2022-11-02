@@ -1,0 +1,1813 @@
+{
+  "common": {
+    "labels": {
+      "currency": "€ {{amount}}",
+      "loading": "Loading..",
+      "freelancer": "Freelancer",
+      "client": "Client",
+      "status": "Status",
+      "approved": "Approved",
+      "decline": "Decline",
+      "declined": "Declined",
+      "rate": "Rate",
+      "hourly-rate": "Hourly rate",
+      "location": "Location",
+      "hours-abbreviation": "hrs",
+      "need-help": "Need help?",
+      "contact-support": "Contact Support",
+      "technology": "Technology",
+      "remote-work": "Remote work",
+      "office-work": "Office work",
+      "congratulations": "Congratulations!",
+      "remote": "Remote",
+      "on-site": "On-site",
+      "optional": "optional",
+      "company-name": "Company name",
+      "description": "Description",
+      "languages": "Languages",
+      "skills": "Skills",
+      "skill": "Skill",
+      "contact-info": "Contact information",
+      "technologies": "Technologies",
+      "hint": "Hint",
+      "set-rate": "Set your hourly rate",
+      "availability": "Availability",
+      "immediately": "Immediately",
+      "hours-per-week": "Working hours per week",
+      "not-set": "Not set",
+      "industry": "Industry"
+    },
+    "months": {
+      "months": "{{months}} months",
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "durations": {
+      "hours": "{{minHour}} hrs - {{maxHour}} hrs",
+      "month": "{{month}} Months",
+      "working-hours-options": {
+        "min-selected-hour": "Min. {{minHour}} hours",
+        "max-selected-hour": "Max. {{maxHour}} hours"
+      },
+      "hourly-rate": {
+        "currency": "€ {{rate}}",
+        "min-selected-rate": "Min. € {{minRate}}",
+        "max-selected-rate": "Max. € {{maxRate}}"
+      }
+    },
+    "messages": {
+      "file-too-big": "The file is too large, maximum 5mb",
+      "file-not-accepted": "This file type is not accepted. Upload an image or document",
+      "start-date-required": "Please enter a start date",
+      "description-required": "Please enter a description",
+      "hourly-rate-required": "Please enter an hourly rate",
+      "too-many-role-selected": "Your functions are too broad, try to focus on a sector.",
+      "enter-valid-email": "Please enter a valid email address",
+      "enter-your-email": "Please enter your email address"
+    },
+    "buttons": {
+      "yes": "Yes",
+      "no": "No",
+      "more": "more",
+      "less": "less",
+      "export-pdf": "Export PDF",
+      "approve": "Approve",
+      "decline": "Decline",
+      "ok": "ok",
+      "send": "Send",
+      "sign-up": "Sign up",
+      "download-resume": "Download resume",
+      "upload-resume": "Upload resume",
+      "update": "Update",
+      "cancel": "Cancel",
+      "view-responses": "View responses",
+      "download": "Download",
+      "login": "Login",
+      "view-details": "View details",
+      "continue": "Continue",
+      "contact-support": "Contact Support",
+      "back": "Back",
+      "next": "Next",
+      "first": "First",
+      "last": "Last",
+      "hire": "Hire",
+      "invite": "Invite",
+      "save": "Save",
+      "find-job": "Find a job",
+      "sort": "Sort:",
+      "language": "Language",
+      "subscribe": "Subscribe",
+      "close": "Close",
+      "filter": "Filter"
+    },
+    "validations": {
+      "email": {
+        "required": "Please enter your email address",
+        "valid": "Please enter a valid email address"
+      }
+    }
+  },
+  "admin-home": {
+    "labels": {
+      "contracts-to-check": "Number of contracts to check:",
+      "invoices-to-check": "Number of invoices to check:",
+      "invoices-to-pay": "Number of invoices to pay:",
+      "invoices-to-receive": "Number of invoices to receive:",
+      "jobs-to-check": "Number of assignments to check:",
+      "responses-to-check": "Number OF Responses to controller:"
+    }
+  },
+  "administration": {
+    "title": "Administration"
+  },
+  "forgot-password": {
+    "labels": {
+      "title": "Forgot your password",
+      "not-a-member": "Not a member yet?",
+      "recovery-password": "Recover your password",
+      "dont-worry": "Dont worry! We are here to help you...",
+      "resend-recovery-code": "You will be able to resend the recovery code after {{time}} seconds",
+      "email": "Email address"
+    },
+    "validations": {
+      "email": {
+        "required": "Please enter your email address",
+        "valid": "Please enter a valid email address"
+      }
+    },
+    "buttons": {
+      "signup": "Sign up",
+      "email-me": "Email me",
+      "submit": "Send",
+      "back-login": "Back to login"
+    },
+    "messages": {
+      "email-not-found": "Oops! We didn't find the provided email address",
+      "please-contact-admin": "Something went wrong, please contact the administrators"
+    }
+  },
+  "forgot-password-change": {
+    "labels": {
+      "verification-code-is-invalid": "Oops. The provided verification code is no longer valid.",
+      "loading": "Verify Verification code..",
+      "change-your-password": "Change your password",
+      "in-order-to-protect": "We advise to use a password manager to protect your password",
+      "reset-successfully": "Your password is changed successfully"
+    },
+    "placeholders": {
+      "password": "New password",
+      "confirm-password": "Repeat new password"
+    },
+    "validations": {
+      "confirm-password": {
+        "required": "Please enter your password again"
+      },
+      "password": {
+        "required": "Please enter a password",
+        "not-match": "The passwords do not match. Please try again",
+        "too-short": "Password must contain at least 3 characters"
+      }
+    },
+    "messages": {
+      "welcome-back": "Welcome back {{user.fullName}}!"
+    },
+    "buttons": {
+      "submit": "Change password"
+    }
+  },
+  "forgot-password-success": {
+    "labels": {
+      "title": "Success!",
+      "change-password-mail": "Within a few minutes you will receive a mail to change your password.",
+      "check-email": "Please check your email to reset your password. We have sent an email to ",
+      "we-sent": "We have sent you an email."
+    },
+    "buttons": {
+      "resend-email": "Resend Email"
+    }
+  },
+  "freelance-profile": {
+    "labels": {
+      "contact-info": "Contact Information",
+      "company-name": "Company name",
+      "phone": "Phone Number",
+      "environment": "and environment",
+      "profile": "Profile",
+      "roles": "* Can be used as",
+      "technology": "* Knowledge and skills",
+      "resume": "Resume",
+      "details": "Bet details",
+      "availability": "Availability",
+      "start-date": "Start date",
+      "success": "Profile has been updated",
+      "select-rate": "Select hourly rate",
+      "remote-possible": "I can work remotely",
+      "hour-per-week": "Working hours per week",
+      "min-selected-hour": "Min. {{minHour}} hours",
+      "max-selected-hour": "Max. {{maxHour}} hours"
+    },
+    "validations": {
+      "roles": {
+        "too-many-selected": "Your functions are too broad, try to focus on a sector."
+      },
+      "form": {
+        "incomplete": "Check if all fields are filled"
+      },
+      "start-date": {
+        "required": "Please enter a start date"
+      },
+      "location": {
+        "required": "Please select your location"
+      },
+      "positions": {
+        "required": "Please select the position(s) you are working in or would like to work in",
+        "min-length": "Please select at least 1 position"
+      },
+      "technologies": {
+        "too-many-selected": "Try to fill in fewer knowledge and skills so that the client knows what you are good at",
+        "required": "Please enter the skills or technologies you would like to work with",
+        "min-length": "Please select at least two skills or technologies"
+      },
+      "hourlyrate": {
+        "required": "Please enter your hourly rate"
+      },
+      "resume": {
+        "required": "Upload your resume"
+      },
+      "working-hours": {
+        "required": "Please provide minimum and maximum working hours"
+      }
+    },
+    "buttons": {
+      "update": "Update",
+      "download-resume": "Download resume"
+    }
+  },
+  "freelancer-home": {
+    "labels": {
+      "dashboard": "Dashboard",
+      "active-clients": "Active clients",
+      "clients": "Clients",
+      "total-hours-worked": "Total hours worked",
+      "hour": "hour",
+      "jobs": "Jobs",
+      "complete-application": "Complete your application to become visible!",
+      "job-matches": "Jobs you might be interested in",
+      "no-matches": "There are currently no jobs that match your skills",
+      "technologies": "Technologies:",
+      "month": "month",
+      "months": "months",
+      "match": "Match"
+    },
+    "buttons": {
+      "complete-application": "Complete application",
+      "read-more": "Read more"
+    }
+  },
+  "hourly-rate-modal": {
+    "labels": {
+      "title": "Hourly rate",
+      "description": "Chance of a match",
+      "side-note": " Amounts quoted are exclusive of VAT",
+      "average-junior-rate": "Average junior rate",
+      "average-senior-rate": "Average senior rate"
+    },
+    "freelancer-rating": {
+      "low-description": "High chance. A good hourly rate for a starting freelancer.",
+      "average-description": "High chance. A good hourly rate for someone with a low number of years experience",
+      "high-description": "Mid chance. For higher educated freelancers who already have a multiple projects to his name",
+      "veryhigh-description": "Special case. For Higher educated freelancers with 5-10+ years of experience",
+      "difficult-description": "Edge case. A professional / expert in his field"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "save": "Save"
+    }
+  },
+  "jobs-create": {
+    "labels": {
+      "keep-track": "Keep track your job and application performance in the dashboard.",
+      "project-duration": "Project duration",
+      "max-rate": "Max hourly rate",
+      "week-hours": "Weekly Hours",
+      "preview": "Preview",
+      "provide-detail": "Provide the basic details for your job",
+      "job-title": "Job title",
+      "create-job": "Create job",
+      "job-description": "Job description",
+      "positions": "Related positions",
+      "technology-stack": "Technology stack",
+      "chose-technologies": "Chose technologies",
+      "chose-location": "Chose location",
+      "description": "Job description",
+      "availability": "Availability",
+      "edit-job": "You are edit job",
+      "creating-job": "You are creating job",
+      "start-date": "Starting date",
+      "working-hour": "Working hours per week",
+      "duration": "Duration of the project",
+      "knowledge-level": "Knowledge level",
+      "max-hour-rate": "Max. Hourly rate",
+      "freelancers-needed": "Number of freelancers",
+      "surroundings": "and surroundings",
+      "need-help": "Need help?",
+      "enter-description": "Enter description of job",
+      "details": "Job details",
+      "remote-possible": "Remote working is possible",
+      "excl-vat": "Excl. VAT",
+      "job-saved": "Job saved",
+      "skills-looking-for": "What skill or position are you looking for?",
+      "chose-skills": "Chose skills",
+      "hint": "Hint",
+      "very-high-rate": "Very High Rates €{{minRate}} - €{{maxRate}}",
+      "enter-job": "Enter the job title"
+    },
+    "validations": {
+      "description": {
+        "required": "Please enter a description",
+        "min-length": "The description is too short. Please write at least 100 characters"
+      },
+      "duration": {
+        "required": "Please enter a duration",
+        "min": "Please fill at least 1 month"
+      },
+      "freelancers": {
+        "required": "Please fill in the number of freelancers you need",
+        "min": "Please fill in at least 1 freelancer"
+      },
+      "max-hourly-rate": {
+        "required": "Please enter an hourly rate",
+        "min-length": "Please fill in an hourly rate of 35 euro or higher"
+      },
+      "technologies": {
+        "required": "Please select the technologies that you are using or want to use",
+        "min-length": "Please select at least 2 technologies",
+        "too-long": "Try to fill in less knowledge and skills so that the freelancers know what you need"
+      },
+      "industries": {
+        "too-many-selected": "Try to fill in fewer industries so that the client knows what you are good at",
+        "required": "Please enter the industries you are interested in",
+        "min-length": "Please select at least two industries"
+      },
+      "position": {
+        "required": "Please enter one or more positions",
+        "too-long": "Your functions are too broad, try to focus on a sector."
+      },
+      "title": {
+        "min-length": "Title must contain at least 5 characters",
+        "required": "Please enter a job title"
+      },
+      "knowledge-level": {
+        "required-one-check": "At least one option should checked"
+      },
+      "startJob": {
+        "required": "Chose start job date"
+      },
+      "location-required": "Please enter a location",
+      "start-date-required": "Please enter a start date"
+    },
+    "messages": {
+      "check-fields": "Make Sure All fields are filled in",
+      "succesfully-saved-as-draft": "Job successfully saved as a draft"
+    },
+    "buttons": {
+      "publish": "Publish",
+      "save": "Save concept",
+      "show-preview": "View example",
+      "click-to-preview": "Click to view in preview",
+      "select-rate": "Select hourly rate",
+      "view-job": "View Job",
+      "edit-job": "Edit Job",
+      "save-job": "Save Job"
+    },
+    "header": "Job description",
+    "working-hours-options": {
+      "min-selected-hour": "Min. {{minHour}} hours",
+      "max-selected-hour": "Max. {{maxHour}} hours"
+    },
+    "hourly-rate": {
+      "min-selected-rate": "Min. € {{minRate}}",
+      "max-selected-rate": "Max. € {{maxRate}}"
+    }
+  },
+  "jobs-create-success-page": {
+    "labels": {
+      "description": "We will check the job for spelling errors, technical errors and other things that stand out. You will receive a notification once the job has been approved!",
+      "sucessfully-created-job": "Great! The job has been created."
+    }
+  },
+  "jobs-overview-page": {
+    "labels": {
+      "title": "Overview jobs",
+      "loading": "Loading jobs ..",
+      "no-job-yet": "You have not yet created a job",
+      "create-job": "Create job",
+      "display-hours": "hours",
+      "not-found-jobs": "Broaden yourself to see more jobs related to your profile"
+    },
+    "table-headers": {
+      "title": "Title",
+      "working-hours": "Working hours",
+      "actions": "Actions"
+    },
+    "action-btns": {
+      "edit": "Edit",
+      "delete": "Remove",
+      "publish-or-edit": "publish / edit",
+      "stop-and-edit": "Stop & edit",
+      "responses": "View responses",
+      "take-offline": "Take offline"
+    },
+    "statusses": {
+      "concept": "Draft",
+      "wait-for-approval": "Waiting for approval",
+      "offline": "Inactive",
+      "published": "Active",
+      "fullfilled": "fulfilled"
+    },
+    "delete-job": {
+      "successful": "Successfully deleted the job {{title}}",
+      "something-went-wrong": "Something went wrong while deleting the job"
+    },
+    "take-offline": {
+      "successful": "Successfully taken the job {{title}} offline",
+      "something-went-wrong": "Something went wrong while taking the job offline"
+    },
+    "modal": {
+      "take-offline": {
+        "title": "Take the job offline",
+        "are-you-sure": "Are you sure you want to take the job <span class='text-info'>\"{{title}}\"</span> offline?"
+      },
+      "delete": {
+        "title": "Delete job",
+        "are-you-sure": "Are you sure you want to delete the job <span class='text-info'>\"{{title}}\"</span>?"
+      }
+    },
+    "buttons": {
+      "delete": "Remove",
+      "publish-or-edit": "publish / edit",
+      "stop-and-edit": "Stop & edit",
+      "take-offline": "Take offline"
+    }
+  },
+  "subscribe-to-get-new-jobs": {
+    "messages": {
+      "didnt-find-what-youre-looking-for": "Didn't find what you're looking for?",
+      "we-will-notify-you": "We will notify you!",
+      "thanks-we-will-notify-you": "Thank you for subscribing, we will notify you of new jobs.",
+      "do-you-want-to-create-account": "Do you want to be more visible to clients? Do you want to get invited for a job and get jobs that match with your profile? Create an account to be more visible"
+    },
+    "labels": {
+      "your-email-here": "Your email here",
+      "subscribe-to-get": "Subscribe to receive notifications for new jobs!",
+      "create-account": "Create an account to be visible to clients and get matching jobs!"
+    }
+  },
+  "jobs-responses-view": {
+    "labels": {
+      "title": "Applications of",
+      "profile": "Profile",
+      "positions": "Position(s):",
+      "skills": "Skills:",
+      "available-hours": "Hours available:",
+      "hours": "hours",
+      "application": "Application",
+      "match": "{{match}}% Match",
+      "applied-on": "Applied on",
+      "motivation": "Motivation:",
+      "method": "Method",
+      "description": "Description",
+      "date": "Date",
+      "attachment": "Attachment",
+      "deadline": "Deadline",
+      "freelancer-response": "Freelancer Response",
+      "url": "URL",
+      "invitation": "Invitation"
+    },
+    "messages": {
+      "invitation-accepted": "Freelancer accepted your invitation",
+      "invitation-success": "Invitation sent successfully"
+    },
+    "buttons": {
+      "download-resume": "Resume",
+      "hire": "Hire",
+      "hired": "Hired",
+      "invite": "Invite",
+      "invited": "Invited",
+      "download": "Download"
+    }
+  },
+  "login": {
+    "labels": {
+      "login-to-my": "Login to my Codinglab",
+      "to-get-work-done-with": "To get work done with CodingLab",
+      "not-a-member": "Not a member?",
+      "or": "OR",
+      "lets-confirm-your-email": "Let's confirm your email",
+      "one-step-left-verify-email": "One more step is left, verify your email and get started. We have sent an email to <span class='text-bold text-primary'>{{email}}</span>"
+    },
+    "placeholders": {
+      "e-mail": "E-mail",
+      "password": "Password"
+    },
+    "validations": {
+      "email": {
+        "required": "Please enter an email address",
+        "valid": "Please enter a valid email address"
+      },
+      "password": {
+        "min-length": "Your password must contain at least 3 characters",
+        "required": "Please enter your password"
+      }
+    },
+    "messages": {
+      "invalid-login": "Your email address or password is invalid"
+    },
+    "buttons": {
+      "forgot-password": "Forgot Your Password?",
+      "login": "Login",
+      "signup": "Sign up",
+      "signin-google": "Sign In With Google",
+      "signin-linkedin": "Sign In With LinkedIn",
+      "resend-confirmation": "Resend Email Confirmation"
+    }
+  },
+  "navbar": {
+    "freelancer-steps": {
+      "title": "Steps",
+      "description": "Follow these steps to apply to your first job",
+      "create-an-account": "Create an account",
+      "create-profile": "Create a profile",
+      "apply-to-job": "Apply to a job",
+      "success-title": "Congratulations!",
+      "all-step-done": "You have completed all your steps",
+      "todo-list": "to-do list",
+      "ok": "ok"
+    },
+    "client-steps": {
+      "title": "Steps",
+      "description": "Follow these steps to post your first job",
+      "create-an-account": "Create an account",
+      "post-a-job": "Post a job",
+      "success-title": "Congratulations!",
+      "all-step-done": "You have completed all your steps",
+      "todo-list": "to-do list",
+      "ok": "ok"
+    },
+    "buttons": {
+      "post-job": "Post a new job",
+      "goto-main-site": "To the main site",
+      "logout": "Logout",
+      "profile": "My Profile"
+    }
+  },
+  "notification-settings": {
+    "labels": {
+      "description": "Here you can manage all your types of notifications.",
+      "send-update-email": "Send me an email about updates",
+      "send-email": "Send me an email for potential assignments"
+    },
+    "messages": {
+      "update-notification-settings": "Update notification settings"
+    },
+    "buttons": {
+      "update": "Update"
+    }
+  },
+  "client-home": {
+    "labels": {
+      "active-freelancer": "Freelancers active",
+      "total-hours-worked": "Total hours worked",
+      "jobs": "Jobs",
+      "loading": "Loading...",
+      "start-job-post": "Welcome! Start by creating a job post",
+      "enter-your-post": "Continue to enter your job post",
+      "application-approved": "Your assignment has been approved! You can now publish your assignment to complete it",
+      "post-is-online": "Hooray! Your job post is online.",
+      "wait-for-approval": "The job is being processed, we will keep you up to date!",
+      "freelancers": "freelancers",
+      "administration": "Manage administration",
+      "total-hours": "Total hours worked",
+      "hours": "Hours",
+      "no-active-jobs": "Welcome back! Create a new job post?"
+    },
+    "buttons": {
+      "create-job": "Create Job",
+      "job-edit": "Complete job application",
+      "publish-job": "Publish Job",
+      "edit-job": "Edit job",
+      "view-responses": "View responses",
+      "create": "Create Job"
+    }
+  },
+  "not-found": {
+    "labels": {
+      "title": "Opps, We can’t find that page!",
+      "description": "Either something went wrong or the page doesn’t exist anymore"
+    },
+    "buttons": {
+      "back": "Back",
+      "home": "Home"
+    }
+  },
+  "profile": {
+    "labels": {
+      "where-are-you-located": "Where are you located?",
+      "or": "OR",
+      "first-step": "Your first step",
+      "my-profile": "My Profile",
+      "not-much-time": "It does not take too much time!",
+      "what-kind-of-work": "What kind of work do you like to do?",
+      "what-knowledge-skills": "What languages, tools & technologies do you know?",
+      "what-industries": "What industries are you interested in?",
+      "what-is-your-hourly-rate": "What is your hourly rate?",
+      "choose-knowledge-skills": "Choose knowledge & skills",
+      "choose-roles": "Choose roles",
+      "choose-location": "Choose location",
+      "choose-industries": "Choose industries",
+      "hint": "Hint:",
+      "very-high-rates": "Very High Rates €{{minRate}} - €{{maxRate}}",
+      "drag-or-upload-cv": "Click or drag here to upload your resume",
+      "drop-file": "Drop files instantly to: Coding Lab Server",
+      "wrong-file-type-resume": "Oops, we can't process that! Could you upload a PDF or DOC(X) file?",
+      "when-available": "When are you available?",
+      "hours-per-week": "Preferred working hours per week",
+      "where-do-you-like-to-work": "Where do you like to work?",
+      "min-hrs": "Min Hrs ",
+      "max-hrs": "Max Hrs ",
+      "how-can-clients-reach-you": "How can clients reach you?",
+      "company-no": "Phone number",
+      "company-name": "Company Name",
+      "min-euro": "Min €",
+      "preferred-euro": "Preferred €",
+      "enter-company": "Enter name of company",
+      "enter-phone": "Enter phone number",
+      "upload-profile-image": "Upload your profile image",
+      "tip-include-what-you-like": "Tip: Make sure you include things you want to work with too!"
+    },
+    "messages": {
+      "welcome-user": "Welcome {{firstName}}.",
+      "lets-create-profile": "Let's create an appealing profile!",
+      "welcome-to": "Welcome to CodingLab!",
+      "enter-details": "Your first step is to enter your details, this helps to make your profile visible for\n              clients and when applying.",
+      "not-allowed-avatar": "Only image with extension allowed (img/png)",
+      "photo-is-small": "Profile photo resolution is too small",
+      "photo-is-large": "Profile photo size is too large, allowed max size{{size}}mb"
+    },
+    "validations": {
+      "working-conditions.required": "Please choose remote and / or office",
+      "technologies.required": "Please select the technologies that you are using or want to use",
+      "position.required": "Please choose one or more positions",
+      "location-required": "Please choose a location"
+    },
+    "buttons": {
+      "freelancer-profile": "Freelancer profile",
+      "notifications": "Notifications",
+      "remove-profile-picture": "Remove profile picture"
+    },
+    "working-hours-options": {
+      "min-selected-hour": "Min. {{minHour}} hours",
+      "max-selected-hour": "Max. {{maxHour}} hours"
+    },
+    "hourly-rate": {
+      "min-selected-rate": "Min. € {{minRate}}",
+      "max-selected-rate": "Max. € {{maxRate}}"
+    }
+  },
+  "job-response-detail": {
+    "labels": {
+      "hours": "hours",
+      "months": "months",
+      "application": "Application",
+      "job-details": "Job details",
+      "job-description": "Job description",
+      "telephone": "Phone Number",
+      "motivation": "Motivation",
+      "resume": "Resume",
+      "invitation": "Invitation",
+      "method": "Method",
+      "canstart": " Start date:",
+      "duration-month": "Duration:",
+      "level": "Level:",
+      "max-working-hours": "Hours per week:",
+      "positions": "Related functions:",
+      "technologies": "Technologies:",
+      "description": "Description",
+      "date": "Date",
+      "attachment": "Attachment",
+      "deadline": "Deadline",
+      "code-url": "Code Url (Git, BitBucket, GitLab)"
+    },
+    "placeholders": {
+      "description": "Description.."
+    },
+    "validations": {
+      "valid-url": "Must be a valid URL"
+    },
+    "messages": {
+      "code-submitted": "You submited code successfully",
+      "invitation-accept": "You accepted this invitation",
+      "update-success": "Update successfully",
+      "code-submit-success": "Code submited successfully"
+    },
+    "buttons": {
+      "download-resume": "Download resume",
+      "invitation": "Invitation",
+      "accept": "Accept",
+      "discuss": "Discuss",
+      "download": "Download",
+      "i-will-be-there": "I will be there",
+      "submit-code": "Submit Code",
+      "go-to-my-app": "Go to my application"
+    }
+  },
+  "submit-code-confirm-modal": {
+    "labels": {
+      "title": "Confirmation!",
+      "text-message": "Are you sure you want to submit code?"
+    }
+  },
+  "responses": {
+    "labels": {
+      "title": "My Applications",
+      "loading": "Loading..",
+      "applied-on": "Applied on",
+      "no-item": "You currently have no applications"
+    },
+    "status": {
+      "incomplete": "Incomplete",
+      "visible": "Send",
+      "needs-review": "Applied",
+      "complete": "Complete"
+    },
+    "buttons": {
+      "details": "View Details",
+      "complete-application": "Complete application"
+    }
+  },
+  "response-detail": {
+    "labels": {
+      "title": "Application on",
+      "respond": "Respond",
+      "loading": "Loading application ..",
+      "motivation": "(Optional) short motivation",
+      "telephone": "Phone Number"
+    },
+    "delete-application": {
+      "are-you-sure": "Are you sure you have the Application on",
+      "want-to-delete": " want to delete?",
+      "title": "Cancel application"
+    },
+    "validations": {
+      "hourly-rate-required": " Please enter an hourly rate",
+      "motivation-required": "Your motivation is too short"
+    },
+    "messages": {
+      "enter-rate": "Enter your rate",
+      "successfully-canceled": "Canceling the application for the job {{title}} has succeeded",
+      "warning": "Something went wrong when canceling the application",
+      "success-description": "Take your time to respond to other jobs!",
+      "success": "Great! Your response has arrived."
+    },
+    "buttons": {
+      "delete-application": "Cancel application",
+      "send-response": "Send response",
+      "go-to-dashboard": "Back to dashboard"
+    }
+  },
+  "sidebar": {
+    "buttons": {
+      "dashboard": "Dashboard",
+      "contracts": "Contracts",
+      "post-a-job": "Post a job",
+      "invoices": "Invoices",
+      "freelancers": "My freelancers",
+      "my-profile": "My Profile",
+      "my-responses": "My applications",
+      "jobs": "Jobs",
+      "reports": "Time reports",
+      "responses": "Responses",
+      "referral": "Referral",
+      "statistics": "Statistics",
+      "invites": "Invitations",
+      "time-logs": "Time management",
+      "view-jobs": "View Jobs",
+      "main-site": "Go to the main site",
+      "messages": "Messages",
+      "billing": "Billing"
+    }
+  },
+  "signup-page": {
+    "labels": {
+      "terms-and-conditions-link-text": "Terms and Conditions.",
+      "i-agree-with-the": "I agree with the",
+      "already-a-member": " Already a member?",
+      "title": "Create a new account",
+      "type": "I'm a:",
+      "what-do-you-want": "What do you want to do?",
+      "i-want-to": "I want to:",
+      "or": "OR"
+    },
+    "placeholders": {
+      "firstname": "First Name",
+      "lastname": "Last Name",
+      "password": "Password",
+      "e-mail": "E-mail"
+    },
+    "validations": {
+      "email": {
+        "required": "Please enter your email address",
+        "valid": "Please enter a valid email address"
+      },
+      "password": {
+        "min-length": "Password must contain at least 3 characters",
+        "required": "Please enter a password"
+      },
+      "first-name": {
+        "min-length": "Please fill in at least 3 characters",
+        "required": "Please enter your first name"
+      },
+      "last-name": {
+        "min-length": "Please fill in at least 3 characters",
+        "required": "Please enter your last name"
+      },
+      "please-agree-to-terms": "Please agree to the terms if you want to continue",
+      "email-in-use": "The email address provided is already in use",
+      "company-in-use": "The company name provided is already in use"
+    },
+    "steps": {
+      "just-one-step": "Just 1 step left!",
+      "finalizing-it": "Finalizing it"
+    },
+    "buttons": {
+      "submit": "Sign up",
+      "signup-google": "Sign up with Google",
+      "signup-linkedin": "Sign up with LinkedIn",
+      "login": "Login",
+      "continue": "Continue",
+      "remind-me": "Remind me",
+      "freelancer": "Work as a freelancer",
+      "client": "Hire candidates"
+    },
+    "messages": {
+      "confirm-email": "An email has been sent. Please check your email account and click on the link when you get it"
+    }
+  },
+  "signup-success-page": {
+    "labels": {
+      "confirm-email": "Check and confirm your email.",
+      "welcome-to-the-club": "Welcome to the club {{firstName}}!",
+      "registration-done": "Your registration is complete.",
+      "verified-info": "You can now continue with completing your profile.",
+      "email-has-been-resent": "Email confirmation has been resent",
+      "resend-verification-code": "You will be able to resend the verification code after {{time}} seconds"
+    },
+    "buttons": {
+      "resend-email": "Resend Email"
+    }
+  },
+  "verify-email-page": {
+    "labels": {
+      "signup-success": "Signup Successful!",
+      "welcome": "Welcome {{name}}",
+      "one-more-step": "One more step is left to identify you, Please check your email and confirm you are human. We have sent an email to {{email}}",
+      "first-job-post": "creating your first job post.",
+      "completing-your-profile": "completing your profile.",
+      "invalid-verification-code": "The provided verification link is not valid",
+      "checking-email-address": "Check email address..",
+      "email-is-verified": "Email address is confirmed!",
+      "verified-info": "You can now continue with",
+      "email-verified": "Your email address has been verified",
+      "your-email-verified": "Your email <span class='text-primary'>{{email}}</span> is successfully verified!",
+      "verification-failed": "Verification Failed",
+      "email-verification-link-invalid": "Your email verification link is invalid or expired.",
+      "verification-code-used": "Verification code has already been used",
+      "email-already-verified": "Email already verified"
+    },
+    "buttons": {
+      "resend-verification": "Resend email verification"
+    }
+  },
+  "time-logs": {
+    "labels": {
+      "title": "Time Management",
+      "sub-title": "You can submit your work every end of the month",
+      "report-declined": "This report is declined by client, please update and sent it again.",
+      "description": "Description",
+      "client": "Client",
+      "period": "Period",
+      "total-hours": "Total hours",
+      "amount-billed": "Amount Billed",
+      "day": "Day",
+      "hours": "Hours",
+      "date": "Date",
+      "amount": "Amount",
+      "edit": "Edit",
+      "no-data": "No time logs available for this month",
+      "send-report": "Send Report",
+      "report-sent": "Report sent",
+      "help-description": "When you click send report, This will notify the client with the hours you have worked and will disable editing these hours!",
+      "no-contracts": "You currently have no contracts"
+    },
+    "status": {
+      "pending": "Pending",
+      "wait-for-approval": "Wait for approval",
+      "declined": "Declined",
+      "approved": "Approved"
+    },
+    "placeholders": {
+      "description": "What were you working on?"
+    },
+    "validations": {
+      "date-required": "Please select a date",
+      "time-required": "Please enter the time",
+      "description-required": "Please enter a description"
+    },
+    "messages": {
+      "invalid-log-day": "You can not log time for up comning day",
+      "already-logged": "Time already logged",
+      "create-success": "Time logged successfully",
+      "update-success": "Time updated successfully",
+      "sent-success": "Report sent successfully to the client",
+      "sent-fail": "Report sent faild {{errorMessage}}"
+    },
+    "buttons": {
+      "logtime": "Log Time",
+      "update": "Update",
+      "cancel": "Cancel"
+    }
+  },
+  "report-confirm-modal": {
+    "labels": {
+      "title": "Report send confirmation!",
+      "message": "Are you sure you want to send report?, This will disable editing for month "
+    }
+  },
+  "contract": {
+    "labels": {
+      "title": "All contracts",
+      "no-item": "You currently have no contracts",
+      "technologies": "Technologies:",
+      "contract": "Contract",
+      "invoice-information": "Invoice Information",
+      "invoice-logo": "Invoice logo",
+      "vat-number": "VAT Number",
+      "kvk-number": "KVK Number",
+      "bank-account": "Bank Account",
+      "company-name": "Company name",
+      "address": "Address",
+      "zipcode": "Zip Code",
+      "under-review": "Your contract under review by codinglab",
+      "has-signed": " has signed contract",
+      "job": "job",
+      "description": "Description",
+      "invoice": "Invoice"
+    },
+    "messages": {
+      "update-success": "Updated successfully"
+    },
+    "invoiceinfo": "Invoice Information",
+    "invoicelogo": "Invoice logo",
+    "number": "Number",
+    "bankaccount": "Bank Account",
+    "address": "Address",
+    "zipcode": "Zip Code",
+    "save": "Save information",
+    "download": "click here to download contract",
+    "upload": "Upload signed contract",
+    "review": "Your contract under review by codinglab",
+    "hassign": " has signed contract",
+    "updated": "Updated successfully",
+    "warning": "Please select signed copy of your contract",
+    "uploaded": "Contract uploaded successfully",
+    "job": "job",
+    "invoice": "Invoice",
+    "signed": "Signed contract",
+    "verify": "verify",
+    "buttons": {
+      "signed": "Signed contract",
+      "verify": "verify",
+      "view-details": "View details"
+    }
+  },
+  "contracts-client": {
+    "labels": {
+      "title": "All contracts",
+      "no-item": "You currently have no contracts",
+      "technologies": "Technologies",
+      "end-in-five-days": "Ends in 5 days"
+    },
+    "buttons": {
+      "view-details": "View details",
+      "end-contract": "End contract",
+      "edit-contract": "Edit contract"
+    },
+    "status": {
+      "pending": "Pending",
+      "to-be-signed": "To be signed",
+      "to-be-signed-by-client": "To be signed by client",
+      "to-be-signed-by-freelancer": "To be signed by freelancer",
+      "needs-review": "Needs review",
+      "active": "Active",
+      "ended": "Ended"
+    },
+    "messages": {
+      "contract-updated": "Contract updated successfully",
+      "contract-update-failed": "Contract update mislukt {{errorMessage}}"
+    }
+  },
+  "contracts-freelancer": {
+    "labels": {
+      "title": "All contracts",
+      "no-item": "You currently have no contracts",
+      "technologies": "Technologies",
+      "job": "job"
+    },
+    "buttons": {
+      "view-details": "View details"
+    },
+    "status": {
+      "pending": "Pending",
+      "to-be-signed": "To be signed",
+      "to-be-signed-by-client": "To be signed by client",
+      "to-be-signed-by-freelancer": "To be signed by freelancer",
+      "needs-review": "Needs review",
+      "active": "Active",
+      "ended": "Ended"
+    }
+  },
+  "contract-client": {
+    "labels": {
+      "contract": "Contract with",
+      "invoice-information": "Invoice Information",
+      "invoice-logo": "Invoice logo",
+      "vat-number": "VAT Number",
+      "kvk-number": "KVK Number",
+      "bank-account": "Bank Account",
+      "company-name": "Company name",
+      "address": "Address",
+      "zipcode": "Zip Code",
+      "under-review": "Your contract under review by codinglab",
+      "freelancer-has-signed": "Freelancer {{firstName}} {{lastName}} has signed contract",
+      "drop-logo": "Choose the logo or drop it",
+      "drop-contract": "Choose the contract file or drop it",
+      "change-logo": "Choose the logo or drop it to change",
+      "job": "job"
+    },
+    "buttons": {
+      "save": "Save information",
+      "download": "Download contract to sign",
+      "upload": "Upload signed contract"
+    },
+    "messages": {
+      "update-success": "Updated successfully",
+      "select-signed-copy": "Please select signed copy of your contract",
+      "upload-success": "Contract uploaded successfully"
+    }
+  },
+  "contract-freelancer": {
+    "labels": {
+      "contract": "Contract with",
+      "invoice-information": "Invoice Information",
+      "invoice-logo": "Invoice logo",
+      "vat-number": "VAT Number",
+      "kvk-number": "KVK Number",
+      "bank-account": "Bank Account",
+      "company-name": "Company name",
+      "address": "Address",
+      "zipcode": "Zip Code",
+      "under-review": "Your contract under review by codinglab",
+      "client-has-signed": "Client {{firstName}} {{lastName}} has signed contract",
+      "drop-logo": "Choose the logo or drop it",
+      "drop-contract": "Choose the contract file or drop it",
+      "change-logo": "Choose the logo or drop it to change",
+      "job": "job"
+    },
+    "buttons": {
+      "save": "Save information",
+      "download": "Download contract to sign",
+      "upload": "Upload signed contract"
+    },
+    "messages": {
+      "update-success": "Updated successfully",
+      "select-signed-copy": "Please select signed copy of your contract",
+      "upload-success": "Contract uploaded successfully"
+    }
+  },
+  "time-logs-client": {
+    "labels": {
+      "name": "Name",
+      "title": "Time Reports",
+      "month": "Month",
+      "year": "Year",
+      "action": "Action",
+      "total-hours": "Total hours",
+      "no-data": "No time reports available for this freelancer"
+    },
+    "status": {
+      "pending": "Pending",
+      "to-be-reviewed": "To be reviewed",
+      "approved": "Approved",
+      "declined": "Declined"
+    },
+    "messages": {
+      "report-not-approved": "The reports has not been approved or declined for 7 days, please review the report"
+    },
+    "buttons": {
+      "view": "View"
+    }
+  },
+  "timelog-view": {
+    "labels": {
+      "title": "Timesheet",
+      "date": "Date",
+      "hours": "Hours",
+      "description": "Description",
+      "total-hours": "Total Hours",
+      "no-data": "No time logs available for this month",
+      "hourlyrate": "Hourly Rate"
+    },
+    "messages": {
+      "approve-success": "Reports approved successfully",
+      "approve-fail": "Report approve failed {{errorMessage}}",
+      "decline-success": "Reports declined",
+      "decline-fail": "Report decline failed {{errorMessage}}"
+    },
+    "buttons": {
+      "back-to-reports": "Back to Reports"
+    }
+  },
+  "report-decline-modal": {
+    "labels": {
+      "title": "Decline confirmation!",
+      "description": "Description"
+    },
+    "placeholders": {
+      "description": "Please describe for the freelancer why you would decline the timesheet"
+    },
+    "validations": {
+      "description": {
+        "too-short": "Description is too short, It should have minimum 50 characters",
+        "required": "Please enter the description"
+      }
+    },
+    "buttons": {
+      "decline": "Decline"
+    }
+  },
+  "notification": {
+    "labels": {
+      "no-item": "You currently have no notifications",
+      "notifications": "Notifications",
+      "timelog-sent": "{{data.freelancer.firstName}} {{data.freelancer.lastName}} send you time log report {{data.month}}-{{data.year}} for review.",
+      "timelog-approval": "{{data.client.firstName}} {{data.client.lastName}} has {{data.status}} your Time log report {{data.month}}-{{data.year}}.",
+      "new-application": " You received new application from {{firstName}} {{lastName}} for job {{title}}.",
+      "job-interview": "{{data.user.name}} send invitation for job {{data.job.title}}",
+      "job-hired": "{{data.user.name}} hired you for job {{data.job.title}}",
+      "application-has-been-completed": "Your application for {{title}} has been completed. You can now apply to other jobs."
+    },
+    "buttons": {
+      "view-all": "View all notifications"
+    }
+  },
+  "freelancers": {
+    "labels": {
+      "title": "Active freelancers",
+      "no-item": "You currently have no active freelancers"
+    }
+  },
+  "interview-method-modal": {
+    "labels": {
+      "title": "What do you want to do ?"
+    },
+    "buttons": {
+      "onsite-interview": "onsite interview",
+      "phone-remote-interview": "phone/remote interview",
+      "code-challenge": "code challenge",
+      "close": "Close",
+      "view-job": "View Job"
+    }
+  },
+  "hire-confirm-modal": {
+    "labels": {
+      "title": "Hire confirmation!",
+      "sure-you-want-to-hire": "Are you sure you want to hire ?"
+    }
+  },
+  "invitation-model": {
+    "labels": {
+      "description": "Description",
+      "date": "Date",
+      "attachment": "Attachment",
+      "deadline": "Deadline"
+    },
+    "method": {
+      "onsite-interview": "onsite interview",
+      "phone-remote-interview": "phone/remote interview",
+      "code-challenge": "code challenge"
+    },
+    "placeholders": {
+      "description": "Description.."
+    },
+    "validations": {
+      "date-required": "Please select date"
+    },
+    "buttons": {
+      "send-invitation": "Send invitation",
+      "close": "Close",
+      "change-method": "Change method"
+    }
+  },
+  "messages": {
+    "labels": {
+      "title": "Messages"
+    },
+    "message-type": {
+      "client-hire": "Client Hired you",
+      "freelancer-hired": "You hired this freelancer"
+    },
+    "buttons": {
+      "send": "Send"
+    }
+  },
+  "end-contract-modal": {
+    "labels": {
+      "title": "Decline confirmation!",
+      "description": "Description"
+    },
+    "buttons": {
+      "end-contract": "End Contract"
+    },
+    "placeholders": {
+      "description": "Please describe for the freelancer why you would end the contract"
+    },
+    "validations": {
+      "description": {
+        "too-short": "Description is too short, it should have minimum 50 characters",
+        "too-long": "Description is too long, it should have maximum 300 characters",
+        "required": "Please fill the description"
+      }
+    }
+  },
+  "edit-contract-modal": {
+    "labels": {
+      "title": "Edit Contract",
+      "end-date": "Contract end date",
+      "end-date-note": "The end date can only be at least 1 month in the future"
+    },
+    "buttons": {
+      "edit-contract": "edit Contract"
+    },
+    "placeholders": {
+      "contract-end-date": "End Contract Date"
+    },
+    "validations": {
+      "end-date": {
+        "required": "Please select the end date"
+      }
+    }
+  },
+  "freelance-billing": {
+    "labels": {
+      "generate-invoice": "Generate invoice",
+      "invoice-number": "Invoice Number",
+      "upload-invoice": "Upload invoice",
+      "drop-or-upload-file": "Choose the file or drop it",
+      "billing-for": "Billing for"
+    },
+    "validations": {
+      "invoice-required": "Invoice number is required."
+    },
+    "messages": {
+      "invoice-received": "We have received your invoice. We will update you as soon as possible",
+      "drop-or-upload-file": "Choose the file or drop it",
+      "send-success": "Invoice send successfully"
+    },
+    "buttons": {
+      "generate-invoice": "Generate invoice",
+      "send": "Send"
+    }
+  },
+  "freelance-billing-list": {
+    "labels": {
+      "billing": "Billing",
+      "amount": "Amount",
+      "client": "Client",
+      "month": "month",
+      "year": "Year",
+      "hours": "hours",
+      "action": "Action",
+      "no-data-for-this-month": "No data available for this month"
+    },
+    "status": {
+      "pending": "Pending",
+      "under-review": "Under review",
+      "paid": "Paid"
+    },
+    "placeholders": {
+      "search-client": "Search client(s)"
+    },
+    "buttons": {
+      "view-details": "View details"
+    }
+  },
+  "to-do-list": {
+    "labels": {
+      "welcome-name": "Welcome {{firstName}},",
+      "lets-get-you-started": "Let's get you up and running",
+      "complete-profile": "Complete your profile and get ready to apply to a job",
+      "step": "Step {{step}}"
+    },
+    "buttons": {
+      "create-account": "Create an account",
+      "create-profile": "Create your profile",
+      "apply-job": "Apply to a job"
+    }
+  },
+  "main": {
+    "labels": {
+      "leader-in-dutch": "Codinglab helps to expand your digital world",
+      "i-am-looking-for-a": "I am looking for a..",
+      "or-contact-us": "Or send us a mail to "
+    },
+    "messages": {
+      "frontend-job": "Front-end developer job",
+      "backend-job": "Back-end developer job",
+      "design-job": "UX / UI designer job",
+      "candidate": "I am looking for a suitable candidate",
+      "no-mailbox": "If your mailbox does not open, please mail us at info@codinglab.nl with your wishes"
+    },
+    "buttons": {
+      "i-want-frontend-job": "Front-end job",
+      "i-want-backend-job": "Back-end job",
+      "i-want-design-job": "UX / UI design job",
+      "looking-candidate": "Suitable candidate"
+    }
+  },
+  "success-modal": {
+    "buttons": {
+      "dashboard": "Dashboard"
+    },
+    "labels": {
+      "you-are-setup-perfect": "You are all setup to apply on the jobs, that are perfectly matching your skills"
+    }
+  },
+  "edit-avatar-modal": {
+    "labels": {
+      "edit-photo": "Edit Profile Photo",
+      "drag-or-zoom-photo": "Drag to reposition the photo or zoom it"
+    }
+  },
+  "contact-support": {
+    "labels": {
+      "contact-us": "Contact us",
+      "can-we-help": "Can we help? Contact us and we will get back to you as soon as possible.",
+      "number": "+31 06 85 36 1812",
+      "thank-you": "Thank you, your request submit successfully. We will get get in touch with you shortly"
+    },
+    "placeholders": {
+      "full-name": "Full name",
+      "email": "Email address",
+      "category": "Select category",
+      "message": "Message"
+    },
+    "buttons": {
+      "send": "Send"
+    },
+    "validations": {
+      "full-name": {
+        "required": "Please enter your full name",
+        "min-length": "Please fill in at least 3 characters"
+      },
+      "email": {
+        "required": "Please enter your email address",
+        "valid": "Please enter a valid email address"
+      },
+      "category": {
+        "required": "Please select a category"
+      },
+      "message": {
+        "required": "Please enter a message"
+      }
+    },
+    "messages": {
+      "created": "Contact created successfully"
+    }
+  },
+  "jobs-list": {
+    "labels": {
+      "locations": "Location(s)",
+      "email": "Email",
+      "email-address": "Email address",
+      "contact": "Contact no",
+      "number": "Number",
+      "posted-days-ago": "Posted {{days}} days ago",
+      "upload-resume": "Upload your resume",
+      "jobs": "Jobs",
+      "apply-now": "Be an early applicant, respond now",
+      "successfully-sent": "Your application has been sent",
+      "knowledge-skills": "Knowledge & Skills",
+      "select-knowledge": "Select your skills & desired position(s)",
+      "select-location": "Select location(s)",
+      "job-closed": "The Job is closed now"
+    },
+    "buttons": {
+      "sign-up-to-apply": "Sign up to apply",
+      "date": "Date (new-old)",
+      "working-hours-high": "Working hours (high-low)",
+      "working-hours-low": "Working hours (low-high)",
+      "duration-project-high": "Duration project (high-low)",
+      "duration-project-low": "Duration project (low-high)"
+    },
+    "hourly-rate": {
+      "min-selected-rate": "Min. € {{minRate}}",
+      "max-selected-rate": "Max. € {{maxRate}}",
+      "very-high-rate": "Very High Rates €{{minRate}} - €{{maxRate}}"
+    }
+  },
+  "job-view": {
+    "labels": {
+      "have-account": "Already have an account",
+      "signup-to-view": "Signup to view application progress",
+      "currency": "€ {{currency}}",
+      "job-not-found": "Oops, we didn't find that job",
+      "view-application-progress": "View application progress"
+    },
+    "buttons": {
+      "back-to-job": "Back to job overview",
+      "apply-now": "Apply now",
+      "back-to-job-search": "Back to job search"
+    }
+  },
+  "job-detail": {
+    "labels": {
+      "start-date": "Start date",
+      "hours-per-week": "Hours per week",
+      "min-max-hour": "Min {{minHour}} Hrs - Preferred {{maxHour}} Hrs",
+      "freelancers": "{{freelancers}} Freelancer",
+      "months": "Months",
+      "month": "Month",
+      "not-available": "This job is no longer available for the apply, because employer hired someone already."
+    }
+  },
+  "apply-modal": {
+    "labels": {
+      "apply-now": "Apply now",
+      "email": "Email",
+      "phone-number": "Phone number",
+      "upload-resume": "Upload your resume",
+      "enter-number": "Enter number",
+      "choose-file": "Choose file",
+      "enter-email": "Enter email",
+      "enter-motivation": "Enter short motivation",
+      "motivation": "Short motivation"
+    },
+    "validations": {
+      "resume": {
+        "upload-resume": "Please upload your resume",
+        "upload-pdf-doc-docx-or-image": "Please upload a pdf, doc, docx or image"
+      },
+      "number-length": "Number length must be at least 11 characters",
+      "min-length-motivation": "The length of motivation should be more than 20 characters",
+      "max-length-motivation": "The length of motivation should not be more than 400 characters"
+    }
+  },
+  "generator-resume": {
+    "labels": {
+      "name": "Your name",
+      "email": "Email",
+      "location": "Location",
+      "personal-info": "Personal information",
+      "top-skill": "Top skill",
+      "work-experience": "Work experience",
+      "chose-proficiency": "Chose proficiency",
+      "name-position": "Name of position",
+      "start-date": "Start date",
+      "end-date": "End date",
+      "position": "Position",
+      "tools-label": "Tools label",
+      "tools": "Tools",
+      "employable-as": "Employable as",
+      "phone": "Phone Number",
+      "education-name": "Education name",
+      "education": "Education",
+      "schoolname-location": "School name & location",
+      "experience-level": "Experience level",
+      "language": "Language",
+      "platforms": "Platforms",
+      "softwares": "Software's",
+      "colored": "Colored resume",
+      "black-white": "Black & White resume",
+      "projects": "Projects",
+      "in-progress": "In Progress",
+      "passed": "Passed",
+      "beginner": "Beginner",
+      "advance": "Advance",
+      "fluent": "Fluent",
+      "star": "{{star}} star",
+      "stars": "{{star}} stars",
+      "present": "{{month}} - present",
+      "other-project": "Other projects",
+      "link": "Link",
+      "build-on": "Build on",
+      "project-date": "Project date",
+      "school-name": "School name",
+      "product-owner": "Product owner",
+      "enter-name": "Enter your name",
+      "enter-phone": "Enter phone number",
+      "enter-location": "Enter your location",
+      "enter-skill": "Enter your skill",
+      "enter-position": "Enter name of position",
+      "enter-company": "Enter name of company",
+      "enter-description": "Enter description of work",
+      "enter-tools-labels": "Enter tools labels",
+      "enter-tools": "Enter tools",
+      "enter-education": "Enter education name",
+      "enter-school-location": "Enter school name & location",
+      "enter-language": "Enter language",
+      "enter-link": "Enter link",
+      "title": "Title",
+      "enter-title": "Enter title"
+    },
+    "durations": {
+      "half-years": "{{years}}.5 years",
+      "year": "{{year}} year",
+      "years": "{{years}} years"
+    },
+    "validations": {
+      "min-length": "Please fill in at least {{min}} characters",
+      "name": {
+        "required": "Please enter your name"
+      },
+      "phone": {
+        "required": "Please enter your phone number",
+        "max-length": "The maximum length of the telephone number cannot exceed 15 characters"
+      },
+      "location": {
+        "required": "Please enter your location"
+      },
+      "description": {
+        "required": "Please enter a description"
+      },
+      "position": {
+        "required": "Please enter name of position"
+      },
+      "company": {
+        "required": "Please enter company name"
+      },
+      "date": {
+        "required": "Please select a date"
+      }
+    },
+    "buttons": {
+      "add-top-skill": "Add top skill",
+      "remove-project": "Remove Project",
+      "remove-education": "Remove education",
+      "remove-work": "Remove work experience",
+      "add-skill": "Add skill",
+      "add-education": "Add education",
+      "add-language": "Add languages",
+      "add-employable": "Add another employable as",
+      "add-work": "Add work experience",
+      "add-tools": "Add tools",
+      "add-project": "Add project",
+      "back-to-create": "Back to create",
+      "click-upload": "Click to upload your resume photo"
+    }
+  },
+  "footer": {
+    "links": {
+      "about-us": "About Us",
+      "contact-us": "Contact us",
+      "how-it-works": "How it works",
+      "terms-of-service": "Terms of Service",
+      "privacy-policy": "Privacy Policy"
+    },
+    "copyright": " © Copyrights {{year}}, CodingLab. All Rights Reserved."
+  },
+  "header": {
+    "menus": {
+      "jobs": "Jobs",
+      "dashboard": "Dashboard",
+      "contract": "Contract",
+      "contracts": "Contracts",
+      "referall": "Referall",
+      "reports": "Reports",
+      "report": "Report",
+      "to-do-list": "To do list",
+      "messages": "Messages",
+      "my-freelancers": "My Freelancers",
+      "my-jobs": "My Jobs"
+    },
+    "menu-items": {
+      "contract": {
+        "overview": "Overview",
+        "my-applications": "My Applications",
+        "open-contracts": "Open Contracts"
+      },
+      "reports": {
+        "overview": "Overview",
+        "billing": "Billing",
+        "time-management": "Time Management"
+      },
+      "profile": {
+        "my-profile": "My Profile",
+        "settings": "Settings",
+        "logout": "Logout"
+      }
+    },
+    "languages": {
+      "dutch": "NL",
+      "english": "EN"
+    },
+    "buttons": {
+      "login": "Login",
+      "sign-up": "Sign up"
+    }
+  },
+  "dashboard": {
+    "labels": {
+      "jobs": "Jobs",
+      "contracts": "Contracts",
+      "freelancers": "Freelancers",
+      "profile-jobs": "Jobs that might interest you",
+      "active-jobs": "Active Jobs",
+      "job-status": "Job application status",
+      "there-no-active-jobs": "There is no active jobs, to see your active jobs",
+      "no-active-contracts": "There is no active contract right now. Post a job and get started",
+      "no-freelancers": "There is no freelancer that you hired. Post a job and hire the freelancer",
+      "profile-incomplete": "Your profile is incomplete, complete your profile and see interesting jobs here",
+      "no-active-jobs": "There is not active jobs right now. Apply on a job and see status here...",
+      "no-open-applications": "There is no open applications now. Apply on a job and see your status here",
+      "last-days": "Last {{days}} Days",
+      "match": "{{match}}% Match",
+      "hours": "{{minWorkingHours}}hrs - {{maxWorkingHours}}hrs"
+    },
+    "buttons": {
+      "edit-profile": "Edit profile",
+      "apply-job": "Apply on job"
+    }
+  },
+  "serverErrorMessages": {
+    "messages": {
+      "email-already-in-use": "The email {{email}} is already in use",
+      "something-wrong": "Oops. Something went wrong, let us know!",
+      "already-applied-job": "You already applied to this job!",
+      "invalid-status": "Please enter a valid status",
+      "invalid-hourlyRate": "Please enter a valid hourly rate",
+      "invalid-resume": "Please upload a valid resume",
+      "invalid-motivation": "Please enter a valid motivation",
+      "invalid-phone": "Please enter a valid phone number",
+      "invalid-jobId": "The job you tried to apply to does not exist",
+      "not-exist-job": "Job does not exist"
+    }
+  },
+  "jobs-applications": {
+    "labels": {
+      "your-jobs": "Your Jobs",
+      "all-jobs": "All jobs",
+      "freelancer-response-on": "Freelancer Response On",
+      "approval-waiting": "Approval waiting",
+      "draft": "Draft",
+      "filled": "Filled",
+      "deleted": "Deleted",
+      "employable-as": "Employable as",
+      "freelancer-match": "This freelancer match {{match}}% with your job post",
+      "technology-skills": "Technology & skills",
+      "no-active-jobs": "There is no active jobs, to see your active jobs",
+      "working-hours": "Working hours {{minHours}} Hrs - {{maxHours}} Hrs",
+      "freelancer-rate": "Freelancer hourly rate",
+      "working-hours-week": "Working hours per week",
+      "response-on": "{{response}} Response on",
+      "responses-on": "{{response}} Responses on",
+      "average-hourly-rate": "Average hourly rate of this job",
+      "search-freelancer": "Search your freelancers by name, location, technology",
+      "job-motivation": "Job motivation"
+    },
+    "buttons": {
+      "post-new-job": "Post new job",
+      "edit-posting": "Edit Posting",
+      "reuse-posting": "Reuse Posting",
+      "remove-posting": "Remove Posting",
+      "take-offline-post": "Take offline this job post",
+      "response": "{{response}} Response",
+      "take-offline": "Take Offline",
+      "filter": "Filter",
+      "view-proposal": "View Proposal",
+      "cv-resume": "CV / Resume",
+      "newest": "Newest",
+      "continue-edit": "Continue editing",
+      "resume": "Resume",
+      "best-match": "Best match",
+      "more-then": "More then 40 hrs",
+      "highest-rate": "Highest hourly rate",
+      "close-distance": "Closest distance"
+    },
+    "messages": {
+      "no-freelancers-applied": "No applications yet, share the job on social media to get more traction!"
+    }
+  },
+  "my-applications": {
+    "labels": {
+      "my-applications": "My Applications",
+      "applied": "Applied on: {{date}}",
+      "incomplete": "Incomplete",
+      "cancelled": "Cancelled",
+      "complete": "Sent",
+      "published": "Published",
+      "you-accepted": "You accepted this invitation"
+    },
+    "buttons": {
+      "apply-job": "Apply on a job",
+      "go-back": "Go to back",
+      "download-resume": "Download Resume"
+    }
+  },
+  "landing": {
+    "labels": {
+      "build-team": "Build up your tech team, \nFind candidates that match with your needs.",
+      "are-freelancer": "Are you a freelancer?",
+      "how-condinglab-works": "How CodingLab works",
+      "create-job": "Create a job",
+      "tell-us": "Tell us about your project. Codinglab connects you with top talent and agencies near you.",
+      "receive-applications": "Receive applications",
+      "get-proposal": "Get qualified proposals within 24 hours. Compare bids, reviews, and prior work. Interview favorites and hire the best fit.",
+      "invite-or-chat": "Invite or chat with candidates",
+      "use-codinglab": "Use Codinglab to chat or video call, share files, and track project milestones from your desktop or mobile.",
+      "any-question": "Do you have any question in your mind?",
+      "how-hire": "How can I hire good engineers?",
+      "how-hire-desc": "To hire quality you need to answer the following two questions: - How do I know if a developer is good? - How do I motivate a developer? ",
+      "how-payment": "How does the payment system work?",
+      "how-payment-desc": "Payment system is very easy you just focus on hiring and we will solve your payment problem",
+      "do-need-freelancer": "Do you need a freelancer?",
+      "want-to-know": "Want to know how else you can benefit from CodingLab?",
+      "leave-detail": "Or do you want to quickly and easily build your own freelance pool? Leave your details and we will contact you without obligation.",
+      "cant-find-question": "Didn’t find your question?",
+      "how-much-dev-cost": "How much does a developer cost?",
+      "is-developer-good": "How do I know if a developer is good?",
+      "what-designer-do": "What does a designer do?",
+      "how-communication-work": "How does communication work?",
+      "hire-freelancers": "Hire the best talent in Netherlands",
+      "freelancer-list-text": "Lorem ipsum dolor imit",
+      "view-all": "View All"
+    },
+    "buttons": {
+      "get-started": "Get started",
+      "click-here": "Click here",
+      "watch-demo": "Watch demo",
+      "go-to-faq": "Go to full F.A.Q.",
+      "signup": "Signup",
+      "explore-jobs": "Explore jobs",
+      "about": "About",
+      "how-works": "How it works",
+      "find-talent": "Find talent",
+      "company": "Company",
+      "social": "Social",
+      "resource": "Resources",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "payments": "Payments"
+    }
+  },
+  "faq": {
+    "title": {
+      "head": "Frequently Asked Question",
+      "frequently-client": "Frequently Asked by clients",
+      "frequently-freelancers": "Frequently Asked by Freelancers",
+      "not-found-question": "Didn’t find your question?"
+    },
+    "buttons": {
+      "go-to-full-faq": "Go to full F.A.Q"
+    }
+  },
+  "profile-card": {
+    "buttons": {
+      "view-profile": "View Profile"
+    }
+  },
+  "candidates-search": {
+    "labels": {
+      "top-talents": "Top talents from multiple Industries",
+      "freelancers-amount": "{{usersLength}} freelancers are waiting for your job"
+    },
+    "buttons": {
+      "select-all": "Select All",
+      "view-profile": "View profile",
+      "send-message": "Send message",
+      "create-job": "Create job"
+    }
+  },
+  "sign-up-page": {
+    "messages-error": "To continue sending a message, please signup first"
+  }
+}

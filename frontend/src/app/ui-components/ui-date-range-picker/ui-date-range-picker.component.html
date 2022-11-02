@@ -1,0 +1,49 @@
+<mat-form-field appearance="outline" class="w-full cursor-pointer custom-border">
+  <mat-label>{{ label }}</mat-label>
+  <mat-date-range-input separator="" (click)="showCalendar()">
+    <input
+      [selectionStart]="startDate"
+      [selectionEnd]="endDate"
+      [value]="currentDate"
+      readonly
+      matStartDate
+      [ngModel]="value.start"
+      [placeholder]="placeHolder"
+    />
+    <input class="invisible hidden" readonly matEndDate [ngModel]="value.end" placeholder="End date" />
+  </mat-date-range-input>
+  <mat-icon
+    (click)="isVisibleCalendar = !isVisibleCalendar"
+    cdkOverlayOrigin
+    #trigger="cdkOverlayOrigin"
+    class="my-auto text-neutral-400 table align-middle translate-y-[-25%]"
+    matSuffix
+  >
+    <img src="../../../assets/images/icons/calendar.svg" width="15px" />
+  </mat-icon>
+</mat-form-field>
+<ng-template
+  (detach)="isVisibleCalendar = false"
+  (backdropClick)="isVisibleCalendar = false"
+  cdkConnectedOverlay
+  cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
+  [cdkConnectedOverlayHasBackdrop]="true"
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isVisibleCalendar"
+>
+  <section
+    class="bg-white range-container"
+    [ngClass]="{ 'range-container-with-calendar': mode === 'range-with-calendar' }"
+  >
+    <article class="w-[320px] lg:w-[400px] md:w-[400px] sm:w-[400px]">
+      <section *ngIf="mode === 'range-with-calendar'" class="inline m-0 sm:w-8/12">
+        <mat-calendar
+          class="custom-calendar"
+          [minDate]="minDate"
+          (selectedChange)="onSelectedDateChange($event)"
+          [selected]="selectedDateRange"
+        ></mat-calendar>
+      </section>
+    </article>
+  </section>
+</ng-template>

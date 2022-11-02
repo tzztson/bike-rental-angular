@@ -1,0 +1,14 @@
+.success-modal {
+  background-image: url('/assets/images/backgrounds/stars.svg');
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.ui-buttons > * {
+  display: inline-block;
+}
+
+.modal-description,
+.ui-buttons > * {
+  background: white;
+}

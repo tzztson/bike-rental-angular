@@ -1,0 +1,13 @@
+<div [formGroup]="parentForm" class="editor">
+  <ckeditor
+    [editor]="Editor"
+    [formControlName]="controlName"
+    tagName="textarea"
+    [config]="editorConfiguration"
+  ></ckeditor>
+</div>
+<div *ngIf="errorMessageKeys && formControl.errors && formControl.touched" class="error-messages">
+  <p *ngFor="let messageKey of errorMessageKeys" [hidden]="!formControl.errors[messageKey]">
+    {{ errorMessages[messageKey] | transloco }}
+  </p>
+</div>

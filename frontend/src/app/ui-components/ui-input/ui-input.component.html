@@ -1,0 +1,25 @@
+<ng-container *ngIf="type !== 'search'; else searchInput">
+  <div
+    [class]="['form-group', 'form-group-' + backgroundColor]"
+    [formGroup]="parentForm"
+    [class.has-error]="formControl.invalid && formControl.touched"
+  >
+    <input [type]="type" [name]="controlName" [formControlName]="controlName" [class.not-empty]="formControl.value" />
+    <label [for]="controlName">{{ label | transloco }}</label>
+  </div>
+</ng-container>
+<div
+  *ngIf="errorMessageKeys && formControl.errors && formControl.touched"
+  data-testid="error-message"
+  class="error-messages"
+>
+  <p *ngFor="let messageKey of errorMessageKeys" [hidden]="!formControl.errors[messageKey]">
+    {{ errorMessages[messageKey] | transloco }}
+  </p>
+</div>
+<ng-template #searchInput>
+  <div [formGroup]="parentForm" class="search">
+    <input [type]="type" [placeholder]="label | transloco" name="search" />
+    <ui-button size="sm" shape="block" color="primary" iconName="search"> </ui-button>
+  </div>
+</ng-template>

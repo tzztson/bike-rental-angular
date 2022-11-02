@@ -1,0 +1,78 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { UiButtonComponent } from './ui-button.component';
+import { moduleMetadata } from '@storybook/angular';
+import { ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { TranslocoService } from '@ngneat/transloco';
+import { TranslocoRootModule } from 'src/app/transloco-root.module';
+
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+import { UiComponentsModule } from '../ui-components.module';
+import { TestDocComponent, HttpLoaderFactory, translateModuleConfig } from './ui-button.component.stories.ts';
+
+<Meta
+  title="UiButtonComponent"
+  component={UiButtonComponent}
+  decorators={[
+    moduleMetadata({
+      declarations: [UiButtonComponent],
+      imports: [ReactiveFormsModule, HttpClientModule, TranslocoRootModule],
+      providers: [HttpClient, TranslocoService],
+    }),
+  ]}
+/>
+# Usage example
+
+A light button with icon exapmple
+
+<Story name="Docs" height="auto">
+  {{
+    component: UiButtonComponent,
+    props: {
+      color: 'light',
+      text: 'Test button',
+      iconName: 'linkedin',
+    },
+  }}
+</Story>
+
+<!-- A spacer to separate the story iframe from the snippet header -->
+
+<div className="mb-5"></div>
+
+### demo.module.ts
+
+```ts
+// import the UI Components module in your module
+import { UiComponentsModule } from 'src/app/ui-components/ui-components.module';
+
+@NgModule({
+  imports: [UiComponentsModule]
+})
+export class AppModule(){}
+```
+
+### demo.component.html
+
+```html
+<ui-button color="light" [text]="buttonText" [iconName]="buttonIcon"></ui-button>
+```
+
+### demo.component.ts
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'demo-button',
+  templateUrl: './demo-button.component.html',
+})
+export class DemoStepIndicatorComponent {
+  buttonText = 'Test button';
+  buttonIcon = 'linkedin';
+}
+```
+
+## Props
+
+<Props of={UiButtonComponent} />

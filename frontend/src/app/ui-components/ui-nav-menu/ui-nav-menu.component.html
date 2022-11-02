@@ -1,0 +1,35 @@
+<ng-container *ngIf="imgUrl">
+  <div class="d-inline-block img-menu">
+    <img *ngIf="imgUrl" [src]="imgUrl" [matMenuTriggerFor]="navMenu" #t="matMenuTrigger" alt="avatar-icon" />
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!imgUrl && menuName">
+  <button
+    mat-button
+    (menuOpened)="onOpenedMenu()"
+    (menuClosed)="onClosedMenu()"
+    [disableRipple]="true"
+    [matMenuTriggerFor]="navMenu"
+    #t="matMenuTrigger"
+    class="menu"
+    [ngClass]="{ 'text-primary': isOpenMenu }"
+  >
+    {{ menuName | transloco }}
+    <i class="fas fa-chevron-down align-text-top"></i>
+  </button>
+</ng-container>
+
+<mat-menu #navMenu="matMenu" [xPosition]="xPosition" [yPosition]="yPosition">
+  <button
+    mat-menu-item
+    *ngFor="let item of menuItems"
+    [routerLink]="item.url"
+    [routerLinkActiveOptions]="{ exact: true }"
+    (click)="onSelectItem(item)"
+    routerLinkActive="active-item"
+    [attr.data-testid]="'desktop-' + item.attrName"
+  >
+    {{ item.label | transloco }}
+  </button>
+</mat-menu>

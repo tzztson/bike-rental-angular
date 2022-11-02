@@ -1,0 +1,86 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { UiRadioButtonComponent } from './ui-radio-button.component';
+import { TestRadioButtonComponent } from './ui-radio-button.component.stories';
+import { ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { moduleMetadata } from '@storybook/angular';
+
+<Meta
+  title="UiRadioButtonComponent"
+  decorators={[
+    moduleMetadata({
+      declarations: [TestRadioButtonComponent, UiRadioButtonComponent],
+      imports: [ReactiveFormsModule],
+    }),
+  ]}
+/>
+
+# Usage example
+
+Radio button for chosing a user type at the signup page
+
+<!--
+We set the height of the container to 310px because when the value is set to 'auto'
+the container isn't big enough and we see a scroll bar
+-->
+
+<Story name="Docs" height="310px">
+  {{
+    component: TestRadioButtonComponent,
+  }}
+</Story>
+
+```ts
+// demo.module.ts
+
+import { UiComponentsModule } from 'src/app/ui-components/ui-components.module';
+
+@NgModule({
+  imports: [UiComponentsModule]
+})
+export class AppModule(){}
+```
+
+```html
+<!-- demo.component.html -->
+
+<form [formGroup]="testForm" class="p-3 mb-1 row">
+  <ui-radio-button
+    class="col-6 col-md-4 col-lg-3"
+    controlName="testRadioButton"
+    value="freelancer"
+    text="Work as a freelancer"
+    iconName="freelancer"
+  ></ui-radio-button>
+  <ui-radio-button
+    class="col-6 col-md-4 col-lg-3"
+    controlName="testRadioButton"
+    value="client"
+    text="Post a project"
+    iconName="client"
+  ></ui-radio-button>
+</form>
+<div class="px-3 mb-4">Selected value: {{ testRadioButton.value }}</div>
+```
+
+```ts
+// demo.component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'demo-checkbox',
+  templateUrl: './demo-checkbox.component.html',
+})
+export class DemoCheckboxComponent {
+  testForm = new FormGroup({
+    testRadioButton: new FormControl('freelancer'),
+  });
+  testRadioButton = testForm.get('testRadioButton');
+
+  constructor();
+}
+```
+
+## Props
+
+<Props of={UiRadioButtonComponent} />

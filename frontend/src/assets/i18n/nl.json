@@ -1,0 +1,1813 @@
+{
+  "common": {
+    "labels": {
+      "currency": "€ {{amount}}",
+      "loading": "Laden..",
+      "freelancer": "Freelancer",
+      "client": "Opdrachtgever",
+      "status": "Status",
+      "approved": "Geaccepteerd",
+      "decline": "Afwijzen",
+      "declined": "Afgewezen",
+      "rate": "uurtarief",
+      "hourly-rate": "Uurtarief",
+      "location": "Locatie",
+      "hours-abbreviation": "u",
+      "remote": "Remote",
+      "on-site": "Op locatie",
+      "optional": "optional",
+      "need-help": "Hulp nodig?",
+      "company-name": "Company name",
+      "description": "Description",
+      "languages": "Languages",
+      "skills": "Skills",
+      "skill": "Skill",
+      "contact-info": "Contact information",
+      "contact-support": "Contact Support",
+      "technology": "Technology",
+      "remote-work": "Remote work",
+      "office-work": "Office work",
+      "hint": "Hint",
+      "set-rate": "Set your hourly rate",
+      "congratulations": "Top!",
+      "technologies": "Technologies",
+      "not-set": "Not set",
+      "hours-per-week": "Working hours per week",
+      "availability": "Availability",
+      "immediately": "Per direct",
+      "industry": "Industrie"
+    },
+    "months": {
+      "months": "{{months}} months",
+      "january": "Januari",
+      "february": "Februari",
+      "march": "Maart",
+      "april": "April",
+      "may": "Mei",
+      "june": "Juni",
+      "july": "Juli",
+      "august": "Augustus",
+      "september": "September",
+      "october": "Oktober",
+      "november": "November",
+      "december": "December"
+    },
+    "durations": {
+      "hours": "{{minHour}} hrs - {{maxHour}} hrs",
+      "month": "{{month}} Months",
+      "working-hours-options": {
+        "min-selected-hour": "Min. {{minHour}}u",
+        "max-selected-hour": "Max. {{maxHour}}u"
+      },
+      "hourly-rate": {
+        "currency": "€ {{rate}}",
+        "min-selected-rate": "Min. € {{minRate}}",
+        "max-selected-rate": "Max. € {{maxRate}}"
+      }
+    },
+    "messages": {
+      "file-too-big": "Het bestand is te groot, maximaal 5mb",
+      "file-not-accepted": "Dit bestandstype wordt niet geaccepteerd. Upload een afbeelding of document",
+      "start-date-required": "Vul een startdatum in",
+      "description-required": "Vul een beschrijving in",
+      "hourly-rate-required": " Vul een uurtarief in",
+      "too-many-role-selected": "Je functies zijn te breed, probeer je te focussen op een sector.",
+      "enter-valid-email": "Vul een geldige e-mailadres in",
+      "enter-your-email": "Vul een e-mailadres in"
+    },
+    "buttons": {
+      "yes": "Ja",
+      "no": "Nee",
+      "more": "more",
+      "less": "less",
+      "export-pdf": "Exporteer PDF",
+      "approve": "Goedkeuren",
+      "decline": "Afwijzen",
+      "ok": "ok",
+      "send": "Versturen",
+      "sign-up": "Aanmelden",
+      "download-resume": "Download C.V.",
+      "upload-resume": "Upload resume",
+      "update": "Bijwerken",
+      "cancel": "Annuleren",
+      "view-responses": "Bekijk reacties",
+      "download": "Downloaden",
+      "login": "Inloggen",
+      "view-details": "Bekijk details",
+      "continue": "Continue",
+      "contact-support": "Contact Support",
+      "back": "Terug",
+      "next": "Volgende",
+      "hire": "Aannemen",
+      "invite": "Uitnodigen",
+      "first": "First",
+      "last": "Last",
+      "save": "Opslaan",
+      "find-job": "Vind een opdracht",
+      "sort": "Sorteer:",
+      "language": "Taal",
+      "subscribe": "Aanmelden",
+      "close": "Sluiten",
+      "filter": "Filter"
+    },
+    "validations": {
+      "email": {
+        "required": "Vul je e-mailadres in",
+        "valid": "Vul een geldige e-mailadres in"
+      }
+    }
+  },
+  "admin-home": {
+    "labels": {
+      "contracts-to-check": "Aantal contracten te controleren:",
+      "invoices-to-check": "Aantal facturen te controlleren:",
+      "invoices-to-pay": "Aantal facturen te betalen:",
+      "invoices-to-receive": "Aantal facturen te ontvangen:",
+      "jobs-to-check": "Aantal opdrachten te controlleren:",
+      "responses-to-check": "Aantal reacties te controlleren:"
+    }
+  },
+  "administration": {
+    "title": "Administratie"
+  },
+  "forgot-password": {
+    "labels": {
+      "title": "Wachtwoord vergeten",
+      "not-a-member": "Nog geen lid?",
+      "recovery-password": "Herstel je wachtwoord",
+      "dont-worry": "Geen zorgen! We zijn er om je te helpen...",
+      "resend-recovery-code": "Je kan de herstelcode na {{time}} seconden opnieuw verzenden",
+      "email": "e-mailadres"
+    },
+    "validations": {
+      "email": {
+        "required": "Vul je e-mailadres in",
+        "valid": "Vul een geldige e-mailadres in"
+      }
+    },
+    "buttons": {
+      "signup": "Meld je aan",
+      "email-me": "Mail mij",
+      "submit": "Verstuur",
+      "back-login": "Terug naar inloggen"
+    },
+    "messages": {
+      "email-not-found": "Oops! De opgegeven e-mailadres is niet gevonden",
+      "please-contact-admin": "Er iets fout gegaan, neem a.u.b. contact op met de beheerders"
+    }
+  },
+  "forgot-password-change": {
+    "labels": {
+      "verification-code-is-invalid": "Oops. De verificatiecode is niet meer geldig.",
+      "loading": "Verificatie code controleren..",
+      "change-your-password": "Verander je wachtwoord",
+      "in-order-to-protect": "We raden je aan om een password manager te gebruiken om je wachtwoord te beschermen",
+      "reset-successfully": "Je wachtwoord is verandert!"
+    },
+    "placeholders": {
+      "password": "Nieuw wachtwoord",
+      "confirm-password": "Herhaal nieuw wachtwoord"
+    },
+    "validations": {
+      "confirm-password": {
+        "required": "Vul opnieuw je wachtwoord in"
+      },
+      "password": {
+        "required": "Vul een wachtwoord in",
+        "not-match": "Het opgegeven wachtwoord matcht niet met herhaal wachtwoord",
+        "too-short": "Wachtwoord moet minimaal 3 tekens bevatten"
+      }
+    },
+    "messages": {
+      "welcome-back": "Welkom terug {{user.fullName}}!"
+    },
+    "buttons": {
+      "submit": "Verander wachtwoord"
+    }
+  },
+  "forgot-password-success": {
+    "labels": {
+      "title": "Succes!",
+      "change-password-mail": "Binnen enkele minuten ontvang je een mail om je wachtwoord te kunnen veranderen.",
+      "check-email": "Controleer je email om je wachtwoord aan te passen. We hebben een email verzonden naar ",
+      "we-sent": "We hebben je een email verzonden."
+    },
+    "buttons": {
+      "resend-email": "Opnieuw verzenden"
+    }
+  },
+  "freelance-profile": {
+    "labels": {
+      "contact-info": "Contact informatie",
+      "company-name": "Bedrijfsnaam",
+      "phone": "Telefoonnummer",
+      "environment": "en omgeving",
+      "profile": "Profiel",
+      "roles": "* Inzetbaar als",
+      "technology": "* Ik ben bekend met",
+      "resume": "C.V.",
+      "details": "Inzet details",
+      "availability": "Beschikbaarheid",
+      "start-date": "Startdatum",
+      "success": "Profiel is bijgewerkt",
+      "select-rate": "Selecteer uurtarief",
+      "remote-possible": "Ik kan remote werken",
+      "hour-per-week": "Werkuren per week",
+      "min-selected-hour": "Min. {{minHour}} hours",
+      "max-selected-hour": "Max. {{maxHour}} hours"
+    },
+    "validations": {
+      "roles": {
+        "too-many-selected": "Je functies zijn te breed, probeer je te focussen op een sector."
+      },
+      "form": {
+        "incomplete": "Controleer of alle velden zijn ingevuld"
+      },
+      "start-date": {
+        "required": "Vul een startdatum in"
+      },
+      "location": {
+        "required": "Selecteer je locatie"
+      },
+      "positions": {
+        "required": "Geef op waar je voor inzetbaar bent",
+        "min-length": "Geef minimaal een functie op"
+      },
+      "technologies": {
+        "too-many-selected": "Probeer wat minder kennis en vaardigheden in te vullen zodat de opdrachtgever weet waar jij goed in bent",
+        "required": "Vul je kennis en vaardigheden in",
+        "min-length": "Selecteer minimaal twee vaardigheden of technologie(ën) die je kent"
+      },
+      "hourlyrate": {
+        "required": "Vul je uurtarief in"
+      },
+      "resume": {
+        "required": "Upload je C.V."
+      },
+      "working-hours": {
+        "required": "Please provide minimum and maximum working hours"
+      }
+    },
+    "buttons": {
+      "update": "Bijwerken",
+      "download-resume": "Download C.V."
+    }
+  },
+  "freelancer-home": {
+    "labels": {
+      "dashboard": "Dashboard",
+      "active-clients": "Actieve opdrachtgevers",
+      "clients": "opdrachtgevers",
+      "total-hours-worked": "Totaal uren gewerkt",
+      "hour": "uur",
+      "jobs": "Opdrachten",
+      "complete-application": "Maak je sollicitatie compleet om zichtbaar te worden!",
+      "job-matches": "Opdrachten die interessant voor jou zijn",
+      "no-matches": "Op dit moment zijn er geen opdrachten die matcht met je skills.",
+      "technologies": "Technieken:",
+      "month": "maand",
+      "months": "maanden",
+      "match": "Match"
+    },
+    "buttons": {
+      "complete-application": "Sollicitatie voltooien",
+      "read-more": "Bekijk opdracht"
+    }
+  },
+  "hourly-rate-modal": {
+    "labels": {
+      "title": "Uurtarief",
+      "description": "Kans op een match",
+      "side-note": "Opgegeven bedragen zijn exclusief BTW",
+      "average-junior-rate": "Gemiddeld junior tarief",
+      "average-senior-rate": "Gemiddeld senior tarief"
+    },
+    "freelancer-rating": {
+      "low-description": "High chance. A good hourly rate for a starting freelancer.",
+      "average-description": "High chance. A good hourly rate for someone with a low number of years experience",
+      "high-description": "Mid chance. For higher educated freelancers who already have a multiple projects to his name",
+      "veryhigh-description": "Special case. For Higher educated freelancers with more than 5 years of experience",
+      "difficult-description": "Edge case. A professional / expert in his field"
+    },
+    "buttons": {
+      "cancel": "Annuleren",
+      "save": "Opslaan"
+    }
+  },
+  "jobs-create": {
+    "labels": {
+      "keep-track": "Keep track your job and application performance in the dashboard.",
+      "project-duration": "Projectduur",
+      "max-rate": "Max hourly rate",
+      "week-hours": "Weekly Hours",
+      "preview": "Preview",
+      "provide-detail": "Provide the basic details for your job",
+      "job-title": "Job title",
+      "create-job": "Opdracht aanmaken",
+      "job-description": "Opdracht omschrijving",
+      "positions": "Gerelateerde functie(s)",
+      "technology-stack": "Technologie(ën)",
+      "chose-location": "Chose location",
+      "chose-technologies": "Chose technologies",
+      "description": "Beschrijving rol/opdracht",
+      "availability": "Beschikbaarheid",
+      "start-date": "Startdatum",
+      "working-hour": "Werkuren per week",
+      "duration": "Duur project",
+      "enter-description": "Enter description of job",
+      "knowledge-level": "Kennis niveau",
+      "max-hour-rate": "Max. uurtarief",
+      "freelancers-needed": "Aantal freelancers",
+      "surroundings": "en omgeving",
+      "need-help": "Hulp nodig?",
+      "details": "Opdracht details",
+      "remote-possible": "Remote werken is mogelijk",
+      "excl-vat": "excl. BTW",
+      "job-saved": "Opdracht opgeslagen",
+      "skills-looking-for": "What skill or position are you looking for?",
+      "chose-skills": "Chose skills",
+      "edit-job": "You are edit job",
+      "creating-job": "You are creating job",
+      "hint": "Hint",
+      "very-high-rate": "Very High Rates € {{minRate}} - € {{maxRate}}",
+      "enter-job": "Enter the job title"
+    },
+    "validations": {
+      "description": {
+        "required": "Vul een beschrijving in",
+        "min-length": "De beschrijving is te kort. Minimaal 100 tekens"
+      },
+      "duration": {
+        "required": " Vul de duur van het project in",
+        "min": "Vul minimaal 1 maand in"
+      },
+      "freelancers": {
+        "required": "Vul het aantal freelancers dat je nodig hebt in",
+        "min": "Vul minimaal 1 freelancer in"
+      },
+      "max-hourly-rate": {
+        "required": "Vul het uurtarief in",
+        "min-length": "Vul een uurtarief van 35 euro of hoger in"
+      },
+      "technologies": {
+        "required": "Kies de technologieën die je gebruikt of graag wilt gebruiken",
+        "min-length": "Voeg minimaal 2 technologieën toe",
+        "too-long": "Probeer wat minder kennis en vaardigheden in te vullen zodat de freelancers weten wat je nodig hebt"
+      },
+      "industries": {
+        "too-many-selected": "Probeer minder branches in te vullen zodat de klant weet waar je goed in bent ",
+        "required": "Vul a.u.b. de sectoren in waarin u geïnteresseerd bent ",
+        "min-length": "Selecteer ten minste twee branches"
+      },
+      "startJob": {
+        "required": "Chose start job date"
+      },
+      "position": {
+        "required": "Vul een of meerdere functies in",
+        "too-long": "Je functies zijn te breed, probeer je te focussen op een sector."
+      },
+      "title": {
+        "required": "Vul een titel in",
+        "min-length": "Titel moet minimaal 5 tekens bevatten"
+      },
+      "knowledge-level": {
+        "required-one-check": "At least one option should checked"
+      },
+      "location-required": "Vul een locatie in",
+      "start-date-required": "Vul een startdatum in"
+    },
+    "messages": {
+      "check-fields": "Controleer of alle velden zijn ingevuld",
+      "succesfully-saved-as-draft": "Opdracht succesvol opgeslagen als concept"
+    },
+    "buttons": {
+      "publish": "Publiceren",
+      "save": "Concept opslaan",
+      "show-preview": "bekijk voorbeeld",
+      "click-to-preview": "Klik om in voorbeeldweergave te bekijken",
+      "select-rate": "Selecteer uurtarief",
+      "view-job": "View Job",
+      "edit-job": "Edit Job",
+      "save-job": "Save Job"
+    },
+    "header": "Opdracht omschrijving",
+    "working-hours-options": {
+      "min-selected-hour": "Min. {{minHour}} hours",
+      "max-selected-hour": "Max. {{maxHour}} hours"
+    },
+    "hourly-rate": {
+      "min-selected-rate": "Min. € {{minRate}}",
+      "max-selected-rate": "Max. € {{maxRate}}"
+    }
+  },
+  "subscribe-to-get-new-jobs": {
+    "messages": {
+      "didnt-find-what-youre-looking-for": "Didn't find what you're looking for?",
+      "we-will-notify-you": "We will notify you!",
+      "thanks-we-will-notify-you": "Thank you for subscribing, we will notify you of new jobs.",
+      "do-you-want-to-create-account": "Do you want to be more visible to clients? Do you want to get invited for a job and get jobs that match with your profile? Create an account to be more visible"
+    },
+    "labels": {
+      "your-email-here": "Your email here",
+      "subscribe-to-get": "Subscribe to receive notifications for new jobs!",
+      "create-account": "Create an account to be visible to clients and get matching jobs!"
+    }
+  },
+  "jobs-create-success-page": {
+    "labels": {
+      "description": "Wij zullen de opdracht controlleren op spelfouten, technische fouten en andere dingen dat opvalt. Je ontvangt een notificatie zodra de opdracht is goedgekeurd!",
+      "sucessfully-created-job": "Super! De opdracht is aangemaakt."
+    }
+  },
+  "jobs-overview-page": {
+    "labels": {
+      "title": "Overzicht opdrachten",
+      "loading": "Opdrachten laden..",
+      "no-job-yet": "Je hebt nog geen opdracht aangemaakt",
+      "create-job": "Opdracht aanmaken",
+      "display-hours": "uur",
+      "not-found-jobs": "Broaden yourself to see more jobs related to your profile"
+    },
+    "table-headers": {
+      "title": "Titel",
+      "working-hours": "Werkuren",
+      "actions": "Acties"
+    },
+    "action-btns": {
+      "edit": "Bewerk",
+      "delete": "Verwijder",
+      "publish-or-edit": "publiceren /  bewerken",
+      "stop-and-edit": "Stop & bewerk",
+      "responses": "Bekijk reacties",
+      "take-offline": "Offline halen"
+    },
+    "statusses": {
+      "concept": "Concept",
+      "wait-for-approval": "Wachten op goedkeuring",
+      "offline": "Inactief",
+      "published": "Actief",
+      "fullfilled": "Vervuld"
+    },
+    "delete-job": {
+      "successful": "Verwijderen van de opdracht {{title}} is gelukt",
+      "something-went-wrong": "Er is iets fout gegaan bij het verwijderen van de opdracht"
+    },
+    "take-offline": {
+      "successful": "Offline halen van de opdracht {{title}} is gelukt",
+      "something-went-wrong": "Er is iets fout gegaan bij het offline halen van de opdracht"
+    },
+    "modal": {
+      "take-offline": {
+        "title": "Opdracht offline halen",
+        "are-you-sure": "Weet je zeker dat je de opdracht <span class='text-info'>\"{{title}}\"</span> offline wilt halen?"
+      },
+      "delete": {
+        "title": "Opdracht verwijderen",
+        "are-you-sure": "Weet je zeker dat je de opdracht <span class='text-info'>\"{{title}}\"</span> wilt verwijderen?"
+      }
+    },
+    "buttons": {
+      "delete": "Verwijder",
+      "publish-or-edit": "publiceren /  bewerken",
+      "stop-and-edit": "Stop & bewerk",
+      "take-offline": "Offline halen"
+    }
+  },
+  "jobs-responses-view": {
+    "labels": {
+      "title": "Sollicitatie op",
+      "profile": "Profiel",
+      "positions": "Functie(s):",
+      "skills": "Vaardigheden:",
+      "available-hours": "uren beschikbaar:",
+      "hours": "uur",
+      "application": "Sollicitatie",
+      "match": "{{match}}% Match",
+      "applied-on": "Toegepast op",
+      "motivation": "Motivatie:",
+      "method": "Methode",
+      "description": "Omschrijving",
+      "date": "Datum",
+      "attachment": "Gehechtheid",
+      "deadline": "Deadline",
+      "freelancer-response": "Reactie van freelancer",
+      "url": "URL",
+      "invitation": "uitnodiging"
+    },
+    "messages": {
+      "invitation-accepted": "Freelancer heeft je uitnodiging geaccepteerd",
+      "invitation-success": "Uitnodiging met succes verzonden"
+    },
+    "buttons": {
+      "download-resume": "C.V.",
+      "hire": "Huren",
+      "hired": "Gehuurd",
+      "invite": "Uitnodigen",
+      "invited": "uitgenodigd",
+      "download": "Download"
+    }
+  },
+  "login": {
+    "labels": {
+      "login-to-my": "Inloggen op mijn Codinglab",
+      "to-get-work-done-with": "Om aan de slag te gaan met CodingLab",
+      "not-a-member": "Nog geen lid?",
+      "or": "OR",
+      "lets-confirm-your-email": "Laten we je email bevestigen",
+      "one-step-left-verify-email": "Nog een stap te gaan, bevestig je email om aan de slag te gaan. We hebben een email verzonden naar <span class='text-bold text-primary'>{{email}}</span>"
+    },
+    "placeholders": {
+      "e-mail": "E-mail",
+      "password": "Wachtwoord"
+    },
+    "validations": {
+      "email": {
+        "required": "Vul je e-mailadres in",
+        "valid": "Vul een geldige e-mailadres in"
+      },
+      "password": {
+        "min-length": "Wachtwoord moet minimaal 3 tekens bevatten",
+        "required": "Vul je wachtwoord in"
+      }
+    },
+    "messages": {
+      "invalid-login": "Je e-mailadres of wachtwoord is ongeldig"
+    },
+    "buttons": {
+      "forgot-password": "Wachtwoord vergeten?",
+      "login": "Inloggen",
+      "signup": "Meld je aan",
+      "signin-google": "Sign In With Google",
+      "signin-linkedin": "Sign In With LinkedIn",
+      "resend-confirmation": "Opnieuw verzenden"
+    }
+  },
+  "navbar": {
+    "freelancer-steps": {
+      "title": "stappen",
+      "description": "Volg deze stap om te solliciteren op je eerste opdracht",
+      "create-an-account": "Maak een account",
+      "create-profile": "Maak een profiel aan",
+      "apply-to-job": "Solliciteer",
+      "success-title": "Gefeliciteerd!!",
+      "all-step-done": "Je hebt alle stappen voltooid",
+      "todo-list": "to-do lijst",
+      "ok": "ok"
+    },
+    "client-steps": {
+      "title": "stappen",
+      "description": "Volg deze stap om uw eerste opdracht te plaatsen",
+      "create-an-account": "Maak een account",
+      "post-a-job": "Maak een opdracht aan",
+      "success-title": "Gefeliciteerd!!",
+      "all-step-done": "Je hebt alle stappen voltooid",
+      "todo-list": "to-do lijst",
+      "ok": "ok"
+    },
+    "buttons": {
+      "post-job": "Plaats opdracht",
+      "goto-main-site": "Naar de hoofdsite",
+      "logout": "Uitloggen",
+      "profile": "Mijn profiel"
+    }
+  },
+  "notification-settings": {
+    "labels": {
+      "description": "Hier kun je al je soorten notificaties beheren.",
+      "send-update-email": "Stuur me een e-mail over updates",
+      "send-email": "Stuur me een e-mail voor potentiële opdrachten"
+    },
+    "messages": {
+      "update-notification-settings": "Update meldingsinstellingen"
+    },
+    "buttons": {
+      "update": "Bijwerken"
+    }
+  },
+  "client-home": {
+    "labels": {
+      "active-freelancer": "Freelancers actief",
+      "total-hours-worked": "Totaal uren gewerkt",
+      "jobs": "Opdrachten",
+      "loading": "Laden...",
+      "start-job-post": "Welkom! Begin met een opdracht aanmaken",
+      "enter-your-post": "Ga verder met je opdracht invullen",
+      "application-approved": "Je opdracht is goedgekeurd! Je kunt nu je opdracht publiceren om deze compleet te maken",
+      "post-is-online": "Hooray! Je opdracht staat online.",
+      "wait-for-approval": "De opdracht is in behandeling, we houden je up to date!",
+      "freelancers": "Freelancers",
+      "administration": "Administratie beheren",
+      "total-hours": "Totaal uren gewerkt",
+      "hours": "Uur",
+      "no-active-jobs": "Welkom terug! Een nieuwe opdracht aanmaken?"
+    },
+    "buttons": {
+      "create-job": "Opdracht aanmaken",
+      "job-edit": "Opdracht afmaken",
+      "publish-job": "Opdracht publiceren",
+      "edit-job": "Opdracht bewerken",
+      "view-responses": "Bekijk reacties",
+      "create": "Opdracht aanmaken"
+    }
+  },
+  "not-found": {
+    "labels": {
+      "title": "Opps, We can’t find that page!",
+      "description": "Either something went wrong or the page doesn’t exist anymore"
+    },
+    "buttons": {
+      "back": "Back",
+      "home": "Home"
+    }
+  },
+  "profile": {
+    "labels": {
+      "where-are-you-located": "Waar woon je?",
+      "or": "OF",
+      "first-step": "Je eerste stap",
+      "my-profile": "Mijn profiel",
+      "not-much-time": "Klaar in 5 minuten.",
+      "what-kind-of-work": "Wat voor werk vind je leuk?",
+      "what-knowledge-skills": "Welke talen, tools en technologieën ken je?",
+      "what-industries": "In welke sectoren ben je geïnteresseerd?",
+      "what-is-your-hourly-rate": "Wat is je uurtarief?",
+      "choose-knowledge-skills": "Vul je skills in",
+      "choose-roles": "Kies je functie(s)",
+      "choose-location": "Vul je locatie in",
+      "choose-industries": "Kies industrieën",
+      "hint": "Hint:",
+      "very-high-rates": "Very High Rates {{minRate}} - {{maxRate}}",
+      "drag-or-upload-cv": "Klik of sleep je C.V. hier om te uploaden",
+      "drop-file": "Drop files instantly to: Coding Lab Server",
+      "wrong-file-type-resume": "Oops, we can't process that! Could you upload a PDF or DOC(X) file?",
+      "when-available": "Wanneer ben je beschikbaar?",
+      "hours-per-week": "Uren per week",
+      "where-do-you-like-to-work": "Waar werk je graag?",
+      "min-hrs": "Min Hrs ",
+      "max-hrs": "Max Hrs ",
+      "how-can-clients-reach-you": "Hoe kunnen opdrachtgevers je bereiken?",
+      "tip-include-what-you-like": "Tip: Neem ook zaken op waar je graag mee wilt werken.",
+      "company-no": "Zakelijke nummer",
+      "company-name": "Bedrijfsnaam",
+      "min-euro": "Min €",
+      "preferred-euro": "Gewenst €",
+      "enter-company": "Voer je bedrijfsnaam in",
+      "enter-phone": "Voer je telefoonnummer in",
+      "upload-profile-image": "Upload je profielfoto"
+    },
+    "messages": {
+      "welcome-user": "Welcome {{firstName}}.",
+      "lets-create-profile": "Laten we een aantrekkelijk profiel maken!",
+      "welcome-to": "Welcome to CodingLab!",
+      "enter-details": "Je eerste stap is het invullen van je gegevens, dit helpt om je profiel zichtbaar te maken voor\n              opdrachtgevers en bij het solliciteren.",
+      "not-allowed-avatar": "Only image with extension allowed (img/png)",
+      "photo-is-small": "Profile photo resolution is too small",
+      "photo-is-large": "Profile photo size is too large, allowed max size{{size}}mb"
+    },
+    "validations": {
+      "working-conditions.required": "Please choose remote and / or office",
+      "technologies.required": "Please select the technologies that you are using or want to use",
+      "position.required": "Please choose one or more positions",
+      "location-required": "Please choose a location"
+    },
+    "buttons": {
+      "freelancer-profile": "Freelancer profiel",
+      "notifications": "Notificaties",
+      "remove-profile-picture": "Remove profile picture"
+    },
+    "working-hours-options": {
+      "min-selected-hour": "Min. {{minHour}}u",
+      "max-selected-hour": "Max. {{maxHour}}u"
+    },
+    "hourly-rate": {
+      "min-selected-rate": "Min. € {{minRate}}",
+      "max-selected-rate": "Max. € {{maxRate}}"
+    }
+  },
+  "job-response-detail": {
+    "labels": {
+      "hours": "uur",
+      "months": "maanden",
+      "application": "Sollicitatie",
+      "job-details": "Opdracht details",
+      "job-description": "Opdracht omschrijving",
+      "telephone": "Telefoonnummer",
+      "motivation": "Motivatie",
+      "resume": "Hervatten",
+      "invitation": "Uitnodiging",
+      "method": "Methode",
+      "canstart": " Start datum:",
+      "duration-month": "Duur:",
+      "level": "Niveau:",
+      "max-working-hours": "Uren per week:",
+      "positions": "Gerelateerde functie(s):",
+      "technologies": "Techniek(en):",
+      "description": "Omschrijving",
+      "date": "Datum",
+      "attachment": "Gehechtheid",
+      "deadline": "Deadline",
+      "code-url": "Code Url (Git, BitBucket, GitLab)"
+    },
+    "placeholders": {
+      "description": "Omschrijving.."
+    },
+    "validations": {
+      "valid-url": "Must be a valid URL"
+    },
+    "messages": {
+      "code-submitted": "U hebt de code met succes ingediend",
+      "invitation-accept": "Je hebt deze uitnodiging geaccepteerd",
+      "update-success": "Update succesvol",
+      "code-submit-success": "Code succesvol ingediend"
+    },
+    "buttons": {
+      "download-resume": "Download C.V.",
+      "invitation": "Uitnodiging",
+      "accept": "Aanvaarden",
+      "discuss": "Bespreken",
+      "download": "Downloaden",
+      "i-will-be-there": "ik zal er zijn",
+      "submit-code": "voorleggen code",
+      "go-to-my-app": "Ga naar mijn applicatie"
+    }
+  },
+  "submit-code-confirm-modal": {
+    "labels": {
+      "title": "Bevestiging!",
+      "text-message": "Weet je zeker dat je code wilt verzenden?"
+    }
+  },
+  "responses": {
+    "labels": {
+      "title": "Mijn toepassingen",
+      "loading": "laden..",
+      "applied-on": "Gesolliciteerd op",
+      "no-item": "U heeft momenteel geen toepassingen"
+    },
+    "status": {
+      "incomplete": "Incompleet",
+      "visible": "Verzonden",
+      "needs-review": "In behandeling",
+      "complete": "Compleet"
+    },
+    "buttons": {
+      "details": "Details bekijken",
+      "complete-application": "Volledige applicatie"
+    }
+  },
+  "response-detail": {
+    "labels": {
+      "title": "Sollicitatie op",
+      "respond": "Reageren",
+      "loading": "Sollicitatie laden..",
+      "motivation": "(Optioneel) korte motivatie",
+      "telephone": "Telefoonnummer"
+    },
+    "delete-application": {
+      "are-you-sure": "Weet je zeker dat je de Sollicitatie op",
+      "want-to-delete": " wilt verwijderen?",
+      "title": "Sollicitatie annuleren"
+    },
+    "validations": {
+      "hourly-rate-required": " Vul een uurtarief in",
+      "motivation-required": " Je motivatie is te kort"
+    },
+    "messages": {
+      "enter-rate": "Vul je tarief in",
+      "successfully-canceled": "Annuleren van de sollicitatie voor de opdracht {{title}} is gelukt",
+      "warning": "Er is iets fout gegaan bij het annuleren van de sollicitatie",
+      "success-description": "Neem gerust je tijd om ook op andere opdrachten te reageren!",
+      "success": "Super! Je reactie is binnen."
+    },
+    "buttons": {
+      "delete-application": "Sollicitatie annuleren",
+      "send-response": "Verzend reactie",
+      "go-to-dashboard": "Terug naar dashboard"
+    }
+  },
+  "sidebar": {
+    "buttons": {
+      "dashboard": "Dashboard",
+      "contracts": "Contracten",
+      "post-a-job": "Plaats opdracht",
+      "invoices": "Facturen",
+      "freelancers": "Freelancers",
+      "my-profile": "Mijn profiel",
+      "my-responses": "Mijn reacties",
+      "jobs": "Opdrachten",
+      "reports": "Tijd rapporten",
+      "responses": "Reacties",
+      "referral": "Referral",
+      "statistics": "Statistieken",
+      "invites": "Uitnodigingen",
+      "time-logs": "Urenverantwoording",
+      "view-jobs": "Bekijk opdrachten",
+      "main-site": "Ga naar de hoofdsite",
+      "messages": "berichten",
+      "billing": "Billing"
+    }
+  },
+  "signup-page": {
+    "labels": {
+      "terms-and-conditions-link-text": "algemene voorwaarden.",
+      "i-agree-with-the": "Ik ga akkoord met de",
+      "already-a-member": " Al een lid?",
+      "title": "Maak een nieuwe account aan",
+      "type": "Ik ben een:",
+      "what-do-you-want": "Wat wil je doen?",
+      "i-want-to": "Ik wil:",
+      "or": "OR"
+    },
+    "placeholders": {
+      "firstname": "Voornaam",
+      "lastname": "Achternaam",
+      "password": "Wachtwoord",
+      "e-mail": "E-mail"
+    },
+    "steps": {
+      "just-one-step": "Nog 1 stap te gaan!",
+      "finalizing-it": "Afronden"
+    },
+    "validations": {
+      "email": {
+        "required": "Vul je e-mailadres in",
+        "valid": "Vul een geldige e-mailadres in"
+      },
+      "password": {
+        "min-length": "Wachtwoord moet minimaal 5 tekens bevatten",
+        "required": "Vul een wachtwoord in"
+      },
+      "first-name": {
+        "min-length": "Vul minimaal 3 karakters in",
+        "required": " Vul je voornaam in"
+      },
+      "last-name": {
+        "min-length": "Vul minimaal 3 karakters in",
+        "required": " Vul je achternaam in"
+      },
+      "please-agree-to-terms": "Ga akkoord met de algemene voorwaarden als je door wilt gaan",
+      "email-in-use": "De opgegeven e-mailadres wordt al in gebruik genomen",
+      "company-in-use": "De opgegeven bedrijfsnaam wordt al in gebruik genomen"
+    },
+    "buttons": {
+      "submit": "Aanmelden",
+      "login": "Inloggen",
+      "continue": "Doorgaan",
+      "signup-google": "Sign up with Google",
+      "signup-linkedin": "Sign up with LinkedIn",
+      "remind-me": "Remind me",
+      "freelancer": "Freelance werk doen",
+      "client": "Kandidaten inhuren"
+    },
+    "messages": {
+      "confirm-email": "An email has been sent. Please check your email account and click on the link when you get it"
+    }
+  },
+  "signup-success-page": {
+    "labels": {
+      "confirm-email": "Controleer en bevestig je email.",
+      "welcome-to-the-club": "Welkom bij de club {{firstName}}!",
+      "registration-done": "Welkom bij codinglab",
+      "verified-info": "Je kunt nu doorgaan met je profiel aanmaken.",
+      "email-has-been-resent": "Email bevestiging is opnieuw verzonden",
+      "resend-verification-code": "Je kunt de verificatiecode na {{time}} seconden opnieuw verzenden"
+    },
+    "buttons": {
+      "resend-email": "Opnieuw verzenden"
+    }
+  },
+  "verify-email-page": {
+    "labels": {
+      "signup-success": "Signup Successful!",
+      "welcome": "Welcome {{name}}",
+      "one-more-step": "One more step is left to identify you, Please check your email and confirm you are human. We have sent an email to {{email}}",
+      "first-job-post": "creating your first job post.",
+      "completing-your-profile": "completing your profile.",
+      "invalid-verification-code": "De opgegeven verificatie link is niet geldig",
+      "checking-email-address": "E-mail controleren..",
+      "email-is-verified": "E-mailadres is geverifieerd!",
+      "verified-info": "Je kunt nu doorgaan met ",
+      "email-verified": "Je e-mailadres is geverifieerd",
+      "your-email-verified": "Je email <span class='text-primary'>{{email}}</span> is met succes geverifieerd!",
+      "verification-failed": "Verificatie mislukt",
+      "email-verification-link-invalid": "Je verificatie link is ongeldig of verlopen.",
+      "verification-code-used": "Verification code has already been used",
+      "email-already-verified": "Email already verified"
+    },
+    "buttons": {
+      "resend-verification": "Opnieuw verzenden"
+    }
+  },
+  "time-logs": {
+    "labels": {
+      "title": "Tijdsbeheer",
+      "sub-title": "U kunt uw werk elk einde van de maand indienen",
+      "report-declined": "Dit rapport is geweigerd door de opdrachtgever, werk het rapport bij en verzend het opnieuw.",
+      "description": "Omschrijving",
+      "client": "Client",
+      "period": "Periode",
+      "total-hours": "Uren in totaal",
+      "amount-billed": "Bedrag gefactureerd",
+      "day": "Dag",
+      "hours": "uren",
+      "date": "Datum",
+      "amount": "Bedrag",
+      "edit": "Bewerk",
+      "no-data": "Geen tijdlogboeken beschikbaar voor deze maand",
+      "send-report": "Verzend rapport",
+      "report-sent": "Verzend rapport",
+      "help-description": "Wanneer u op verzendrapport klikt, zal dit de klant op de hoogte stellen van de uren die u hebt gewerkt en zal het bewerken van deze uren onbruikbaar maken!",
+      "no-contracts": "Je hebt op dit moment geen contracten"
+    },
+    "status": {
+      "pending": "In afwachting",
+      "approved": "Geaccepteerd",
+      "wait-for-approval": "Wacht op goedkeuring",
+      "declined": "Afgewezen"
+    },
+    "placeholders": {
+      "description": "Waar was je aan het werken?"
+    },
+    "validations": {
+      "date-required": "Kies een datum",
+      "time-required": "Vul een tijd in",
+      "description-required": "Vul een beschrijving in"
+    },
+    "messages": {
+      "invalid-log-day": "U kunt de tijd niet registreren voor de komende comendag",
+      "already-logged": "Tijd al geregistreerd",
+      "create-success": "De tijd is succesvol vastgelegd",
+      "update-success": "Tijd geüpdatet",
+      "sent-success": "Rapport met succes naar de klant verzonden",
+      "sent-fail": "verzend rapport mislukt vanwege : {{errorMessage}}"
+    },
+    "buttons": {
+      "logtime": "Log Time",
+      "update": "Bijwerken",
+      "cancel": "annuleren"
+    }
+  },
+  "report-confirm-modal": {
+    "labels": {
+      "title": "Rapport bevestiging verzenden!",
+      "message": "Weet je zeker dat je een rapport wilt verzenden ?, dan wordt bewerken voor de maand uitgeschakeld "
+    }
+  },
+  "contract": {
+    "labels": {
+      "title": "Alle contract",
+      "no-item": "Je hebt op dit moment geen contracten",
+      "technologies": "Technieken:",
+      "contract": "Contract",
+      "invoice-information": "Factuurinformatie",
+      "invoice-logo": "Factuurlogo",
+      "vat-number": "BTW Aantal",
+      "kvk-number": "KVK Aantal",
+      "bank-account": "Bankrekening",
+      "company-name": "Bedrijfsnaam",
+      "address": "Adres",
+      "zipcode": "Postcode",
+      "under-review": "Uw contract wordt beoordeeld door codinglab",
+      "has-signed": " heeft een contract getekend",
+      "job": "Baan",
+      "description": "Omschrijving",
+      "invoice": "Factuur"
+    },
+    "messages": {
+      "update-success": "Succesvol geupdatet"
+    },
+    "invoiceinfo": "Factuurinformatie",
+    "invoicelogo": "Factuurlogo",
+    "number": "Aantal",
+    "bankaccount": "Bankrekening",
+    "address": "Adres",
+    "zipcode": "Postcode",
+    "save": "Bewaar informatie",
+    "download": "klik hier om het contract te downloaden",
+    "upload": "Upload ondertekend contract",
+    "review": "Uw contract wordt beoordeeld door codinglab",
+    "hassign": " heeft een contract getekend",
+    "updated": "Succesvol geupdatet",
+    "warning": "Selecteer een ondertekend exemplaar van uw contract",
+    "uploaded": "Contract succesvol geüpload",
+    "job": "Baan",
+    "invoice": "Factuur",
+    "signed": "Getekend contract",
+    "verify": "verifiëren",
+    "buttons": {
+      "signed": "Getekend contract",
+      "verify": "verifiëren",
+      "view-details": "Bekijk details"
+    }
+  },
+  "contracts-client": {
+    "labels": {
+      "title": "Alle contract",
+      "no-item": "Je hebt op dit moment geen contracten",
+      "technologies": "Technieken",
+      "end-in-five-days": "Eindigt over 5 dagen"
+    },
+    "buttons": {
+      "view-details": "Bekijk details",
+      "end-contract": "Contract beeindigen",
+      "edit-contract": "Bewerk contract"
+    },
+    "status": {
+      "pending": "In afwachting",
+      "to-be-signed": "Worden ondertekend",
+      "to-be-signed-by-client": "Te ondertekenen door de klant",
+      "to-be-signed-by-freelancer": "Ondertekend door freelancer",
+      "needs-review": "Behoefte aan beoordeling",
+      "active": "Actief",
+      "ended": "Ended"
+    },
+    "messages": {
+      "contract-updated": "Contract succesvol bijgewerkt",
+      "contract-update-failed": "Contract update failed {{errorMessage}}"
+    }
+  },
+  "contracts-freelancer": {
+    "labels": {
+      "title": "Alle contract",
+      "no-item": "Je hebt op dit moment geen contracten",
+      "technologies": "Technieken",
+      "job": "Baan"
+    },
+    "buttons": {
+      "view-details": "Bekijk details"
+    },
+    "status": {
+      "pending": "In afwachting",
+      "to-be-signed": "Worden ondertekend",
+      "to-be-signed-by-client": "Te ondertekenen door de klant",
+      "to-be-signed-by-freelancer": "Ondertekend door freelancer",
+      "needs-review": "Behoefte aan beoordeling",
+      "active": "Actief",
+      "ended": "Ended"
+    }
+  },
+  "contract-client": {
+    "labels": {
+      "contract": "Contract met",
+      "invoice-information": "Factuurinformatie",
+      "invoice-logo": "Factuurlogo",
+      "vat-number": "BTW Aantal",
+      "kvk-number": "KVK Aantal",
+      "bank-account": "Bankrekening",
+      "company-name": "Bedrijfsnaam",
+      "address": "Adres",
+      "zipcode": "Postcode",
+      "under-review": "Uw contract wordt beoordeeld door codinglab",
+      "freelancer-has-signed": "Freelancer {{firstName}} {{lastName}} heeft een contract getekend",
+      "drop-logo": "Kies het logo of laat het vallen",
+      "drop-contract": "Kies het contractbestand of laat het vallen",
+      "change-logo": "Kies het logo of laat het vallen om te wijzigen",
+      "job": "Baan"
+    },
+    "buttons": {
+      "save": "Bewaar informatie",
+      "download": "Download contract om te ondertekenen",
+      "upload": "Upload ondertekend contract"
+    },
+    "messages": {
+      "update-success": "Succesvol geupdatet",
+      "select-signed-copy": "Selecteer een ondertekend exemplaar van uw contract",
+      "upload-success": "Contract succesvol geüpload"
+    }
+  },
+  "contract-freelancer": {
+    "labels": {
+      "contract": "Contract met",
+      "invoice-information": "Factuurinformatie",
+      "invoice-logo": "Factuurlogo",
+      "vat-number": "BTW Aantal",
+      "kvk-number": "KVK Aantal",
+      "bank-account": "Bankrekening",
+      "company-name": "Bedrijfsnaam",
+      "address": "Adres",
+      "zipcode": "Postcode",
+      "under-review": "Uw contract wordt beoordeeld door codinglab",
+      "client-has-signed": "Client {{firstName}} {{lastName}} heeft een contract getekend",
+      "drop-logo": "Kies het logo of laat het vallen",
+      "drop-contract": "Kies het contractbestand of laat het vallen",
+      "change-logo": "Kies het logo of laat het vallen om te wijzigen",
+      "job": "Baan"
+    },
+    "buttons": {
+      "save": "Bewaar informatie",
+      "download": "Download contract om te ondertekenen",
+      "upload": "Upload ondertekend contract"
+    },
+    "messages": {
+      "update-success": "Succesvol geupdatet",
+      "select-signed-copy": "Selecteer een ondertekend exemplaar van uw contract",
+      "upload-success": "Contract succesvol geüpload"
+    }
+  },
+  "time-logs-client": {
+    "labels": {
+      "name": "Naam",
+      "title": "Tijd rapporten",
+      "month": "Maand",
+      "year": "Jaar",
+      "action": "Actie",
+      "total-hours": "Totale uren",
+      "no-data": "Geen tijdrapporten beschikbaar voor deze freelancer"
+    },
+    "status": {
+      "pending": "In afwachting",
+      "to-be-reviewed": "Beoordeeld worden",
+      "approved": "Geaccepteerd",
+      "declined": "Afgewezen"
+    },
+    "messages": {
+      "report-not-approved": "De rapporten zijn zeven dagen niet goedgekeurd of geweigerd. Raadpleeg het rapport"
+    },
+    "buttons": {
+      "view": "bekijk"
+    }
+  },
+  "timelog-view": {
+    "labels": {
+      "title": "Timesheet",
+      "date": "Datum",
+      "hours": "uur",
+      "description": "Description",
+      "total-hours": "Totale uren",
+      "no-data": "Geen tijdlogboeken beschikbaar voor deze maand",
+      "hourlyrate": "uurtarief"
+    },
+    "messages": {
+      "approve-success": "Rapporten met succes goedgekeurd",
+      "approve-fail": "Rapport goedkeuren mislukt {{errorMessage}}",
+      "decline-success": "Rapporten geweigerd",
+      "decline-fail": "Rapportverwijzing mislukt {{errorMessage}}"
+    },
+    "buttons": {
+      "back-to-reports": "Terug naar rapporten"
+    }
+  },
+  "report-decline-modal": {
+    "labels": {
+      "title": "Bevestiging weigeren!",
+      "description": "Omschrijving"
+    },
+    "placeholders": {
+      "description": "Beschrijf voor de freelancer waarom u de urenstaat zou weigeren"
+    },
+    "validations": {
+      "description": {
+        "too-short": "Beschrijving is te kort. Het moet minimaal 50 tekens bevatten",
+        "required": "Voer de omschrijving in"
+      }
+    },
+    "buttons": {
+      "decline": "Afwijzen"
+    }
+  },
+  "notification": {
+    "labels": {
+      "no-item": "Er zijn op dit moment geen meldingen",
+      "notifications": "meldingen",
+      "timelog-sent": "{{data.freelancer.firstName}} {{data.freelancer.lastName}} stuurt u een rapport met tijdlogboeken van {{data.month}} - {{data.year}} ter beoordeling.",
+      "timelog-approval": "{{data.client.firstName}} {{data.client.lastName}} heeft {{data.status}} de urenverantwoording van {{data.month}} - {{data.year}} goedgekeurd.",
+      "new-application": "Er is een nieuwe sollicitatie van {{firstName}} {{lastName}} voor de opdracht {{title}}.",
+      "job-interview": "{{data.user.name}} uitnodiging voor opdracht verzenden {{data.job.title}}",
+      "job-hired": "{{data.user.name}} heeft je aangenomen voor baan {{data.job.title}}",
+      "application-has-been-completed": "Uw aanvraag voor {{title}} is voltooid. U kunt nu op andere vacatures solliciteren."
+    },
+    "buttons": {
+      "view-all": "Bekijk alle meldingen"
+    }
+  },
+  "freelancers": {
+    "labels": {
+      "title": "Actieve freelancers",
+      "no-item": "U hebt momenteel geen actieve freelancers"
+    }
+  },
+  "interview-method-modal": {
+    "labels": {
+      "title": "Wat wil je doen ?"
+    },
+    "buttons": {
+      "onsite-interview": "onsite interview",
+      "phone-remote-interview": "telefoon / interview op afstand",
+      "code-challenge": "code uitdaging",
+      "close": "ontslaan",
+      "view-job": "View Job"
+    }
+  },
+  "hire-confirm-modal": {
+    "labels": {
+      "title": "Huurbevestiging!",
+      "sure-you-want-to-hire": "Weet je zeker dat je wilt huren?"
+    }
+  },
+  "invitation-model": {
+    "labels": {
+      "description": "Omschrijving",
+      "date": "Datum",
+      "attachment": "Gehechtheid",
+      "deadline": "Deadline"
+    },
+    "method": {
+      "onsite-interview": "onsite interview",
+      "phone-remote-interview": "telefoon / interview op afstand",
+      "code-challenge": "code uitdaging"
+    },
+    "placeholders": {
+      "description": "Omschrijving.."
+    },
+    "validations": {
+      "date-required": "Selecteer een datum"
+    },
+    "buttons": {
+      "send-invitation": "Verstuur uitnodiging",
+      "close": "Dichtbij",
+      "change-method": "Verander methode"
+    }
+  },
+  "messages": {
+    "labels": {
+      "title": "Berichten"
+    },
+    "message-type": {
+      "client-hire": "Cliënt heeft je ingehuurd",
+      "freelancer-hired": "Jij hebt deze freelancer ingehuurd"
+    },
+    "buttons": {
+      "send": "Sturen"
+    }
+  },
+  "end-contract-modal": {
+    "labels": {
+      "title": "Weigeren bevestiging!",
+      "description": "Omschrijving"
+    },
+    "buttons": {
+      "end-contract": "Contract beeindigen"
+    },
+    "placeholders": {
+      "description": "Beschrijf voor de freelancer waarom u het contract zou beëindigen"
+    },
+    "validations": {
+      "description": {
+        "too-short": "Beschrijving is te kort, deze moet minimaal 50 tekens bevatten",
+        "too-long": "Beschrijving is te lang, deze moet maximaal 300 tekens bevatten",
+        "required": "Vul alstublieft de omschrijving in"
+      }
+    }
+  },
+  "edit-contract-modal": {
+    "labels": {
+      "title": "Contract bewerken",
+      "end-date": "Einddatum contract",
+      "end-date-note": "De einddatum kan slechts minimaal 1 maand in de toekomst zijn"
+    },
+    "buttons": {
+      "edit-contract": "Contract bewerken"
+    },
+    "placeholders": {
+      "contract-end-date": "Eind contractdatum"
+    },
+    "validations": {
+      "end-date": {
+        "required": "Selecteer de einddatum"
+      }
+    }
+  },
+  "freelance-billing": {
+    "labels": {
+      "generate-invoice": "Genereer factuur",
+      "invoice-number": "Factuurnummer",
+      "upload-invoice": "Factuur uploaden",
+      "drop-or-upload-file": "Kies het bestand of zet het neer",
+      "billing-for": "Facturering voor"
+    },
+    "validations": {
+      "invoice-required": "Factuurnummer is verplicht."
+    },
+    "messages": {
+      "invoice-received": "We hebben uw factuur ontvangen. We zullen u zo snel mogelijk op de hoogte houden",
+      "drop-or-upload-file": "Kies het bestand of zet het neer",
+      "send-success": "Factuur succesvol verzonden"
+    },
+    "buttons": {
+      "generate-invoice": "Genereer factuur",
+      "send": "Bekijk details"
+    }
+  },
+  "freelance-billing-list": {
+    "labels": {
+      "billing": "Billing",
+      "amount": "Bedrag",
+      "client": "Client",
+      "month": "Maand",
+      "year": "Jaar",
+      "hours": "uur",
+      "action": "Actie",
+      "no-data-for-this-month": "Geen gegevens beschikbaar voor deze maand"
+    },
+    "status": {
+      "pending": "In afwachting",
+      "under-review": "Wordt beoordeeld",
+      "paid": "Betaald"
+    },
+    "placeholders": {
+      "search-client": "zoek client(s)"
+    },
+    "buttons": {
+      "view-details": "Bekijk details"
+    }
+  },
+  "to-do-list": {
+    "labels": {
+      "welcome-name": "Welkom {{firstName}},",
+      "lets-get-you-started": "laten we je op weg helpen",
+      "complete-profile": "Maak je profiel compleet om te kunnen solliciteren",
+      "step": "Stap {{step}}"
+    },
+    "buttons": {
+      "create-account": "Maak een account aan",
+      "create-profile": "Maak een profiel aan",
+      "apply-job": "Solliciteer"
+    }
+  },
+  "main": {
+    "labels": {
+      "leader-in-dutch": "CodingLab helpt u uw digitale wereld te vergroten",
+      "i-am-looking-for-a": "Ik ben opzoek naar een..",
+      "or-contact-us": "Of stuur een mail naar "
+    },
+    "messages": {
+      "frontend-job": "Front-end developer opdracht",
+      "backend-job": "Back-end developer opdracht",
+      "design-job": "UX / UI designer opdracht",
+      "candidate": "Ik ben opzoek naar een geschikte kandidaat",
+      "no-mailbox": "Als je mailbox niet geopend wordt, mail ons dan op info@codinglab.nl met je wensen"
+    },
+    "buttons": {
+      "i-want-frontend-job": "Front-end opdracht",
+      "i-want-backend-job": "Back-end opdracht",
+      "i-want-design-job": "UX / UI design opdracht",
+      "looking-candidate": "Geschikte kandidaat"
+    }
+  },
+  "success-modal": {
+    "labels": {
+      "you-are-setup-perfect": "Je bent klaar om te solliciteren op vacatures die bij je profiel past"
+    },
+    "buttons": {
+      "dashboard": "Dashboard"
+    }
+  },
+  "edit-avatar-modal": {
+    "labels": {
+      "edit-photo": "Edit Profile Photo",
+      "drag-or-zoom-photo": "Drag to reposition the photo or zoom it"
+    }
+  },
+  "contact-support": {
+    "labels": {
+      "contact-us": "Contact us",
+      "can-we-help": "Can we help? Contact us and we will get back to you as soon as possible.",
+      "number": "+31 06 85 36 1812",
+      "thank-you": "Thank you, your request submit successfully. We will get get in touch with you shortly"
+    },
+    "placeholders": {
+      "full-name": "Full name",
+      "email": "Email address",
+      "category": "Select category",
+      "message": "Message"
+    },
+    "buttons": {
+      "send": "Send"
+    },
+    "validations": {
+      "full-name": {
+        "required": "Please enter your full name",
+        "min-length": "Please fill in at least 3 characters"
+      },
+      "email": {
+        "required": "Vul je e-mailadres in",
+        "valid": "Vul een geldige e-mailadres in"
+      },
+      "category": {
+        "required": "Selecteer een categorie"
+      },
+      "message": {
+        "required": "Vul een bericht in"
+      }
+    },
+    "messages": {
+      "created": "Contact created successfully"
+    }
+  },
+  "jobs-list": {
+    "labels": {
+      "locations": "Location(s)",
+      "email": "Email",
+      "email-address": "Email address",
+      "contact": "Contact no",
+      "number": "Number",
+      "posted-days-ago": "Posted {{days}} days ago",
+      "upload-resume": "Upload your resume",
+      "jobs": "Opdrachten",
+      "apply-now": "Be an early applicant, respond now",
+      "successfully-sent": "Je sollicitatie is verzonden.",
+      "knowledge-skills": "Skills en/of functie(s)",
+      "select-knowledge": "Vul je skills en/of functie(s) in",
+      "select-location": "Selecteer je locatie",
+      "job-closed": "De opdracht is gesloten"
+    },
+    "buttons": {
+      "sign-up-to-apply": "Sign up to apply",
+      "date": "Datum (nieuw-oud)",
+      "working-hours-high": "Werkuren (hoog-laag)",
+      "working-hours-low": "Werkuren (laag-hoog)",
+      "duration-project-high": "Projectduur (hoog-laag)",
+      "duration-project-low": "Projectduur (laag-hoog)"
+    },
+    "hourly-rate": {
+      "min-selected-rate": "Min. € {{minRate}}",
+      "max-selected-rate": "Max. € {{maxRate}}",
+      "very-high-rate": "Very High Rates €{{minRate}} - €{{maxRate}}"
+    }
+  },
+  "job-view": {
+    "labels": {
+      "have-account": "Already have an account",
+      "signup-to-view": "Meld je aan om de voortgang van je sollicitatie te bekijken",
+      "job-not-found": "Oops, de opdracht is niet gevonden",
+      "currency": "€ {{currency}}",
+      "view-application-progress": "View application progress"
+    },
+    "buttons": {
+      "back-to-job": "Terug naar overzicht",
+      "apply-now": "Solliciteer",
+      "back-to-job-search": "Terug naar overzicht"
+    }
+  },
+  "job-detail": {
+    "labels": {
+      "start-date": "Start datum",
+      "hours-per-week": "Uren per week",
+      "min-max-hour": "{{minHour}}u - {{maxHour}}u",
+      "freelancers": "{{freelancers}} Freelancer",
+      "months": "Maanden",
+      "month": "Maand",
+      "not-available": "Deze opdracht is al vervuld"
+    }
+  },
+  "apply-modal": {
+    "labels": {
+      "apply-now": "Solliciteer",
+      "email": "E-mailadres",
+      "phone-number": "Mobiel nummer",
+      "upload-resume": "Upload je C.V.",
+      "enter-number": "Enter number",
+      "choose-file": "Kies bestand",
+      "enter-email": "Voer je e-mailadres in",
+      "enter-motivation": "Voer een korte motivatie in",
+      "motivation": "Korte motivatie"
+    },
+    "validations": {
+      "resume": {
+        "upload-resume": "Upload je C.V.",
+        "upload-pdf-doc-docx-or-image": "Upload een pdf, doc, docx of afbeelding"
+      },
+      "number-length": "Vul op zijn minst 11 karakters in",
+      "min-length-motivation": "Vul een motivatie in van minimaal 20 karakters",
+      "max-length-motivation": "Je motivatie mag niet langer zijn dan 400 karakters"
+    }
+  },
+  "generator-resume": {
+    "labels": {
+      "name": "Your name",
+      "email": "Email",
+      "location": "Location",
+      "personal-info": "Personal information",
+      "top-skill": "Top skill",
+      "work-experience": "Work experience",
+      "chose-proficiency": "Chose proficiency",
+      "name-position": "Name of position",
+      "start-date": "Start date",
+      "end-date": "End date",
+      "position": "Position",
+      "tools-label": "Tools label",
+      "tools": "Tools",
+      "employable-as": "Employable as",
+      "phone": "Phone Number",
+      "education-name": "Education name",
+      "education": "Education",
+      "schoolname-location": "School name & location",
+      "experience-level": "Experience level",
+      "language": "Language",
+      "platforms": "Platforms",
+      "softwares": "Software's",
+      "colored": "Colored resume",
+      "black-white": "Black & White resume",
+      "projects": "Projects",
+      "in-progress": "In Progress",
+      "passed": "Passed",
+      "beginner": "Beginner",
+      "advance": "Advance",
+      "fluent": "Fluent",
+      "star": "{{star}} star",
+      "stars": "{{star}} stars",
+      "present": "{{month}} - present",
+      "other-project": "Other projects",
+      "link": "Link",
+      "build-on": "Build on",
+      "project-date": "Project date",
+      "school-name": "School name",
+      "product-owner": "Product owner",
+      "enter-name": "Enter your name",
+      "enter-phone": "Enter phone number",
+      "enter-location": "Enter your location",
+      "enter-skill": "Enter your skill",
+      "enter-position": "Enter name of position",
+      "enter-company": "Enter name of company",
+      "enter-description": "Enter description of work",
+      "enter-tools-labels": "Enter tools labels",
+      "enter-tools": "Enter tools",
+      "enter-education": "Enter education name",
+      "enter-school-location": "Enter school name & location",
+      "enter-language": "Enter language",
+      "enter-link": "Enter link",
+      "title": "Title",
+      "enter-title": "Enter title"
+    },
+    "durations": {
+      "half-years": "{{years}}.5 years",
+      "year": "{{year}} year",
+      "years": "{{years}} years"
+    },
+    "validations": {
+      "min-length": "Please fill in at least {{min}} characters",
+      "name": {
+        "required": "Please enter your name"
+      },
+      "phone": {
+        "required": "Please enter your phone number",
+        "max-length": "The maximum length of the telephone number cannot exceed 15 characters"
+      },
+      "location": {
+        "required": "Please enter your location"
+      },
+      "description": {
+        "required": "Please enter a description"
+      },
+      "position": {
+        "required": "Please enter name of position"
+      },
+      "company": {
+        "required": "Please enter company name"
+      },
+      "date": {
+        "required": "Please select a date"
+      }
+    },
+    "buttons": {
+      "add-top-skill": "Add top skill",
+      "remove-project": "Remove Project",
+      "remove-education": "Remove education",
+      "remove-work": "Remove work experience",
+      "add-skill": "Add skill",
+      "add-education": "Add education",
+      "add-language": "Add languages",
+      "add-employable": "Add another employable as",
+      "add-work": "Add work experience",
+      "add-tools": "Add tools",
+      "add-project": "Add project",
+      "back-to-create": "Back to create",
+      "click-upload": "Click to upload your resume photo"
+    }
+  },
+  "footer": {
+    "links": {
+      "about-us": "About Us",
+      "contact-us": "Contact us",
+      "how-it-works": "How it works",
+      "terms-of-service": "Terms of Service",
+      "privacy-policy": "Privacy Policy"
+    },
+    "copyright": " © Copyrights {{year}}, CodingLab. All Rights Reserved."
+  },
+  "header": {
+    "menus": {
+      "jobs": "Opdrachten",
+      "dashboard": "Dashboard",
+      "contract": "Contract",
+      "contracts": "Contracten",
+      "referall": "Referal",
+      "reports": "Rapportages",
+      "report": "Rapport",
+      "to-do-list": "Takenlijst",
+      "messages": "Berichten",
+      "my-freelancers": "Mijn freelancers",
+      "my-jobs": "Mijn opdrachten"
+    },
+    "menu-items": {
+      "contract": {
+        "overview": "Overzicht",
+        "my-applications": "Mijn sollicitaties",
+        "open-contracts": "Open Contracten"
+      },
+      "reports": {
+        "overview": "Overview",
+        "billing": "Betaling",
+        "time-management": "Tijdsbeheer"
+      },
+      "profile": {
+        "my-profile": "Mijn profiel",
+        "settings": "Instellingen",
+        "logout": "Uitloggen"
+      }
+    },
+    "languages": {
+      "english": "EN",
+      "dutch": "NL"
+    },
+    "buttons": {
+      "login": "Inloggen",
+      "sign-up": "Aanmelden"
+    }
+  },
+  "serverErrorMessages": {
+    "messages": {
+      "email-already-in-use": "Het e-mailadres {{email}} is al in gebruik",
+      "something-wrong": "Er is iets fout gegaan, meld het aan ons!",
+      "already-applied-job": "Je hebt al gesolliciteerd!",
+      "invalid-status": "Invalid status",
+      "invalid-hourlyRate": "Vul een geldige uurtarief in",
+      "invalid-resume": "Je C.V. is in een formaat dat niet geaccepteerd wordt",
+      "invalid-motivation": "Vul een geldige motivatie in",
+      "invalid-phone": "Vul een geldige telefoonnummer in",
+      "invalid-jobId": "De opdracht waar je op solliciteert bestaat niet",
+      "not-exist-job": "De opdracht bestaat niet"
+    }
+  },
+  "dashboard": {
+    "labels": {
+      "jobs": "Jobs",
+      "contracts": "Contracts",
+      "freelancers": "Freelancers",
+      "profile-jobs": "Interessante opdrachten",
+      "active-jobs": "Actieve opdrachten",
+      "job-status": "Sollicitatiestatus",
+      "there-no-active-jobs": "There is no active jobs, to see your active jobs",
+      "no-active-contracts": "There is no active contract right now. Post a job and get started",
+      "no-freelancers": "There is no freelancer that you hired. Post a job and hire the freelancer",
+      "profile-incomplete": "Je profiel is incompleet, maak je profiel compleet en zie interessante opdrachten hier",
+      "no-active-jobs": "Je hebt nog geen actieve opdracht. Solliciteer en zie de status hier",
+      "no-open-applications": "Je hebt nog niet gesolliciteerd. Solliciteer en zie de status hier",
+      "last-days": "Last {{days}} Days",
+      "match": "{{match}}% Match",
+      "hours": "{{minWorkingHours}}hrs - {{maxWorkingHours}}hrs"
+    },
+    "buttons": {
+      "edit-profile": "Edit profile",
+      "apply-job": "Apply on job"
+    }
+  },
+  "jobs-applications": {
+    "labels": {
+      "your-jobs": "Your Jobs",
+      "all-jobs": "Alle opdrachten",
+      "approval-waiting": "Approval waiting",
+      "draft": "Draft",
+      "filled": "Filled",
+      "employable-as": "Employable as",
+      "technology-skills": "Technology & skills",
+      "freelancer-match": "This freelancer match {{match}}% with your job post",
+      "freelancer-response-on": "Freelancer Response On",
+      "deleted": "Deleted",
+      "no-active-jobs": "There is no active jobs, to see your active jobs",
+      "working-hours": "Working hours {{minHours}} Hrs - {{maxHours}} Hrs",
+      "freelancer-rate": "Freelancer hourly rate",
+      "working-hours-week": "Working hours per week",
+      "response-on": "{{response}} Response on",
+      "responses-on": "{{response}} Responses on",
+      "average-hourly-rate": "Average hourly rate of this job",
+      "search-freelancer": "Search your freelancers by name, location, technology",
+      "job-motivation": "Job motivation"
+    },
+    "buttons": {
+      "post-new-job": "Post new job",
+      "edit-posting": "Edit Posting",
+      "reuse-posting": "Reuse Posting",
+      "remove-posting": "Remove Posting",
+      "take-offline-post": "Take offline this job post",
+      "response": "{{response}} Response",
+      "take-offline": "Take Offline",
+      "filter": "Filter",
+      "view-proposal": "View Proposal",
+      "cv-resume": "CV / Resume",
+      "newest": "Newest",
+      "continue-edit": "Continue editing",
+      "resume": "Resume",
+      "best-match": "Best match",
+      "more-then": "More then 40 hrs",
+      "highest-rate": "Highest hourly rate",
+      "close-distance": "Closest distance"
+    },
+    "messages": {
+      "no-freelancers-applied": "No applications yet, share the job on social media to get more traction!"
+    }
+  },
+  "my-applications": {
+    "labels": {
+      "my-applications": "My Applications",
+      "applied": "Applied on: {{date}}",
+      "incomplete": "Incompleet",
+      "cancelled": "Geannuleerd",
+      "complete": "Verzonden",
+      "published": "Published",
+      "you-accepted": "You accepted this invitation"
+    },
+    "buttons": {
+      "apply-job": "Apply on a job",
+      "go-back": "Go to back",
+      "download-resume": "Download Resume"
+    }
+  },
+  "landing": {
+    "labels": {
+      "build-team": "Bouw je tech team op, \nvind kandidaten die passen bij jouw behoeftes.",
+      "are-freelancer": "Bekijk demo",
+      "how-condinglab-works": "Hoe CodingLab werkt",
+      "create-job": "Maak een vacature aan",
+      "tell-us": "Vertel ons over je project. Codinglab brengt je in contact met toptalent.",
+      "receive-applications": "Ontvang sollicitaties",
+      "get-proposal": "Vergelijk sollicitaties, recensies en eerder werk. Interview favorieten en huur de beste persoon in.",
+      "invite-or-chat": "Invite or chat with candidates",
+      "use-codinglab": "Use Codinglab to chat or video call, share files, and track project milestones from your desktop or mobile.",
+      "any-question": "Do you have any question in your mind?",
+      "how-hire": "How can I hire good engineers?",
+      "how-hire-desc": "To hire quality you need to answer the following two questions: - How do I know if a developer is good? - How do I motivate a developer? ",
+      "how-payment": "How does the payment system work?",
+      "how-payment-desc": "Payment system is very easy you just focus on hiring and we will solve your payment problem",
+      "do-need-freelancer": "Do you need a freelancer?",
+      "want-to-know": "Want to know how else you can benefit from CodingLab?",
+      "leave-detail": "Or do you want to quickly and easily build your own freelance pool? Leave your details and we will contact you without obligation.",
+      "cant-find-question": "Didn’t find your question?",
+      "how-much-dev-cost": "How much does a developer cost?",
+      "is-developer-good": "How do I know if a developer is good?",
+      "what-designer-do": "What does a designer do?",
+      "how-communication-work": "How does communication work?",
+      "hire-freelancers": "Huur het beste talent van Nederland in",
+      "freelancer-list-text": "Lorem ipsum dolor imit",
+      "view-all": "Bekijk Alles"
+    },
+    "buttons": {
+      "get-started": "Get started",
+      "click-here": "Click here",
+      "watch-demo": "Watch demo",
+      "go-to-faq": "Go to full F.A.Q.",
+      "company": "Company",
+      "social": "Social",
+      "resource": "Resources",
+      "signup": "Aanmelden",
+      "explore-jobs": "Explore jobs",
+      "about": "About",
+      "how-works": "How it works",
+      "find-talent": "Vind talent",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "payments": "Payments"
+    }
+  },
+  "faq": {
+    "title": {
+      "head": "Frequently Asked Question",
+      "frequently-client": "Frequently Asked by clients",
+      "frequently-freelancers": "Frequently Asked by Freelancers",
+      "not-found-question": "Didn’t find your question?"
+    },
+    "buttons": {
+      "go-to-full-faq": "Go to full F.A.Q"
+    }
+  },
+  "profile-card": {
+    "buttons": {
+      "view-profile": "Bekijk profiel"
+    }
+  },
+  "candidates-search": {
+    "labels": {
+      "top-talents": "Toptalenten uit meerdere industrieën",
+      "freelancers-amount": "{{usersLength}} freelancers wachten op je baan"
+    },
+    "buttons": {
+      "select-all": "Select All",
+      "view-profile": "Bekijk profiel",
+      "send-message": "Bericht versturen",
+      "create-job": "Taak maken"
+    }
+  },
+  "sign-up-page": {
+    "messages-error": "Om door te gaan met het verzenden van een bericht, moet u zich eerst aanmelden"
+  }
+}

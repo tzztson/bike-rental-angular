@@ -1,0 +1,338 @@
+<!--<div class="topbar">-->
+<!--  <div class="topbar-md d-lg-none">-->
+<!--    <div class="container">-->
+<!--      <div class="d-flex align-items-center justify-content-between">-->
+<!--        <a href="#" class="toggle-nav">-->
+<!--          <div class="toggle-icon">-->
+<!--            <span class="toggle-line"></span>-->
+<!--            <span class="toggle-line"></span>-->
+<!--            <span class="toggle-line"></span>-->
+<!--            <span class="toggle-line"></span>-->
+<!--          </div> </a-->
+<!--        >&lt;!&ndash; .toggle-nav &ndash;&gt;-->
+
+<!--        <div class="site-logo">-->
+<!--          <a routerLink="/" class="site-brand">-->
+<!--            <img src="assets/images/logo/logo_colored_cropped-sm.png" alt="logo" srcset="assets/images/logo2x.png 2x" />-->
+<!--          </a>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; .site-logo &ndash;&gt;-->
+<!--        <div class="dropdown topbar-action-item topbar-action-user">-->
+<!--          <a href="#" data-toggle="dropdown"> <img class="icon" src="assets/images/user-thumb-sm.png" alt="thumb" /></a>-->
+
+<!--          &lt;!&ndash; Mobile navbar &ndash;&gt;-->
+<!--          <div class="dropdown-menu dropdown-menu-right">-->
+<!--            <div class="user-dropdown">-->
+<!--              <div class="user-dropdown-head">-->
+<!--                <h6 class="user-dropdown-name">{{ user.fullName }}</h6>-->
+<!--                <span class="user-dropdown-email">{{ user.email }}</span>-->
+<!--              </div>-->
+<!--              <a href="#" class="btn btn-block btn-warning">{{ 'navbar.buttons.post-job' | transloco }}</a>-->
+<!--              <div class="gaps-1x"></div>-->
+<!--              <ul class="user-dropdown-links">-->
+<!--                <li>-->
+<!--                  <a href="account.html"><i class="ti ti-id-badge"></i>My Profile</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="security.html"><i class="ti ti-lock"></i>Security</a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="activity.html"><i class="ti ti-eye"></i>Activity</a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--              <ul class="user-dropdown-links">-->
+<!--                <li>-->
+<!--                  <a href="login.html"><i class="ti ti-power-off"></i>Logout</a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; .toggle-action &ndash;&gt;-->
+<!--      </div>-->
+<!--      &lt;!&ndash; .container &ndash;&gt;-->
+<!--    </div>-->
+<!--    &lt;!&ndash; .container &ndash;&gt;-->
+<!--  </div>-->
+<!--  &lt;!&ndash; .topbar-md &ndash;&gt;-->
+<!--  <div class="container">-->
+<!--    <div class="d-lg-flex align-items-center justify-content-between">-->
+<!--      <div class="topbar-lg d-none d-lg-block">-->
+<!--        <div class="site-logo">-->
+<!--          <a href="index.html" class="site-brand">-->
+<!--            <img-->
+<!--              src="/assets/images/logo/logo_colored_cropped-sm.png"-->
+<!--              alt="logo"-->
+<!--              srcset="/assets/images/logo2x.png 2x"-->
+<!--            />-->
+<!--          </a>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; .site-logo &ndash;&gt;-->
+<!--      </div>-->
+<!--      &lt;!&ndash; .topbar-lg &ndash;&gt;-->
+
+<!--      <div class="topbar-action d-none d-lg-block">-->
+<!--        <ul class="topbar-action-list">-->
+<!--          <li class="topbar-action-item" *ngIf="this.user.hasStepsDone === false">-->
+<!--            <button data-toggle="dropdown" class="btn btn-info btn-xs text-uppercase todolist-btn">-->
+<!--              {{ 'navbar.freelancer-steps.todo-list' | transloco }}-->
+<!--              <span class="badge badge-danger complete-badge" *ngIf="!showSteps">&nbsp;</span>-->
+<!--            </button>-->
+<!--            &lt;!&ndash; Mobile navbar &ndash;&gt;-->
+<!--            <div class="dropdown-menu dropdown-menu-right">-->
+<!--              &lt;!&ndash; Freelancer Steps &ndash;&gt;-->
+<!--              <div class="user-dropdown" *ngIf="user.roleId === Roles.Freelancer">-->
+<!--                <div class="user-dropdown-head" *ngIf="showSteps">-->
+<!--                  <h5 class="user-dropdown-name">-->
+<!--                    {{ 'navbar.freelancer-steps.title' | transloco }}-->
+<!--                  </h5>-->
+<!--                  <span class="user-dropdown-email">{{ 'navbar.freelancer-steps.description' | transloco }}</span>-->
+<!--                </div>-->
+<!--                <div class="user-dropdown-head" *ngIf="!showSteps">-->
+<!--                  <h5 class="user-dropdown-name">-->
+<!--                    {{ 'navbar.freelancer-steps.success-title' | transloco }}-->
+<!--                  </h5>-->
+<!--                  <span class="user-dropdown-email">{{ 'navbar.freelancer-steps.all-step-done' | transloco }}</span>-->
+<!--                </div>-->
+<!--                <ul class="user-dropdown-links" *ngIf="!showSteps">-->
+<!--                  <li class="complete-button">-->
+<!--                    <a>-->
+<!--                      <button class="btn btn-info" (click)="finishStep()">-->
+<!--                        {{ 'navbar.freelancer-steps.ok' | transloco }}-->
+<!--                      </button>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--                <ul class="user-dropdown-links" *ngIf="showSteps">-->
+<!--                  <li>-->
+<!--                    <a-->
+<!--                      ><i class="ti ti-check text-success"></i-->
+<!--                      >{{ 'navbar.freelancer-steps.create-an-account' | transloco }}</a-->
+<!--                    >-->
+<!--                  </li>-->
+<!--                  <li>-->
+<!--                    <a-->
+<!--                      ><i-->
+<!--                        class="ti text-success"-->
+<!--                        [ngClass]="{-->
+<!--                          'ti-check': !user.isNew,-->
+<!--                          'ti-more-alt': user.isNew-->
+<!--                        }"-->
+<!--                      ></i-->
+<!--                      >{{ 'navbar.freelancer-steps.create-profile' | transloco }}</a-->
+<!--                    >-->
+<!--                  </li>-->
+<!--                  <li>-->
+<!--                    <a-->
+<!--                      ><i-->
+<!--                        class="ti text-success"-->
+<!--                        [ngClass]="{-->
+<!--                          'ti-check': user.hasApplied,-->
+<!--                          'ti-more-alt': !user.hasApplied-->
+<!--                        }"-->
+<!--                      ></i-->
+<!--                      >{{ 'navbar.freelancer-steps.apply-to-job' | transloco }}</a-->
+<!--                    >-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--              &lt;!&ndash; Client Steps &ndash;&gt;-->
+<!--              <div class="user-dropdown" *ngIf="user.roleId === Roles.Client">-->
+<!--                <div class="user-dropdown-head" *ngIf="showSteps">-->
+<!--                  <h5 class="user-dropdown-name">-->
+<!--                    {{ 'navbar.client-steps.title' | transloco }}-->
+<!--                  </h5>-->
+<!--                  <span class="user-dropdown-email">{{ 'navbar.client-steps.description' | transloco }}</span>-->
+<!--                </div>-->
+<!--                <div class="user-dropdown-head" *ngIf="!showSteps">-->
+<!--                  <h5 class="user-dropdown-name">-->
+<!--                    {{ 'navbar.client-steps.success-title' | transloco }}-->
+<!--                  </h5>-->
+<!--                  <span class="user-dropdown-email">{{ 'navbar.client-steps.all-step-done' | transloco }}</span>-->
+<!--                </div>-->
+<!--                <ul class="user-dropdown-links" *ngIf="!showSteps">-->
+<!--                  <li class="complete-button">-->
+<!--                    <a>-->
+<!--                      <button class="btn btn-info" (click)="finishStep()">-->
+<!--                        {{ 'navbar.client-steps.ok' | transloco }}-->
+<!--                      </button>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--                <ul class="user-dropdown-links" *ngIf="showSteps">-->
+<!--                  <li>-->
+<!--                    <a-->
+<!--                      ><i class="ti ti-check text-success"></i-->
+<!--                      >{{ 'navbar.client-steps.create-an-account' | transloco }}</a-->
+<!--                    >-->
+<!--                  </li>-->
+<!--                  <li>-->
+<!--                    <a-->
+<!--                      ><i-->
+<!--                        class="ti text-success"-->
+<!--                        [ngClass]="{-->
+<!--                          'ti-check': user.isNew === false,-->
+<!--                          'ti-more-alt': user.isNew === true-->
+<!--                        }"-->
+<!--                      ></i-->
+<!--                      >{{ 'navbar.client-steps.post-a-job' | transloco }}</a-->
+<!--                    >-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="topbar-action-item topbar-action-link">-->
+<!--            <a href="http://codinglab.com" target="_blank"-->
+<!--              ><em class="ti ti-home"></em><span>{{ 'navbar.buttons.goto-main-site' | transloco }}</span></a-->
+<!--            >-->
+<!--          </li>-->
+<!--          &lt;!&ndash; .topbar-action-item &ndash;&gt;-->
+
+<!--          <li class="dropdown topbar-action-item topbar-action-language">-->
+<!--            <a href="#" data-toggle="dropdown">-->
+<!--              {{ getLanguage() === 'nl' ? 'Dutch' : 'English' }}-->
+<!--              <em class="ti ti-angle-down"></em>-->
+<!--            </a>-->
+<!--            <ul class="dropdown-menu">-->
+<!--              <li><a (click)="setLanguage('en')">English</a></li>-->
+<!--              <li><a (click)="setLanguage('nl')">Dutch</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <span data-toggle="dropdown" (click)="showNotifications()" class="bell">-->
+<!--              <i class="ti ti-bell"></i>-->
+<!--              <span-->
+<!--                class="badge badge-danger complete-badge"-->
+<!--                *ngIf="unReadNotification && unReadNotification.length > 0"-->
+<!--                >&nbsp;-->
+<!--              </span>-->
+<!--            </span>-->
+
+<!--            <div class="dropdown-menu dropdown-menu-right notification-dropdown">-->
+<!--              <div class="text-center" *ngIf="notifications && notifications.length === 0">-->
+<!--                <i class="no-item-bell ti ti-bell"></i>-->
+<!--                <div class="no-item-bell-text">-->
+<!--                  {{ 'notification.labels.no-item' | transloco }}-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div>-->
+<!--                <ul class="notification-dropdown-links" *ngFor="let notification of notifications">-->
+<!--                  <li-->
+<!--                    (click)="$event.stopPropagation()"-->
+<!--                    *ngIf="notification.notificationId === NotificationType.TimelogSent"-->
+<!--                  >-->
+<!--                    <a-->
+<!--                      [routerLink]="['/time-reporting/view', notification.data.id]"-->
+<!--                      [ngClass]="{ 'text-bold': !notification.isRead }"-->
+<!--                    >-->
+<!--                      {{ 'notification.labels.timelog-sent' | transloco: notification }}-->
+<!--                    </a>-->
+<!--                    <button class="btn-noti">-->
+<!--                      <i (click)="deleteNotification($event, notification.id)" class="ti ti-close"></i>-->
+<!--                    </button>-->
+<!--                  </li>-->
+<!--                  <li-->
+<!--                    (click)="$event.stopPropagation()"-->
+<!--                    *ngIf="notification.notificationId === NotificationType.TimelogApproval"-->
+<!--                  >-->
+<!--                    <a [routerLink]="['/time-accounting']" [ngClass]="{ 'text-bold': !notification.isRead }">-->
+<!--                      {{ 'notification.labels.timelog-approval' | transloco: notification }}-->
+<!--                    </a>-->
+<!--                    <button class="btn-noti">-->
+<!--                      <i (click)="deleteNotification($event, notification.id)" class="ti ti-close"></i>-->
+<!--                    </button>-->
+<!--                  </li>-->
+<!--                  <li-->
+<!--                    (click)="$event.stopPropagation()"-->
+<!--                    *ngIf="notification.notificationId === NotificationType.NewApplication"-->
+<!--                  >-->
+<!--                    <a-->
+<!--                      [routerLink]="['/jobs/responses', notification.data.id]"-->
+<!--                      [ngClass]="{ 'text-bold': !notification.isRead }"-->
+<!--                    >-->
+<!--                      {{ 'notification.labels.new-application' | transloco: notification }}-->
+<!--                    </a>-->
+<!--                    <button class="btn-noti">-->
+<!--                      <i (click)="deleteNotification($event, notification.id)" class="ti ti-close"></i>-->
+<!--                    </button>-->
+<!--                  </li>-->
+<!--                  <li-->
+<!--                    (click)="$event.stopPropagation()"-->
+<!--                    *ngIf="notification.notificationId === NotificationType.JobInterview"-->
+<!--                  >-->
+<!--                    <a class="noti-link" [routerLink]="['/applications/job', notification.data.jobResponseId]">-->
+<!--                      {{ 'notification.labels.job-interview' | transloco: notification }}-->
+<!--                    </a>-->
+<!--                    <button class="btn-noti">-->
+<!--                      <i (click)="deleteNotification($event, notification.id)" class="ti ti-close"></i>-->
+<!--                    </button>-->
+<!--                  </li>-->
+<!--                  <li-->
+<!--                    (click)="$event.stopPropagation()"-->
+<!--                    *ngIf="notification.notificationId === NotificationType.JobHired"-->
+<!--                  >-->
+<!--                    <a class="noti-link" [routerLink]="['/applications/job', notification.data.jobResponseId]">-->
+<!--                      {{ 'notification.labels.job-hired' | transloco: notification }}-->
+<!--                    </a>-->
+<!--                    <button class="btn-noti">-->
+<!--                      <i (click)="deleteNotification($event, notification.id)" class="ti ti-close"></i>-->
+<!--                    </button>-->
+<!--                  </li>-->
+<!--                  <li-->
+<!--                    (click)="$event.stopPropagation()"-->
+<!--                    *ngIf="notification.notificationId === NotificationType.applicationCompleted"-->
+<!--                  >-->
+<!--                    <a class="noti-link" [routerLink]="['/applications/job', notification.data.id]">-->
+<!--                      {{ 'notification.labels.application-has-been-completed' | transloco: notification }}-->
+<!--                    </a>-->
+<!--                    <button class="btn-noti">-->
+<!--                      <i (click)="deleteNotification($event, notification.id)" class="ti ti-close"></i>-->
+<!--                    </button>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--                <button class="btn btn-link text-success btn-block" (click)="showAllNotification()">-->
+<!--                  {{ 'notification.buttons.view-all' | transloco }}-->
+<!--                </button>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="dropdown topbar-action-item topbar-action-user">-->
+<!--            <a href="#" data-toggle="dropdown">-->
+<!--              <img class="icon" src="assets/images/user-thumb-sm.png" alt="thumb" />-->
+<!--            </a>-->
+<!--            <div class="dropdown-menu dropdown-menu-right" *ngIf="user">-->
+<!--              <div class="user-dropdown">-->
+<!--                <div class="user-dropdown-head">-->
+<!--                  <h6 class="user-dropdown-name">{{ user.fullName }}</h6>-->
+<!--                  <span class="user-dropdown-email">{{ user.email }}</span>-->
+<!--                </div>-->
+<!--                <ul class="user-dropdown-links">-->
+<!--                  <li>-->
+<!--                    <a routerLink="/account"-->
+<!--                      ><i class="ti ti-id-badge"></i>{{ 'navbar.buttons.profile' | transloco }}</a-->
+<!--                    >-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--                <ul class="user-dropdown-links">-->
+<!--                  <li>-->
+<!--                    <a href="#" (click)="logout($event)"-->
+<!--                      ><i class="ti ti-power-off"></i>{{ 'navbar.buttons.logout' | transloco }}</a-->
+<!--                    >-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          &lt;!&ndash; .topbar-action-item &ndash;&gt;-->
+<!--        </ul>-->
+<!--        &lt;!&ndash; .topbar-action-list &ndash;&gt;-->
+<!--      </div>-->
+<!--      &lt;!&ndash; .topbar-action &ndash;&gt;-->
+<!--    </div>-->
+<!--    &lt;!&ndash; .d-flex &ndash;&gt;-->
+<!--  </div>-->
+<!--  &lt;!&ndash; .container &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; TopBar End &ndash;&gt;-->
+<!--<app-to-do-list *ngIf="isDisplayList" (isDisplayed)="isDisplayToDoList($event)"></app-to-do-list>-->

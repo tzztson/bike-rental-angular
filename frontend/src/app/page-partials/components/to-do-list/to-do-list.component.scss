@@ -1,0 +1,65 @@
+@import 'src/styles/scss/variables';
+@import 'src/styles/scss/mixins';
+@import 'src/styles/scss/breakpoints';
+
+.ice-cream {
+  height: 1.5em;
+}
+
+.step {
+  color: $color-dark;
+  margin-left: 0.2rem;
+  flex: 1;
+  background-color: $color-light;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-light, 10%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  div {
+    padding: 0.6rem 0;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.active {
+  background-color: $color-primary !important;
+  color: white !important;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.close-icon {
+  position: absolute;
+  cursor: pointer;
+  bottom: 80%;
+  right: 2%;
+  font-size: 1.4rem;
+}
+
+@include media-breakpoint-down(sm) {
+  .step {
+    margin: 0 0 0.2rem;
+  }
+
+  .close-icon {
+    top: 2%;
+  }
+}
+
+.content-block {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}

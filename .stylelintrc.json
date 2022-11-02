@@ -1,0 +1,46 @@
+{
+  "plugins": ["stylelint-declaration-strict-value"],
+  "extends": "stylelint-config-recommended-scss",
+  "rules": {
+    "no-empty-source": null,
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["ng-deep"]
+      }
+    ],
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "extends",
+          "function",
+          "if",
+          "each",
+          "include",
+          "mixin",
+          "for",
+          "return",
+          "else",
+          "tailwind",
+          "variants",
+          "responsive",
+          "apply",
+          "layer",
+          "screen"
+        ]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["blockless-after-blockless", "blockless-after-same-name-blockless", "first-nested"],
+        "ignore": ["after-comment", "inside-block"],
+        "ignoreAtRules": ["apply", "screen", "font-face", "nest"]
+      }
+    ],
+    "declaration-empty-line-before": ["never"],
+    "declaration-colon-newline-after": ["always-multi-line"],
+    "scale-unlimited/declaration-strict-value": ["color", "background-color"]
+  }
+}

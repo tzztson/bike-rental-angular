@@ -1,0 +1,103 @@
+@import 'src/styles/scss/variables';
+@import 'src/styles/scss/mixins';
+
+$transition-speed: 0.2s;
+
+label {
+  display: block;
+  position: relative;
+  padding-left: calc(5rem / 3);
+  cursor: pointer;
+
+  @include user-select(none);
+
+  .checkmark {
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    background-color: transparent;
+    border: 1px solid $color-dark;
+    border-radius: 3px;
+
+    &.checkmark-dark {
+      border-color: $color-dark;
+    }
+
+    &.checkmark-primary {
+      border-color: $color-primary;
+    }
+
+    &.checkmark-secondary {
+      border-color: $color-secondary;
+    }
+
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      left: 0.25rem;
+      top: 0.02rem;
+      width: 0.4rem;
+      height: calc(2rem / 3);
+      border: solid white;
+      border-width: 0 0.1rem 0.1rem 0;
+      opacity: 0;
+
+      @include transform(rotate(45deg));
+      @include transition(opacity $transition-speed);
+    }
+  }
+
+  &:hover input ~ .checkmark {
+    &.checkmark-dark {
+      background-color: $color-dark-light;
+    }
+
+    &.checkmark-primary {
+      background-color: $color-primary-light;
+    }
+
+    &.checkmark-secondary {
+      background-color: $color-secondary-light;
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked ~ .checkmark {
+      &.checkmark-dark {
+        background-color: $color-dark;
+      }
+
+      &.checkmark-primary {
+        background-color: $color-primary;
+      }
+
+      &.checkmark-secondary {
+        background-color: $color-secondary;
+      }
+    }
+
+    &:checked ~ .checkmark::after {
+      opacity: 1;
+    }
+  }
+}
+
+.error-messages {
+  margin-top: calc(2rem / 3);
+
+  p {
+    color: $color-danger;
+    font-size: 0.8rem;
+
+    &::before {
+      content: url(../../../assets/images/icons/error.svg);
+      display: inline-block;
+      margin-right: calc(1rem / 3);
+    }
+  }
+}

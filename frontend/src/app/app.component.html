@@ -1,0 +1,8 @@
+<app-header [isHideHeader]="isHideHead">
+  <main class="main">
+    <section class="main-content">
+      <router-outlet (activate)="onRouterOutletActivate($event)"></router-outlet>
+    </section>
+    <app-footer *ngIf="!isHideFooter" [backgroundColor]="colorOfFooter"></app-footer>
+  </main>
+</app-header>

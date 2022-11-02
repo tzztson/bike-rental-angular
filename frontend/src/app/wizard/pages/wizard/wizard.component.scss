@@ -1,0 +1,32 @@
+@import 'src/styles/scss/variables';
+@import 'src/styles/scss/mixins';
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: $mat-border-color;
+  padding: 0;
+  // opacity: 1!important;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 10px !important;
+  margin: 0 !important;
+}
+
+::ng-deep .mat-form-field-label {
+  background-color: transparent !important;
+}
+
+.error-messages {
+  margin-top: calc(2rem / 3);
+
+  p {
+    color: $color-danger;
+    font-size: 0.8rem;
+
+    &::before {
+      content: url(../../../../assets/images/icons/error.svg);
+      display: inline-block;
+      margin-right: calc(1rem / 3);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<modal-container>
+  <ng-container content>
+    <div class="row success-modal justify-content-center align-items-center h-100 w-100 no-gutters">
+      <div class="col-12 text-center">
+        <img src="assets/images/icons/modal-tick.svg" alt="success-ticket" />
+        <h2>{{ dataFromParentComponent.header }}</h2>
+        <div>
+          <span
+            class="text-dark text-center modal-description"
+            [innerHTML]="dataFromParentComponent.description"
+          ></span>
+        </div>
+        <div class="pt-4 row justify-content-center">
+          <p class="col-12 text-center m-0 pb-2" [innerHTML]="dataFromParentComponent.button.aboveButton"></p>
+          <div class="col-12 col-md-6 ui-buttons">
+            <ui-button
+              *ngIf="dataFromParentComponent.button.leftButtonText"
+              shape="link"
+              color="primary"
+              (click)="leftButtonCallback()"
+            >
+              {{ dataFromParentComponent.button.leftButtonText | transloco }}
+            </ui-button>
+            <ui-button shape="block" color="primary" (click)="goToLink()">
+              {{ dataFromParentComponent.button.text | transloco }}
+            </ui-button>
+          </div>
+          <p class="col-12 text-center m-0 pt-2" [innerHTML]="dataFromParentComponent.button.underButton"></p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</modal-container>

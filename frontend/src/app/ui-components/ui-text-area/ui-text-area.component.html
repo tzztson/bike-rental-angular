@@ -1,0 +1,19 @@
+<div class="form-group" [formGroup]="parentForm" [class.has-error]="formControl.invalid && formControl.touched">
+  <textarea
+    [name]="controlName"
+    [ngClass]="color === 'blue' ? 'textarea-blue' : 'textarea-white'"
+    class="form-control"
+    [placeholder]="placeholder | transloco"
+    [rows]="rows"
+    [cols]="cols"
+    [maxlength]="maxLength"
+    [minlength]="minLength"
+    [formControlName]="controlName"
+  ></textarea>
+
+  <div *ngIf="errorMessageKeys && formControl.errors && formControl.touched" class="error-messages">
+    <p *ngFor="let messageKey of errorMessageKeys" [hidden]="!formControl.errors[messageKey]">
+      {{ errorMessages[messageKey] | transloco }}
+    </p>
+  </div>
+</div>

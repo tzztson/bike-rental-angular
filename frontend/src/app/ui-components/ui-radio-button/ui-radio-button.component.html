@@ -1,0 +1,23 @@
+<ng-container *ngIf="iconName; else withoutIcon">
+  <button type="button" class="btn" [class.active]="isActive" (click)="onClick()">
+    <img
+      src="assets/images/button-icons/{{ iconName }}{{ isActive ? '_active' : '' }}.svg"
+      alt="button {{ iconName }}"
+    />
+    <span class="btn-text">{{ text | transloco }}</span>
+  </button>
+</ng-container>
+
+<ng-template #withoutIcon>
+  <label (click)="onClick()" class="checkbox-primary" [for]="controlName">
+    <input
+      type="radio"
+      name="{{ controlName }}"
+      [formControlName]="controlName"
+      [value]="value"
+      class="checkmark checkmark-primary"
+    />
+    <span class="checkmark checkmark-primary"></span>
+    {{ text | transloco }}
+  </label>
+</ng-template>

@@ -1,0 +1,126 @@
+@import 'src/styles/scss/variables';
+
+.range ::ng-deep .ng5-slider {
+  margin: 0;
+}
+
+.range ::ng-deep .ng5-slider-tick {
+  background-color: #9fb1c1;
+  margin-left: 0;
+}
+
+.range ::ng-deep .tooltip-selectable-area {
+  padding: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+}
+
+.range ::ng-deep .tooltip-codinglab {
+  .tooltip-inner {
+    width: 200px;
+    font-weight: bold;
+    background-color: $color-secondary;
+    color: $color-white;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+
+.range ::ng-deep .ng5-slider-ticks {
+  top: -2px;
+}
+
+.range ::ng-deep .ng5-slider .ng5-slider-tick.ng5-slider-selected {
+  background-color: $color-primary;
+}
+
+/* Increase clickable-area */
+.range ::ng-deep .ng5-slider-bar-wrapper {
+  height: auto;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.range ::ng-deep .ng5-slider-selection {
+  background-color: $color-primary;
+}
+
+.range ::ng-deep .ng5-slider .ng5-slider-bubble {
+  font-weight: $font-family-bold;
+}
+
+.range ::ng-deep .ng5-slider-bar {
+  border: 6px;
+  height: 6px;
+}
+
+.range ::ng-deep .ng5-slider-pointer {
+  width: 15px;
+  height: 15px;
+  top: -5px;
+  background-color: $color-primary;
+  outline: none;
+}
+
+.error-messages {
+  ::ng-deep.range.ng5-slider-pointer {
+    background-color: $color-danger;
+  }
+
+  margin-top: calc(2rem / 3);
+
+  p {
+    color: $color-danger;
+    font-size: 0.8rem;
+
+    &::before {
+      content: url(../../../assets/images/icons/error.svg);
+      display: inline-block;
+      margin-right: calc(1rem / 3);
+    }
+  }
+}
+
+.range .ng5-slider[disabled] ::ng-deep .ng5-slider-pointer {
+  background-color: grey;
+}
+
+.range .ng5-slider[disabled] ::ng-deep .ng5-slider-selection {
+  background-color: grey;
+}
+
+.range ::ng-deep .ng5-slider.animate .ng5-slider-pointer {
+  transition: all linear 0.05s;
+}
+
+.range ::ng-deep .ng5-slider.animate .ng5-slider-selection {
+  transition: all linear 0.05s;
+}
+
+.range ::ng-deep .ng5-slider.animate .ng5-slider-bubble {
+  transition: all linear 0.05s;
+}
+
+.range ::ng-deep .ng5-slider.animate .ng5-slider-bar-wrapper {
+  transition: all linear 0.05s;
+}
+
+.range .ng5-slider[disabled] ::ng-deep .ng5-slider-bar {
+  background-color: grey;
+}
+
+::ng-deep {
+  .range .ng5-slider .ng5-slider-full-bar .ng5-slider-bar {
+    background: white;
+  }
+}
+
+.grey-line {
+  ::ng-deep .ng5-slider .ng5-slider-full-bar .ng5-slider-bar {
+    background: $border-color;
+  }
+}

@@ -1,0 +1,67 @@
+<div class="container-fluid bg-white content-block">
+  <div class="row justify-content-center position-relative">
+    <i class="close-icon far fa-times-circle" (click)="toggleDisplay()"></i>
+    <div class="col-12 col-lg-8 text-center col-sm-8 pt-4">
+      <h2>
+        {{ 'to-do-list.labels.welcome-name' | transloco: { firstName: user.firstName } }}<br />
+        {{ 'to-do-list.labels.lets-get-you-started' | transloco }}
+        🏃
+      </h2>
+      <p class="text-bold">{{ 'to-do-list.labels.complete-profile' | transloco }}</p>
+    </div>
+    <div class="col-12 col-lg-8 pt-4 pb-4">
+      <div class="w-100">
+        <div class="d-flex flex-column flex-md-row w-100 justify-content-between">
+          <!--          step 1-->
+          <div class="step d-flex align-items-center active" routerLink="/profile/edit">
+            <div class="col-2 w-100 text-center">
+              <i class="far fa-check-circle"></i>
+            </div>
+            <div class="col-8 text-center">
+              <p class="text-bold">{{ 'to-do-list.labels.step' | transloco: { step: 1 } }}</p>
+              <p>{{ 'to-do-list.buttons.create-account' | transloco }}</p>
+            </div>
+          </div>
+
+          <!--          step 2-->
+          <div
+            class="step d-flex align-items-center"
+            [ngClass]="{ 'justify-content-center': user.isNew }"
+            [class.active]="!user.isNew"
+            routerLink="/profile/edit"
+          >
+            <div class="col-2 w-100 text-center" *ngIf="!user.isNew">
+              <i class="far fa-check-circle"></i>
+            </div>
+            <div class="col-2 w-100 text-center" *ngIf="user.isNew">
+              <i class="far fa-arrow-alt-circle-right"></i>
+            </div>
+            <div class="col-8 text-center">
+              <p class="text-bold">{{ 'to-do-list.labels.step' | transloco: { step: 2 } }}</p>
+              <p>{{ 'to-do-list.buttons.create-profile' | transloco }}</p>
+            </div>
+          </div>
+
+          <!--step 3-->
+          <div
+            class="step d-flex align-items-center"
+            [ngClass]="{ 'justify-content-center': !user.freelancerInfo.hasApplied }"
+            [class.active]="user.freelancerInfo.hasApplied"
+            routerLink="/jobs"
+          >
+            <div class="col-2 w-100 text-center" *ngIf="user.freelancerInfo.hasApplied">
+              <i class="far fa-check-circle"></i>
+            </div>
+            <div class="col-2 w-100 text-center" *ngIf="!user.isNew">
+              <i class="far fa-arrow-alt-circle-right"></i>
+            </div>
+            <div class="col-8 text-center">
+              <p class="text-bold">{{ 'to-do-list.labels.step' | transloco: { step: 3 } }}</p>
+              <p>{{ 'to-do-list.buttons.apply-job' | transloco }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

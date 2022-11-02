@@ -1,0 +1,22 @@
+<div class="range" [formGroup]="parentForm" [ngClass]="{ 'grey-line': greyLine }">
+  <ng5-slider [formControlName]="controlName" [options]="optionsSlider" [manualRefresh]="manualRefresh">
+    <ng-template #tooltipTemplate let-tooltip="tooltip" let-placement="placement" let-content="content">
+      <div
+        class="tooltip-selectable-area"
+        tooltipClass="tooltip-codinglab"
+        [ngbTooltip]="tooltip"
+        [placement]="placement"
+      >
+        {{ content }}
+      </div>
+    </ng-template>
+  </ng5-slider>
+  <div
+    *ngIf="errorMessageKeys && parentForm.get(controlName).errors && parentForm.get(controlName).touched"
+    class="error-messages"
+  >
+    <p *ngFor="let messageKey of errorMessageKeys" [hidden]="!parentForm.get(controlName).errors[messageKey]">
+      {{ errorMessages[messageKey] | transloco }}
+    </p>
+  </div>
+</div>

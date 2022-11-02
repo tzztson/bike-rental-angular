@@ -1,0 +1,177 @@
+image: node:16-alpine
+
+stages:
+  - codereview
+  - install_dependencies
+  - verification
+  - build
+  - deployment
+  - release
+  - e2e
+  - cleanup
+
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: "$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS"
+      when: never
+    - if: "$CI_COMMIT_BRANCH"
+
+variables:
+  FF_USE_FASTZIP: "true" # enable fastzip - a faster zip implementation that also supports level configuration.
+  ARTIFACT_COMPRESSION_LEVEL: fast # can also be set to fastest, fast, slow and slowest. If just enabling fastzip is not enough try setting this to fastest or fast.
+  CACHE_COMPRESSION_LEVEL: fastest # same as above, but for caches
+  BASE_URL_FRONTEND: demo.overpaper.com
+  BASE_ADDRESS_BACKEND: backend.overpaper.com
+  DYNAMIC_ENV_ADDRESS: 63.33.78.66
+  MYSQL_ROOT_PASSWORD: toor
+
+cache:
+  key: package-lock.json
+  paths:
+    - frontend/node_modules
+    - backend/node_modules
+
+Install dependencies:
+  stage: install_dependencies
+  needs: []
+  image: node:16.14-slim #fix node version to fix issue with installing angular peer dependencies
+  script:
+    - cd backend
+    - npm ci --cache .npm
+    - cd ../frontend
+    - npm ci --cache .npm
+
+Set environment vars:
+  stage: install_dependencies
+  needs: []
+  script:
+    # frontend vars
+    - echo "CONTAINER_NAME_FRONTEND=${CI_COMMIT_REF_SLUG:0:52}-frontend" >> build.env
+    - echo "IMAGE_TAG_FRONTEND=$CI_REGISTRY_IMAGE:${CI_COMMIT_REF_SLUG:0:52}-frontend" >> build.env
+    - echo "BASE_URL_FRONTEND=${CI_COMMIT_REF_SLUG:0:52}-frontend.develop.on-tv.tech" >> build.env
+    # backend vars
+    - echo "CONTAINER_NAME_BACKEND=${CI_COMMIT_REF_SLUG:0:52}-backend" >> build.env
+    - echo "IMAGE_TAG_BACKEND=$CI_REGISTRY_IMAGE:${CI_COMMIT_REF_SLUG:0:52}-backend" >> build.env
+    - echo "BASE_URL_BACKEND=${CI_COMMIT_REF_SLUG:0:52}-backend.develop.on-tv.tech" >> build.env
+    # database vars
+    - echo "CONTAINER_NAME_DB=${CI_COMMIT_REF_SLUG:0:52}-db" >> build.env
+    # get Builder image tag based on package-lock.json SHA1 hash
+    - echo "BUILDER_SHA=$(sha1sum package-lock.json | awk '{print $1}')" >> build.env
+  artifacts:
+    reports:
+      dotenv: build.env
+
+# Create prod build and publish docker images to registry
+.Docker prepare:
+  image: docker:19.03.12
+  stage: build
+  services:
+    - docker:19.03.12-dind
+  needs:
+    - Set environment vars
+    - Install dependencies
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules/
+      - dist/
+  variables:
+  before_script:
+    # login to  Docker Image Registries
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+
+Create and publish backend docker image:
+  extends: .Docker prepare
+  variables:
+    BUILDER_TAG: $BUILDER_SHA-builder-backend
+  script:
+    - docker pull $CI_REGISTRY_IMAGE:$BUILDER_TAG || true
+    # build builder image from cache
+    - docker build -t $CI_REGISTRY_IMAGE:$BUILDER_TAG -f pipeline/dockerfile/backend.Dockerfile --target builder --cache-from $CI_REGISTRY_IMAGE:$BUILDER_TAG --build-arg BASE_URL_FRONTEND=$BASE_URL_FRONTEND ./
+    - docker build -t ${IMAGE_TAG_BACKEND} -f pipeline/dockerfile/backend.Dockerfile --cache-from $CI_REGISTRY_IMAGE:$BUILDER_TAG --build-arg BASE_URL_FRONTEND=$BASE_URL_FRONTEND ./
+      # push Builder and application images
+    - docker push $CI_REGISTRY_IMAGE:$BUILDER_TAG
+    - docker push ${IMAGE_TAG_BACKEND}
+  only:
+    - develop
+    - main
+
+Build prod:
+  stage: build
+  needs:
+    - Install dependencies
+    - Set environment vars
+  cache:
+    key: package-lock.json
+    paths:
+      - frontend/dist
+      - backend/dist
+  script:
+    - sed -i "s|apiUrl:[[:blank:]]'http://localhost:3000/api',|apiUrl:'https://$BASE_ADDRESS_BACKEND/api',|g" ./frontend/src/environments/environment.prod.ts
+    - sed -i "s|frontEndUrl:[[:blank:]]'https://overnights.nl'|frontEndUrl:'https://"${BASE_URL_FRONTEND}"'|g" ./backend/src/environments/environment.prod.ts
+    - cd backend
+    - npm run build
+    - cd ../frontend
+    - npm run build:prod
+  only:
+    - develop
+    - main
+
+Deploy frontend pro:
+  stage: release
+  image:
+    name: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  needs:
+    - Build prod
+  cache:
+    key: package-lock.json
+    paths:
+      - frontend/dist
+      - backend/dist
+    policy: pull
+  # Make sure that the first path is the same as artifact path
+  # Make sure that the bucket name is the same as bucket in AWS
+  script:
+    - aws s3 rm s3://overpaper-frontend-demo/
+    - aws s3 cp frontend/dist/ s3://overpaper-frontend-demo/ --recursive --include "*"
+  only:
+    - develop
+    - main
+
+Deploy backend pro:
+  stage: release
+  image: kroniak/ssh-client
+  dependencies:
+    - Set environment vars
+  before_script:
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$GITLAB_RUNNER_PKEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  script:
+    - scp backend/example.env ubuntu@$BASE_ADDRESS_BACKEND:~/docker-compose/.env
+    - ssh ubuntu@$BASE_ADDRESS_BACKEND "docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY"
+    # delete containers if already running
+    - ssh ubuntu@$BASE_ADDRESS_BACKEND "docker rm -f overpaper_backend || true"
+    - ssh ubuntu@$BASE_ADDRESS_BACKEND "docker system prune -a -f"
+    - |
+      ssh ubuntu@$BASE_ADDRESS_BACKEND "docker run -d --network=front --restart=unless-stopped --name overpaper_backend  \
+      --env-file ~/docker-compose/.env \
+      -e HOST=0.0.0.0 \
+      -e DB_PORT=3306 \
+      -e DB_USER=overpaper \
+      -e DB_PASSWORD=$PRO_DATABASE_PASSWORD \
+      -e DB_NAME=overpaper \
+      -e DB_HOST=pro-overpaper.cnkbo0y583ze.eu-west-1.rds.amazonaws.com \
+      -e AWS_ACCESS_KEY=$BACKEND_AWS_ACCESS_KEY \
+      -e AWS_SECRET_KEY=$BACKEND_AWS_SECRET_KEY \
+      -e AWS_REGION=eu-west-1 \
+      -e SENDER_EMAIL=toms@codinglab.com \
+      ${IMAGE_TAG_BACKEND}"
+  only:
+    - develop
+    - main

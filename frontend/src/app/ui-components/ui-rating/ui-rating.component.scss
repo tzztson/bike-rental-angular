@@ -1,0 +1,42 @@
+@import 'src/styles/scss/variables';
+
+.star {
+  &::before {
+    content: '\f005';
+    font-family: $font-awesome-free-icon;
+    font-weight: 200;
+  }
+
+  &-primary {
+    color: #3ee5b2;
+  }
+
+  &-dark {
+    color: #223b55;
+  }
+}
+
+.filled {
+  &::before {
+    content: '\f005';
+    font-family: $font-awesome-free-icon;
+    font-weight: 900;
+  }
+}
+
+.half {
+  &::before {
+    content: '\f089';
+    font-family: $font-awesome-free-icon;
+    font-weight: 900;
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  &::after {
+    content: '\f005';
+    font-family: $font-awesome-free-icon;
+    font-weight: 200;
+  }
+}

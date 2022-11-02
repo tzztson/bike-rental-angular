@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+
+  &-content {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
+
+@media print {
+  .main {
+    display: block;
+    height: unset;
+  }
+}

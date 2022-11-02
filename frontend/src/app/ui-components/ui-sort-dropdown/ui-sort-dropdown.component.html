@@ -1,0 +1,14 @@
+<div ngbDropdown class="filter">
+  <button class="filter-btn" id="dropdown" ngbDropdownToggle>
+    {{ 'common.buttons.sort' | transloco }}
+    <span class="pl-1 pr-2">{{ selectedValue | transloco }}</span>
+    <i class="fas fa-chevron-down"></i>
+  </button>
+  <div ngbDropdownMenu class="filter-items" aria-labelledby="dropdown">
+    <div *ngFor="let item of sortItems">
+      <button ngbDropdownItem [attr.id]="item[bindValue] + '-dropdown-item'" (click)="choseItem(item)">
+        {{ item[bindLabel] | transloco }}
+      </button>
+    </div>
+  </div>
+</div>

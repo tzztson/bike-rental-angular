@@ -1,0 +1,58 @@
+{
+  "Utrecht": {
+    "Amsterdam": 49,
+    "Denhaag": 67,
+    "Rotterdam": 61,
+    "Groningen": 186,
+    "Limburg": 135,
+    "Brussel": 169
+  },
+  "Amsterdam": {
+    "Utrecht": 49,
+    "Denhaag": 63,
+    "Rotterdam": 77,
+    "Groningen": 180,
+    "Limburg": 167,
+    "Brussel": 201
+  },
+  "Denhaag": {
+    "Utrecht": 67,
+    "Amsterdam": 63,
+    "Rotterdam": 20,
+    "Groningen": 235,
+    "Limburg": 180,
+    "Brussel": 63
+  },
+  "Rotterdam": {
+    "Utrecht": 61,
+    "Amsterdam": 77,
+    "Denhaag": 20,
+    "Groningen": 244,
+    "Limburg": 154,
+    "Brussel": 150
+  },
+  "Groningen": {
+    "Utrecht": 186,
+    "Amsterdam": 180,
+    "Denhaag": 235,
+    "Rotterdam": 244,
+    "Limburg": 252,
+    "Brussel": 350
+  },
+  "Limburg": {
+    "Utrecht": 135,
+    "Amsterdam": 167,
+    "Denhaag": 180,
+    "Rotterdam": 154,
+    "Groningen": 251,
+    "Brussel": 180
+  },
+  "Brussel": {
+    "Utrecht": 169,
+    "Amsterdam": 201,
+    "Denhaag": 176,
+    "Rotterdam": 150,
+    "Groningen": 359,
+    "Limburg": 182
+  }
+}

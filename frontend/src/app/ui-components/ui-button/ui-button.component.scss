@@ -1,0 +1,43 @@
+@import 'src/styles/scss/buttons';
+@import 'src/styles/scss/variables';
+
+:host {
+  // it makes this component clickable by cypress
+  display: block;
+}
+
+:host(.disabled) {
+  // Disable click event.
+  pointer-events: none;
+}
+
+:host(.enabled) {
+  pointer-events: auto;
+}
+
+.btn {
+  img {
+    max-height: 100%;
+    vertical-align: text-top;
+    margin-right: 0.5em;
+    position: relative;
+    top: 0.07em;
+    height: 1.1rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .btn {
+    margin-bottom: map-get($map: $spacers, $key: 3); // equivalent to .mb-3
+  }
+}
+
+.navigate {
+  &-next {
+    margin-left: 0.5em;
+  }
+
+  &-back {
+    margin-right: 0.5em;
+  }
+}

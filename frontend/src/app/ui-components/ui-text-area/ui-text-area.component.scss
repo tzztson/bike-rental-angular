@@ -1,0 +1,56 @@
+@import 'src/styles/scss/variables';
+@import 'src/styles/scss/mixins';
+
+.form-group {
+  position: relative;
+  color: $color-dark;
+  text-align: left;
+
+  textarea {
+    display: block;
+    border-radius: 3px;
+    padding: 1rem calc(5rem / 3);
+    width: 100%;
+    font-size: inherit;
+    color: inherit;
+
+    &:active,
+    &:focus {
+      color: $color-body-font;
+      border: 1px solid $color-body-font;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &.has-error {
+    textarea {
+      border-color: $color-danger;
+    }
+  }
+
+  .error-messages {
+    margin-top: calc(2rem / 3);
+
+    p {
+      color: $color-danger;
+      font-size: 0.8rem;
+
+      &::before {
+        content: url(../../../assets/images/icons/error.svg);
+        display: inline-block;
+        margin-right: calc(1rem / 3);
+      }
+    }
+  }
+
+  .textarea-blue {
+    background: $color-light;
+    border: 1px solid $color-dark;
+  }
+
+  .textarea-white {
+    background: transparent;
+    border: 1px solid $color-dark;
+  }
+}

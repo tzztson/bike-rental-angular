@@ -1,0 +1,59 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { UiStepIndicatorComponent } from './ui-step-indicator.component';
+
+<Meta title="UiStepIndicatorComponent" component={UiStepIndicatorComponent} />
+
+# Usage example
+
+A step indicator with 3 total steps and currently active 2nd step.
+
+<Story name="Docs" height="auto">
+  {{
+    component: UiStepIndicatorComponent,
+    props: {
+      totalSteps: 3,
+      currentStep: 2,
+    },
+  }}
+</Story>
+
+<!-- A spacer to separate the story iframe from the snippet header -->
+
+<div className="mb-5"></div>
+
+### demo.module.ts
+
+```ts
+// import the UI Components module in your module
+import { UiComponentsModule } from 'src/app/ui-components/ui-components.module';
+
+@NgModule({
+  imports: [UiComponentsModule]
+})
+export class AppModule(){}
+```
+
+### demo.component.html
+
+```html
+<ui-step-indicator [totalSteps]="totalSteps" [currentStep]="currentStep"></ui-step-indicator>
+```
+
+### demo.component.ts
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'demo-step-indicator',
+  templateUrl: './demo-step-indicator.component.html',
+})
+export class DemoStepIndicatorComponent {
+  totalSteps = 3;
+  currentStep = 2;
+}
+```
+
+## Props
+
+<Props of={UiStepIndicatorComponent} />

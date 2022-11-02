@@ -1,0 +1,12 @@
+<div class="step-indicator-wrapper">
+  <div class="step" *ngFor="let step of stepsRange">
+    <div
+      class="step-number"
+      [attr.data-testid]="'step-' + step"
+      (click)="changeStep(step)"
+      [class.active]="currentStep >= step"
+    >
+      {{ step }}
+    </div>
+  </div>
+</div>

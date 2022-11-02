@@ -1,0 +1,15 @@
+<button mat-button [disableRipple]="true" [matMenuTriggerFor]="navMenu" class="menu" #t="matMenuTrigger">
+  {{ 'header.languages.' + languageCodeToText[language] | transloco }}
+  <i class="fas fa-chevron-down align-text-top"></i>
+</button>
+
+<mat-menu #navMenu="matMenu" [xPosition]="xPosition" [yPosition]="yPosition">
+  <button
+    mat-menu-item
+    *ngFor="let language of languages"
+    (click)="onSelectedLanguage(language)"
+    [ngClass]="{ 'active-item': selectLanguage === language.label }"
+  >
+    {{ language.label | transloco }}
+  </button>
+</mat-menu>

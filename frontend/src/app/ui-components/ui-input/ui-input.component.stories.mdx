@@ -1,0 +1,89 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { moduleMetadata } from '@storybook/angular';
+import { UiInputComponent } from './ui-input.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TranslocoService } from '@ngneat/transloco';
+import { TranslocoRootModule } from 'src/app/transloco-root.module';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+import { UiComponentsModule } from '../ui-components.module';
+import { TestDocComponent, HttpLoaderFactory, translateModuleConfig } from './ui-input.component.stories.ts';
+
+<Meta
+  title="UiInputComponent"
+  decorators={[
+    moduleMetadata({
+      declarations: [TestDocComponent, UiInputComponent],
+      imports: [ReactiveFormsModule, HttpClientModule, TranslocoRootModule],
+      providers: [HttpClient, TranslocoService],
+    }),
+  ]}
+/>
+
+# Usage example
+
+Text input field
+
+<Story name="Docs" height="auto">
+  {{
+    component: TestDocComponent,
+    props: {
+      label: 'First name',
+      requiredMessage: 'This field is required.',
+      minlengthMessage: 'Please, enter at least 2 symbols.',
+    },
+  }}
+</Story>
+
+<!-- A spacer to separate the story iframe from the snippet header -->
+
+<div className="mb-5"></div>
+
+### demo.module.ts
+
+```ts
+// import the UI Components module in your module
+import { UiComponentsModule } from 'src/app/ui-components/ui-components.module';
+
+@NgModule({
+  imports: [UiComponentsModule]
+})
+export class AppModule(){}
+```
+
+### demo.component.html
+
+```html
+<form class="form-row p-4" [formGroup]="testForm">
+  <div class="col-md-4">
+    <ui-input controlName="firstName" [errorMessages]="errorMessages" label="First name"></ui-input>
+  </div>
+</form>
+```
+
+### demo.component.ts
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'demo-input',
+  templateUrl: './demo-input.component.html',
+})
+export class DemoInputComponent {
+  testForm = this.formBuilder.group({
+    firstName: ['', [Validators.required, Validators.minLength(3)]],
+  });
+
+  errorMessages: {
+    required: 'This field is required.';
+    minlength: 'Please, enter at least 2 symbols.';
+  };
+
+  constructor(private formBuilder: FormBuilder) {}
+}
+```
+
+## Props
+
+<Props of={UiInputComponent} />

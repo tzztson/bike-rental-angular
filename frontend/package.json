@@ -1,0 +1,209 @@
+{
+  "name": "admin-panel",
+  "version": "0.0.0",
+  "engines": {
+    "node": "^16.0.0",
+    "npm": ">= 7.0.0"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --output-path=dist",
+    "build:prod": "ng build --configuration production --output-path=dist",
+    "build:stats": "ng build --stats-json",
+    "analyze": "webpack-bundle-analyzer dist/admin-panel/stats.json",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "lint": "ng lint",
+    "lint-staged": "lint-staged",
+    "eslint": "eslint *.js",
+    "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
+    "storybook": "npm run docs:json && start-storybook -p 9008 -s src/assets",
+    "build-storybook": "build-storybook",
+    "ci:commitlint": "commitlint",
+    "ci:clear-test-attributes": "node pipeline/clear-test-attributes.js",
+    "ci:prettier": "prettylint --config ./.prettierrc.js",
+    "ci:stylelint": "stylelint '**/*.scss'",
+    "ci:tslint": "tslint src/**/*.ts --config ./tslint.json && tslint e2e/**/*.ts --config ./tslint.json",
+    "ci:check-translation": "node pipeline/check-translation.js",
+    "dev:ssr": "ng run admin-panel:serve-ssr",
+    "start:ssr": "npm run build:ssr && npm run serve:ssr",
+    "serve:ssr": "node dist/admin-panel/server/main.js",
+    "build:ssr": "ng build --configuration production && ng run admin-panel:server:production",
+    "prerender": "ng run admin-panel:prerender",
+    "deploy": "scp -rp dist ubuntu@3.86.77.198:~/miami-frontend/"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-empty-source": null,
+      "selector-pseudo-element-no-unknown": [
+        true,
+        {
+          "ignorePseudoElements": [
+            "ng-deep"
+          ]
+        }
+      ],
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "function",
+            "if",
+            "each",
+            "include",
+            "mixin",
+            "for",
+            "return",
+            "else"
+          ]
+        }
+      ]
+    }
+  },
+  "lint-staged": {
+    "*.{scss,ts,tsx,js,json,md,html}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --syntax scss --fix",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "tslint"
+    ],
+    "*.json": [
+      "npm run ci:check-translation"
+    ]
+  },
+  "pre-commit": "lint-staged",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^13.0.0",
+    "@angular/cdk": "^13.0.0",
+    "@angular/common": "^13.0.0",
+    "@angular/compiler": "^13.0.0",
+    "@angular/core": "^13.0.0",
+    "@angular/forms": "^13.0.0",
+    "@angular/localize": "^13.0.0",
+    "@angular/material": "^13.0.0",
+    "@angular/material-moment-adapter": "^13.0.0",
+    "@angular/platform-browser": "^13.0.0",
+    "@angular/platform-browser-dynamic": "^13.0.0",
+    "@angular/platform-server": "^13.0.0",
+    "@angular/router": "^13.0.0",
+    "@auth0/angular-jwt": "^5.0.2",
+    "@bugsnag/js": "^7.0.0",
+    "@bugsnag/plugin-angular": "^7.0.0",
+    "@ckeditor/ckeditor5-angular": "^2.0.2",
+    "@ckeditor/ckeditor5-build-classic": "^29.0.0",
+    "@feathersjs/authentication-client": "^4.5.11",
+    "@feathersjs/client": "^4.5.11",
+    "@feathersjs/feathers": "^4.5.11",
+    "@feathersjs/rest-client": "^4.5.11",
+    "@feathersjs/socketio-client": "^4.5.11",
+    "@ng-bootstrap/ng-bootstrap": "^9.1.0",
+    "@ng-select/ng-select": "^6.1.0",
+    "@ngneat/transloco": "^3.1.1",
+    "@nguniversal/express-engine": "13.0.1",
+    "@types/date-fns": "^2.6.0",
+    "@types/lodash": "^4.14.150",
+    "angular-file": "^3.0.1",
+    "bootstrap": "^4.4.1",
+    "codelyzer": "^6.0.0",
+    "cross-fetch": "^3.1.4",
+    "date-fns": "^2.29.1",
+    "devicon": "^2.2.0",
+    "devicon-2.2": "^2.2.0",
+    "dompurify": "^2.3.4",
+    "express": "^4.15.2",
+    "feathers-reactive": "^0.8.1",
+    "getbase": "^3.5.1",
+    "hammerjs": "^2.0.8",
+    "localstorage-polyfill": "^1.0.1",
+    "lodash": "^4.17.15",
+    "lodash-es": "^4.17.21",
+    "moment": "^2.24.0",
+    "ng5-slider": "^1.2.4",
+    "ngx-image-cropper": "^3.1.7",
+    "ngx-perfect-scrollbar": "^10.1.0",
+    "ngx-spinner": "^9.0.2",
+    "ngx-trim-directive": "^1.0.11",
+    "rxjs": "^6.6.2",
+    "socket.io-client": "^2.3.0",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "^13.0.0",
+    "@angular-builders/jest": "^9.0.1",
+    "@angular-devkit/build-angular": "^13.0.1",
+    "@angular-devkit/core": "^13.0.1",
+    "@angular/cli": "^13.0.1",
+    "@angular/compiler-cli": "^13.0.0",
+    "@angular/language-service": "^13.0.0",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.6",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@compodoc/compodoc": "^1.1.11",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@nguniversal/builders": "^13.0.1",
+    "@schematics/update": "^0.901.2",
+    "@storybook/addon-a11y": "^5.3.18",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-notes": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@types/express": "^4.17.0",
+    "@types/feathersjs__authentication-client": "^1.0.5",
+    "@types/feathersjs__feathers": "^3.1.5",
+    "@types/feathersjs__socketio-client": "^1.0.3",
+    "@types/jest": "^25.2.1",
+    "@types/lodash-es": "^4.17.4",
+    "@types/node": "^13.13.1",
+    "babel-jest": "^26.0.0",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "husky": "^4.2.5",
+    "jest": "^25.4.0",
+    "jest-junit": "^10.0.0",
+    "jest-preset-angular": "^8.1.3",
+    "lint-staged": "^10.1.7",
+    "ngx-highlight-js": "^9.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "prettylint": "^1.0.0",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "tailwindcss": "^3.1.8",
+    "ts-node": "~8.9.0",
+    "tslint": "~6.1.0",
+    "tslint-consistent-codestyle": "^1.16.0",
+    "tslint-enum-value-name-rule": "^0.1.0",
+    "typescript": "4.4.4",
+    "wait-on": "^5.0.1",
+    "webpack-bundle-analyzer": "^4.4.2"
+  },
+  "webpack-bundle-analyzer": "^4.4.2",
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/interaction_developer/codinglab_admin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/interaction_developer/codinglab_admin#readme"
+}

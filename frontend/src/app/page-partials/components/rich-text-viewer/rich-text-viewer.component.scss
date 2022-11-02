@@ -1,0 +1,13 @@
+.rich-text ul,
+.rich-text ol {
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+.rich-text ol li {
+  list-style-type: decimal;
+}
+
+.rich-text ul li {
+  list-style-type: square;
+}

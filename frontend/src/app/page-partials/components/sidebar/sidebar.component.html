@@ -1,0 +1,188 @@
+<div class="user-sidebar">
+  <div class="user-sidebar-overlay"></div>
+  <div class="user-box d-none d-lg-block">
+    <h6 class="user-name">{{ user.fullName }}</h6>
+    <!-- for client -->
+    <a routerLink="/jobs/create" *ngIf="user.isClient()" class="btn btn-block btn-warning">
+      {{ 'sidebar.buttons.post-a-job' | transloco }}
+    </a>
+    <a href="javascript:void(0)" *ngIf="user.isFreelancer()" (click)="openJobsPage()" class="btn btn-block btn-warning">
+      {{ 'sidebar.buttons.view-jobs' | transloco }}
+    </a>
+  </div>
+  <div class="user-box d-none d-lg-block" *ngIf="false">
+    <!-- voor freelancer -->
+    <h6 class="user-name">{{ user.fullName }}</h6>
+    <a href="codinglab.com/jobs" target="_blank" class="btn btn-block btn-warning">
+      {{ 'sidebar.buttons.view-jobs' | transloco }}
+    </a>
+  </div>
+  <ul class="user-icon-nav" *ngIf="user.isClient()">
+    <!-- for client -->
+    <li>
+      <a routerLink="/"><em class="ti ti-dashboard"></em>Dashboard</a>
+    </li>
+    <li>
+      <a routerLink="/jobs/overview">
+        <em class="ti ti-files"></em>
+        <span>{{ 'sidebar.buttons.jobs' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/my-freelancers">
+        <em class="ti ti-pie-chart"></em>
+        <span>{{ 'sidebar.buttons.freelancers' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/client/contracts">
+        <em class="ti ti-pie-chart"></em>
+        <span>{{ 'sidebar.buttons.contracts' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/time-reporting">
+        <em class="ti ti-control-shuffle"></em>
+        <span>
+          {{ 'sidebar.buttons.reports' | transloco }}
+          <span class="badge bill-badge-danger complete-badge" *ngIf="showTimeReportPending">&nbsp; </span>
+        </span>
+      </a>
+    </li>
+    <li *ngIf="showMessages">
+      <a routerLink="/client/messages">
+        <em class="ti ti-comments"></em>
+        <span>{{ 'sidebar.buttons.messages' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a href="account.html">
+        <em class="ti ti-user"></em>
+        <span>{{ 'sidebar.buttons.my-profile' | transloco }}</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="user-icon-nav" *ngIf="user.isFreelancer()">
+    <li>
+      <a routerLink="/"> <em class="ti ti-dashboard"></em>Dashboard</a>
+    </li>
+    <li>
+      <a routerLink="/applications">
+        <em class="ti ti-files"> </em>
+        <span>{{ 'sidebar.buttons.my-responses' | transloco }}</span>
+      </a>
+    </li>
+    <li *ngIf="showTimeManagement">
+      <a routerLink="/time-accounting">
+        <em class="ti ti-pie-chart"></em>
+        <span>{{ 'sidebar.buttons.time-logs' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/freelancer/contracts">
+        <em class="ti ti-pie-chart"></em>
+        <span>{{ 'sidebar.buttons.contracts' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/referrals">
+        <em class="ti ti-infinite"></em>
+        <span>{{ 'sidebar.buttons.referral' | transloco }}</span>
+      </a>
+    </li>
+    <li *ngIf="showBilling">
+      <a routerLink="/freelancer-billing">
+        <em class="ti ti-money"></em>
+        <span>
+          {{ 'sidebar.buttons.billing' | transloco }}
+          <span class="badge bill-badge-danger complete-badge" *ngIf="showBillPending">&nbsp; </span>
+        </span>
+      </a>
+    </li>
+    <li *ngIf="showMessages">
+      <a routerLink="/freelancer/messages">
+        <em class="ti ti-comments"></em>
+        <span>{{ 'sidebar.buttons.messages' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/my-profile">
+        <em class="ti ti-user"></em>
+        <span>{{ 'sidebar.buttons.my-profile' | transloco }}</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="user-icon-nav" *ngIf="user.isAdmin()">
+    <li>
+      <a routerLink="/">
+        <em class="ti ti-dashboard"> </em>
+        {{ 'sidebar.buttons.dashboard' | transloco }}
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/applications">
+        <em class="ti ti-files"></em>
+        <span>{{ 'sidebar.buttons.responses' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/jobs">
+        <em class="ti ti-files"></em>
+        <span>{{ 'sidebar.buttons.jobs' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/contracts">
+        <em class="ti ti-pie-chart"></em>
+        <span>{{ 'sidebar.buttons.contracts' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/admin/referrals">
+        <em class="ti ti-infinite"></em>
+        <span>{{ 'sidebar.buttons.invoices' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/my-profile">
+        <em class="ti ti-user"></em>
+        <span>{{ 'sidebar.buttons.invites' | transloco }}</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/my-profile">
+        <em class="ti ti-user"></em>
+        <span> {{ 'sidebar.buttons.statistics' | transloco }}</span>
+      </a>
+    </li>
+  </ul>
+  <div class="user-sidebar-sap"></div>
+  <ul class="user-nav">
+    <li><a href="how-to.html">How to buy?</a></li>
+    <li><a href="faq.html">Faqs</a></li>
+    <li><a href="#">Whitepaper</a></li>
+    <li>Contact Support<span>info@codinglab.com</span></li>
+  </ul>
+  <div class="d-lg-none">
+    <div class="user-sidebar-sap"></div>
+    <div class="gaps-1x"></div>
+    <ul class="topbar-action-list">
+      <li class="topbar-action-item topbar-action-link">
+        <a href="#">
+          <em class="ti ti-home"></em>
+          <span>
+            {{ 'sidebar.buttons.main-site' | transloco }}
+          </span>
+        </a>
+      </li>
+      <li class="dropup topbar-action-item topbar-action-language">
+        <a href="#" data-toggle="dropdown" aria-haspopup="true"> EN <em class="ti ti-angle-up"></em> </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">FR</a></li>
+          <li><a href="#">JY</a></li>
+          <li><a href="#">CH</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

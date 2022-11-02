@@ -1,0 +1,19 @@
+<div [formGroup]="parentForm" *ngIf="controlName; else noControlName">
+  <ngb-rating [max]="maxStar" [formControlName]="controlName" [readonly]="readonly" [rate]="selectedRate">
+    <ng-template let-fill="fill" let-index="index">
+      <span [ngClass]="['star', 'star-' + color]" [class.filled]="fill === 100" [class.half]="fill === 50"> </span>
+    </ng-template>
+  </ngb-rating>
+  <div *ngIf="errorMessageKeys && formControl.errors && formControl.touched" class="error-messages">
+    <p *ngFor="let messageKey of errorMessageKeys" [hidden]="!formControl.errors[messageKey]">
+      {{ errorMessages[messageKey] | transloco }}
+    </p>
+  </div>
+</div>
+<ng-template #noControlName>
+  <ngb-rating [max]="maxStar" [rate]="selectedRate" [readonly]="readonly">
+    <ng-template let-fill="fill" let-index="index">
+      <span [ngClass]="['star', 'star-' + color]" [class.filled]="fill === 100" [class.half]="fill === 50"></span>
+    </ng-template>
+  </ngb-rating>
+</ng-template>

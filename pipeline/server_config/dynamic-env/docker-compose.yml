@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  web:
+    container_name: nginx
+    restart: unless-stopped
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./.htpasswd:/etc/nginx/.htpasswd
+      # - /etc/letsencrypt/live/develop.on-tv.tech/fullchain.pem:/etc/letsencrypt/wildcard/develop.on-tv.tech/fullchain.pem:ro
+      # - /etc/letsencrypt/live/develop.on-tv.tech/privkey.pem:/etc/letsencrypt/wildcard/develop.on-tv.tech/privkey.pem:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - front
+
+  mysql_overnights:
+    platform: linux/x86_64
+    restart: unless-stopped
+    container_name: mysql_overnights
+    image: mysql
+    # allow password auth access for ci/cd
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - /root/docker-compose/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: overnights-dev
+      MYSQL_ROOT_PASSWORD: toor
+    networks:
+      - front
+    ports:
+      - '3306:3306'
+    # Make sure mysql can write docker container logs
+    cap_add:
+      - SYS_NICE  
+
+networks:
+  front:
+    external: true

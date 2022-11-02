@@ -1,0 +1,29 @@
+@import 'src/styles/scss/variables.scss';
+
+.menu {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  vertical-align: sub !important;
+}
+
+.img-menu {
+  display: inline-block;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+
+  img {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    height: 2.3rem;
+    width: 2.3rem;
+    border-radius: 50%;
+  }
+}
+
+.active-item {
+  color: $color-primary;
+  background-color: $color-blue-light;
+}

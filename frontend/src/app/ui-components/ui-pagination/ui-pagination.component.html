@@ -1,0 +1,39 @@
+<section class="w-100 justify-content-between d-flex pt-4 pb-4">
+  <!-- Not important for now to change items per page
+
+    <div ngbDropdown>
+    <button class="drop-down-btn" id="dropdown" ngbDropdownToggle>
+      <span class="pl-1 pr-2">{{ selectedDisplayItemsPerPage || itemsDisplay[1]['page'] }}</span>
+      <i class="fas fa-chevron-down text-primary"></i>
+    </button>
+    <div ngbDropdownMenu class="drop-down-items" aria-labelledby="dropdown">
+      <div *ngFor="let item of itemsDisplay">
+        <button ngbDropdownItem id="option" (click)="displayItems(item)">{{ item['page'] }}</button>
+      </div>
+    </div>
+  </div> -->
+  <div>
+    <button
+      data-testid="firstPage"
+      [disabled]="page === 1"
+      (click)="goToFirstPage()"
+      [ngClass]="{ 'not-active': page === 1 }"
+    >
+      {{ 'common.buttons.first' | transloco }}
+    </button>
+    <ngb-pagination
+      class="d-inline-block"
+      [collectionSize]="amountOfItems"
+      [(page)]="page"
+      [pageSize]="itemsPerPage"
+      [maxSize]="displayNumberOfPages"
+      [rotate]="true"
+      [ellipses]="true"
+      [boundaryLinks]="false"
+      (pageChange)="changedPage($event)"
+    ></ngb-pagination>
+    <button [disabled]="page === lastPage" (click)="goToLastPage()" [ngClass]="{ 'not-active': page === lastPage }">
+      {{ 'common.buttons.last' | transloco }}
+    </button>
+  </div>
+</section>

@@ -1,0 +1,130 @@
+@import 'src/styles/scss/variables';
+@import 'src/styles/scss/mixins';
+
+$transition-speed: 0.3s;
+
+.search {
+  box-sizing: border-box;
+  display: flex;
+
+  input {
+    padding-left: map-get($map: $spacers, $key: 3);
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid $mat-border-color !important;
+    background-color: white;
+  }
+
+  input::placeholder {
+    color: $color-dark;
+    font-size: 13px;
+  }
+
+  ::ng-deep button {
+    box-shadow: none;
+    height: 2.5rem;
+    width: 2.5rem !important;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    justify-content: center;
+    font-size: 1.2rem !important;
+  }
+}
+
+.form-group {
+  margin-bottom: 0.5rem !important;
+
+  &-white {
+    background-color: white;
+  }
+
+  &-default {
+    background-color: $color-light;
+  }
+
+  position: relative;
+  color: $color-dark;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+
+  input {
+    display: block;
+    border: 1px solid $mat-border-color;
+    border-radius: 3px;
+    padding: 0.6rem calc(5rem / 3);
+    padding-left: 15px !important;
+    width: 100%;
+    font-size: inherit;
+    color: inherit;
+    background-color: $color-light;
+    font-family: $font-family-regular;
+
+    @include transition(border-color $transition-speed, color $transition-speed);
+
+    & + label {
+      position: absolute;
+      left: calc(5rem / 4);
+      top: 0.7rem;
+      color: inherit;
+      pointer-events: none;
+
+      padding: {
+        left: 0;
+        right: 0;
+      }
+
+      z-index: auto;
+
+      @include transition(top $transition-speed, font-size $transition-speed);
+    }
+
+    &:active,
+    &:focus {
+      color: $color-body-font;
+      border: 1px solid $color-primary;
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:active + label,
+    &:focus + label,
+    &.not-empty + label {
+      z-index: 2;
+      background-color: inherit;
+      padding: {
+        left: calc(2rem / 3);
+        right: calc(2rem / 3);
+      }
+
+      left: 1rem;
+      top: calc(-2rem / 3);
+      font-size: 0.8rem;
+    }
+  }
+
+  &.has-error {
+    input {
+      border-color: $color-danger;
+
+      & + label {
+        color: $color-danger;
+      }
+    }
+  }
+}
+
+.error-messages {
+  margin-bottom: 10px;
+
+  p {
+    color: $color-danger;
+    font-size: 0.8rem;
+
+    &::before {
+      content: url(../../../assets/images/icons/error.svg);
+      display: inline-block;
+      margin-right: calc(1rem / 3);
+    }
+  }
+}

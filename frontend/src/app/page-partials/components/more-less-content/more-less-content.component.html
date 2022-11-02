@@ -1,0 +1,7 @@
+<div #wrapper class="wrapper">
+  <!--  place content with template value #content -->
+  <ng-content></ng-content>
+</div>
+<span class="text-link" *ngIf="displayButton" (click)="toggle()">
+  {{ disclosedContent ? ('common.buttons.less' | transloco) : ('common.buttons.more' | transloco) }}
+</span>

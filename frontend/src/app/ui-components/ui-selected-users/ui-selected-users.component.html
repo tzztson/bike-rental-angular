@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div *ngFor="let user of selectedUsers; let i = index" class="user-card">
+    <div *ngIf="i < 3" class="user-img" [class.last]="i">
+      <img *ngIf="user.profilePictureUrl" [src]="user.profilePictureUrl" alt="" />
+      <img *ngIf="!user.profilePictureUrl" [src]="user.profilePictureUrl" alt="" />
+    </div>
+  </div>
+  <div *ngIf="selectedUsers.length > 3" class="number">+ {{ selectedUsers.length - 3 }}</div>
+</div>
